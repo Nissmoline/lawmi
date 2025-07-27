@@ -1,0 +1,23 @@
+name = "milawyer-react"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+output_directory = "dist"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[site]
+bucket = "./dist"
+entry-point = "."
+
+[env.production]
+name = "milawyer-react-production"
+
+[env.staging]
+name = "milawyer-react-staging"
+
+# Pages configuration
+[pages]
+output_directory = "dist" 

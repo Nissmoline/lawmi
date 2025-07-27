@@ -1,0 +1,11 @@
+# SPA routing - redirect all routes to index.html except for static assets
+/*    /index.html   200
+
+# Redirect old URLs if needed
+# /old-page    /new-page    301
+
+# Force HTTPS (handled by Cloudflare)
+# https://example.com/*    https://www.example.com/$1    301
+
+# Custom error pages
+# /404    /404.html    404 

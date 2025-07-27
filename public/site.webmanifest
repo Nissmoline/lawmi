@@ -1,0 +1,98 @@
+{
+  "name": "Marina Ilyushina Law Office",
+  "short_name": "MiLawyer",
+  "description": "Δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα - Νομικές Υπηρεσίες",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A2B4C",
+  "theme_color": "#D4A373",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "el",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "legal", "professional"],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Οικογενειακό Δίκαιο",
+      "short_name": "Οικογενειακό",
+      "description": "Διαζύγια, επιμέλεια, διατροφές",
+      "url": "/family",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Μεταναστευτικό Δίκαιο",
+      "short_name": "Μεταναστευτικό",
+      "description": "Άδειες διαμονής, Golden Visa",
+      "url": "/immigration",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Επικοινωνία",
+      "short_name": "Επικοινωνία",
+      "description": "Επικοινωνήστε μαζί μας",
+      "url": "mailto:ilyushina.law@gmail.com",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ]
+} 

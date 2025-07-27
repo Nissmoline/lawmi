@@ -6,10 +6,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Production builds
-dist/
-dist-ssr/
-build/
+# Production builds - KEEP dist/ for Cloudflare deployment
+# dist/
+# dist-ssr/
+# build/
 
 # Environment variables
 .env
@@ -71,11 +71,10 @@ jspm_packages/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
-public
+# public - KEEP for Cloudflare deployment
 
 # Storybook build outputs
 .out
@@ -138,7 +137,7 @@ coverage/
 # Build artifacts
 *.tsbuildinfo
 
-# Optional: Uncomment if you want to ignore generated files
+# KEEP generated files for Cloudflare deployment
 # public/favicon-*.png
 # public/apple-touch-icon.png
 # public/android-chrome-*.png
@@ -146,3 +145,9 @@ coverage/
 # Security: Don't commit any sensitive configuration
 config/secrets.json
 config/private.json
+
+# Cloudflare specific - ensure these are NOT ignored
+# _headers
+# _redirects
+# _worker.js
+# wrangler.toml
