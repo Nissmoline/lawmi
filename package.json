@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:worker":"npm run build && wrangler pages dev dist",
-    "deploy:worker":"npm run build && wrangler deploy"
+    "deploy:worker":"npm run build && wrangler pages deploy dist --project-name=milawyer-react"
   },
   "dependencies": {
     "i18next": "^25.3.2",
