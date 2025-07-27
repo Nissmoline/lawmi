@@ -1,0 +1,629 @@
+/* CSS Variables */
+:root {
+  --primary-color: #0A2B4C;
+  --secondary-color: #CAB8A8;
+  --accent-color: #D4A373;
+  --light-bg: #FFFFFF;
+  --dark-text: #212529;
+  --light-text: #f8f9fa;
+  --neutral-gray: #718787;
+  --section-bg-light: #EFEFEF;
+  --footer-bg: #343a40;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f3f0e9;
+  padding-top: 80px; /* Account for fixed header */
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Full width sections */
+section {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Lists */
+ul, nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Touch-friendly improvements */
+button, 
+a, 
+input, 
+textarea, 
+select {
+  touch-action: manipulation;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Page Hero Styles */
+.page-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/main.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Process Grid Styles */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.process-step {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #2c3e50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.process-step h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.process-step p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Law Area Section Styles */
+.law-area-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.law-area-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.law-area-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.law-area-divider {
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+.law-area-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Civil Services Section Styles */
+.civil-services-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.services-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.services-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+/* Contact Section Styles */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+    font-size: 15px;
+  }
+  
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .page-hero p {
+    font-size: 1rem;
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+
+
+  /* Law Area Mobile Optimization */
+  .law-area-section {
+    padding: 2.5rem 0;
+  }
+
+  .law-area-container {
+    padding: 0 1rem;
+  }
+
+  .law-area-title {
+    font-size: 2rem;
+  }
+
+  .law-area-description {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 65px;
+    font-size: 14px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+
+
+  /* Law Area Small Mobile */
+  .law-area-section {
+    padding: 2rem 0;
+  }
+
+  .law-area-container {
+    padding: 0 0.8rem;
+  }
+
+  .law-area-title {
+    font-size: 1.8rem;
+  }
+
+  .law-area-description {
+    font-size: 0.95rem;
+    padding: 0 0.3rem;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding-top: 60px;
+  }
+  
+  #hero {
+    height: 100vh !important;
+    min-height: 400px;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .law-area-container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Terms and Privacy Pages Styles */
+.terms-section,
+.privacy-section {
+  padding: 4rem 0;
+  background-color: var(--light-bg);
+  min-height: calc(100vh - 160px);
+}
+
+.terms-container,
+.privacy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.terms-title,
+.privacy-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.terms-divider,
+.privacy-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+.terms-date,
+.privacy-date {
+  text-align: center;
+  color: var(--neutral-gray);
+  font-style: italic;
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+.terms-content,
+.privacy-content {
+  line-height: 1.8;
+  color: var(--dark-text);
+}
+
+.terms-content h2,
+.privacy-content h2 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin: 2.5rem 0 1rem 0;
+  font-weight: 600;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+}
+
+.terms-content h2:first-child,
+.privacy-content h2:first-child {
+  margin-top: 0;
+}
+
+.terms-content p,
+.privacy-content p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.terms-content ul,
+.privacy-content ul {
+  margin: 1rem 0 1.5rem 2rem;
+}
+
+.terms-content li,
+.privacy-content li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.terms-content strong,
+.privacy-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Mobile Responsive for Terms/Privacy */
+@media (max-width: 768px) {
+  .terms-section,
+  .privacy-section {
+    padding: 3rem 0;
+  }
+
+  .terms-container,
+  .privacy-container {
+    padding: 0 1.5rem;
+  }
+
+  .terms-title,
+  .privacy-title {
+    font-size: 2rem;
+  }
+
+  .terms-content h2,
+  .privacy-content h2 {
+    font-size: 1.2rem;
+    margin: 2rem 0 0.8rem 0;
+  }
+
+  .terms-content ul,
+  .privacy-content ul {
+    margin: 0.8rem 0 1.2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-section,
+  .privacy-section {
+    padding: 2rem 0;
+  }
+
+  .terms-container,
+  .privacy-container {
+    padding: 0 1rem;
+  }
+
+  .terms-title,
+  .privacy-title {
+    font-size: 1.8rem;
+  }
+
+  .terms-content h2,
+  .privacy-content h2 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.6rem 0;
+    padding-left: 0.8rem;
+  }
+
+  .terms-content p,
+  .privacy-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .terms-content ul,
+  .privacy-content ul {
+    margin: 0.6rem 0 1rem 1.2rem;
+  }
+
+  .terms-content li,
+  .privacy-content li {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Optimized Image Styles */
+img.loading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} 
