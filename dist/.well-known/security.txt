@@ -1,0 +1,5 @@
+Contact: mailto:ilyushina.law@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: el, en, ru
+Canonical: https://milawyer.gr/.well-known/security.txt
+Policy: https://milawyer.gr/security-policy 

@@ -1,0 +1,3 @@
+# Ads.txt file for milawyer.gr
+# This file helps prevent unauthorized inventory sales
+# No advertising partners currently 
