@@ -150,4 +150,4 @@ config/private.json
 # _headers
 # _redirects
 # _worker.js
-# wrangler.toml
+wrangler.toml

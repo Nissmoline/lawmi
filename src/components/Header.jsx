@@ -132,7 +132,7 @@ const Header = () => {
       <nav ref={menuRef}>
         <div className="logo">
           <button onClick={navigateToHome} className="logo-button">
-            <img src="/logo.svg" alt="Ilyushina Marina" />
+            <img src="logo.svg" alt="Ilyushina Marina" />
           </button>
         </div>
         <ul className={isMenuOpen ? 'active' : ''}>
