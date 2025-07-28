@@ -32,7 +32,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f3f0e9;
-  padding-top: 80px; /* Account for fixed header */
+  padding-top: 60px; /* Account for fixed header */
   width: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -355,7 +355,7 @@ select:focus {
 /* Responsive Typography */
 @media (max-width: 768px) {
   body {
-    padding-top: 70px;
+    padding-top: 20px;
     font-size: 15px;
   }
   
@@ -381,9 +381,7 @@ select:focus {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
-
-
+  
   /* Law Area Mobile Optimization */
   .law-area-section {
     padding: 2.5rem 0;
@@ -406,7 +404,7 @@ select:focus {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 65px;
+    padding-top: 45px;
     font-size: 14px;
   }
   

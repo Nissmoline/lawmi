@@ -151,3 +151,59 @@ config/private.json
 # _redirects
 # _worker.js
 wrangler.toml
+
+# SEO and Deployment - IMPORTANT: DO NOT IGNORE THESE FILES
+!public/sitemap.xml
+!public/robots.txt
+!public/favicon.ico
+!public/site.webmanifest
+!public/sw.js
+!public/CNAME
+!public/ads.txt
+!public/app-ads.txt
+!public/security-policy.html
+!public/.htaccess
+!public/logo.svg
+!public/srcfavicon.ico
+
+# Keep SEO documentation
+!SEO-OPTIMIZATION.md
+!DEPLOYMENT_GUIDE.md
+!CLOUDFLARE_DEPLOYMENT.md
+!GITHUB_UPLOAD.md
+!SECURITY.md
+
+# Keep Cloudflare configuration files
+!_headers
+!_redirects
+!wrangler.toml
+
+# Keep build output for deployment
+!dist/
+!dist-ssr/
+!build/
+
+# Keep public directory structure
+!public/
+!public/images/
+!public/.well-known/
+
+# Development files to ignore
+.wrangler/
+.cloudflare/
+.github/
+scripts/seo-checker.js
+test-seo.js
+*.test.js
+*.spec.js
+
+# Node modules and dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment and local files
+.env*
+!.env.example
+*.local

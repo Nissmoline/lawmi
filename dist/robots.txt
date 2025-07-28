@@ -22,6 +22,11 @@ Allow: /corporate
 Allow: /terms
 Allow: /privacy
 
+# Allow favicon and important assets
+Allow: /favicon.ico
+Allow: /images/faviconBlack.svg
+Allow: /site.webmanifest
+
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 

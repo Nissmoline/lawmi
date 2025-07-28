@@ -136,6 +136,9 @@ const SEOHead = ({
     // Update breadcrumb structured data
     updateBreadcrumbStructuredData(location.pathname);
 
+    // Add local business structured data for Greek SEO
+    addLocalBusinessStructuredData(location.pathname);
+
     // Scroll to top on route change
     window.scrollTo(0, 0);
 
@@ -212,6 +215,85 @@ const SEOHead = ({
     script.type = 'application/ld+json';
     script.setAttribute('data-seo-breadcrumb', 'true');
     script.textContent = JSON.stringify(breadcrumbData);
+    document.head.appendChild(script);
+  };
+
+  // Function to add local business structured data for Greek SEO
+  const addLocalBusinessStructuredData = (pathname) => {
+    const localBusinessData = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Marina Ilyushina Law Office",
+      "alternateName": "Μαρίνα Ιλιούσινα - Δικηγόρος",
+      "description": "Δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα. Εξειδικευμένες νομικές υπηρεσίες σε οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο και εταιρικό δίκαιο.",
+      "url": `https://milawyer.gr${pathname}`,
+      "logo": "https://milawyer.gr/favicon.ico",
+      "image": "https://milawyer.gr/images/Ilyushina.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Φυλής 153",
+        "addressLocality": "Αθήνα",
+        "postalCode": "112 51",
+        "addressCountry": "GR",
+        "addressRegion": "Αττική"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+30-698-336-3775",
+        "contactType": "customer service",
+        "availableLanguage": ["Greek", "Russian", "English"],
+        "areaServed": "GR",
+        "email": "ilyushina.law@gmail.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Greece"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9838,
+        "longitude": 23.7275
+      },
+      "sameAs": [
+        "https://www.facebook.com/aquamarinegr/",
+        "https://www.instagram.com/aquamarinegr/",
+        "https://t.me/aquamarineru"
+      ],
+      "foundingDate": "2020",
+      "numberOfEmployees": "1",
+      "priceRange": "€€",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "hasMap": "https://maps.google.com/?q=Φυλής+153,+Αθήνα+112+51"
+    };
+
+    // Add service-specific information based on pathname
+    if (pathname === '/family') {
+      localBusinessData.serviceType = ["Οικογενειακό Δίκαιο", "Διαζύγια", "Επιμέλεια", "Διατροφές", "Διαθήκες"];
+    } else if (pathname === '/immigration') {
+      localBusinessData.serviceType = ["Μεταναστευτικό Δίκαιο", "Άδειες Διαμονής", "Golden Visa", "Ιθαγένεια"];
+    } else if (pathname === '/criminal') {
+      localBusinessData.serviceType = ["Ποινικό Δίκαιο", "Ποινική Υπεράσπιση", "Πλημμελήματα", "Κακουργήματα"];
+    } else if (pathname === '/civil') {
+      localBusinessData.serviceType = ["Αστικό Δίκαιο", "Αποζημιώσεις", "Συμβόλαια", "Αδικοπραξίες"];
+    } else if (pathname === '/corporate') {
+      localBusinessData.serviceType = ["Εταιρικό Δίκαιο", "Εμπορικό Δίκαιο", "Εταιρική Δομή", "Εμπορικές Συμβάσεις"];
+    } else if (pathname === '/translations') {
+      localBusinessData.serviceType = ["Μεταφράσεις", "Επικυρώσεις", "Νομικές Μεταφράσεις"];
+    }
+
+    // Remove existing local business structured data
+    const existingLocalBusiness = document.querySelector('script[data-seo-local-business]');
+    if (existingLocalBusiness) {
+      existingLocalBusiness.remove();
+    }
+
+    // Add new local business structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-seo-local-business', 'true');
+    script.textContent = JSON.stringify(localBusinessData);
     document.head.appendChild(script);
   };
 
