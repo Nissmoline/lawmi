@@ -181,13 +181,19 @@ select:focus {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/main.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+}
+
+/* Fix for mobile devices - disable fixed attachment on mobile */
+@media (max-width: 768px) {
+  .page-hero {
+    background-attachment: scroll;
+  }
 }
 
 .page-hero h1 {
