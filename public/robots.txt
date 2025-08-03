@@ -11,7 +11,7 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
 
-# Allow important pages for Greek SEO
+# Allow important pages for all languages
 Allow: /
 Allow: /family
 Allow: /immigration
@@ -22,14 +22,16 @@ Allow: /corporate
 Allow: /terms
 Allow: /privacy
 
-# Allow Greek-specific URLs
-Allow: /dikigoros-athina
-Allow: /nomikes-ypiresies
-Allow: /metanaftiko-dikaio
-Allow: /oikogeneiako-dikaio
-Allow: /poiniko-dikaio
-Allow: /astiko-dikaio
-Allow: /etairiko-dikaio
+# Allow all main pages (same URLs for all languages)
+Allow: /
+Allow: /family
+Allow: /immigration
+Allow: /criminal
+Allow: /civil
+Allow: /translations
+Allow: /corporate
+Allow: /terms
+Allow: /privacy
 
 # Allow favicon and important assets
 Allow: /favicon.ico

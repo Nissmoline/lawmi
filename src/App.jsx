@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,6 +8,7 @@ import SEOHead from './components/SEOHead';
 import Breadcrumbs from './components/Breadcrumbs';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SecurityHeaders from './components/SecurityHeaders';
+
 import { initializeCookieSystem } from './utils/cookieUtils';
 import HomePage from './pages/HomePage';
 import FamilyLawPage from './pages/FamilyLawPage';
@@ -37,6 +38,12 @@ function App() {
           description={t('seo.home.description')}
           keywords={t('seo.home.keywords')}
           canonical="https://milawyer.gr/"
+          hreflang={{
+            "el": "https://milawyer.gr/",
+            "en": "https://milawyer.gr/",
+            "ru": "https://milawyer.gr/",
+            "x-default": "https://milawyer.gr/"
+          }}
         />
         <PerformanceOptimizer />
         <Header />
@@ -52,6 +59,14 @@ function App() {
             <Route path="/corporate" element={<CorporatePage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
+            
+            {/* Redirect old language URLs to default */}
+            <Route path="/de" element={<Navigate to="/" replace />} />
+            <Route path="/de/*" element={<Navigate to="/" replace />} />
+            <Route path="/en" element={<Navigate to="/" replace />} />
+            <Route path="/en/*" element={<Navigate to="/" replace />} />
+            <Route path="/ru" element={<Navigate to="/" replace />} />
+            <Route path="/ru/*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />

@@ -1,6 +1,16 @@
 # SPA routing - redirect all routes to index.html except for static assets
 /*    /index.html   200
 
+# Language redirects - redirect old language URLs to default
+/de    /    301
+/de/*    /    301
+/en    /    301
+/en/*    /    301
+/ru    /    301
+/ru/*    /    301
+/el    /    301
+/el/*    /    301
+
 # Redirect old URLs if needed
 # /old-page    /new-page    301
 
