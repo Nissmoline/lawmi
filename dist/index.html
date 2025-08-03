@@ -343,12 +343,39 @@
         cookie_flags: 'SameSite=None;Secure'
       });
     </script>
-    <script type="module" crossorigin src="/assets/index-CVz6o0Hw.js"></script>
+    <script type="module" crossorigin src="/assets/index-21NWNB_U.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-DholdlZV.js">
     <link rel="modulepreload" crossorigin href="/assets/router-CKa4ZxGq.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-RhAAfpq_.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BJdpcy9b.css">
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Force cache refresh -->
+    <script>
+      // Force cache refresh on page load
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+              // Force update
+              registration.update();
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+      
+      // Clear cache on page load
+      if ('caches' in window) {
+        caches.keys().then(function(names) {
+          for (let name of names) {
+            caches.delete(name);
+          }
+        });
+      }
+    </script>
   </body>
 </html>

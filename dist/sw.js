@@ -1,4 +1,4 @@
-const CACHE_NAME = 'milawyer-v1';
+const CACHE_NAME = 'milawyer-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -32,10 +32,21 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      }
-    )
+        // Always try network first, fallback to cache
+        return fetch(event.request)
+          .then(networkResponse => {
+            // Update cache with fresh response
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(event.request, responseClone);
+            });
+            return networkResponse;
+          })
+          .catch(() => {
+            // Fallback to cached version if network fails
+            return response;
+          });
+      })
   );
 });
 
