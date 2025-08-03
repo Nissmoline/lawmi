@@ -411,7 +411,7 @@ export default function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>{t('footer.copyright')}</p>
+        <p>© {new Date().getFullYear()} Marina Ilyushina Law Office. All rights reserved.</p>
       </div>
     </footer>
   );
