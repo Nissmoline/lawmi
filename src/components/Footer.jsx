@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import CookieSettings from "./CookieSettings";
 import "./Footer.css";
 
@@ -316,6 +317,8 @@ function SocialIcon({ href, label, children }) {
 }
 
 export default function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <footer id="contact" className="footer">
       <div className="footer-main">
@@ -325,7 +328,7 @@ export default function Footer() {
         
         <div className="footer-content">
           <div className="footer-title">
-            <p>Έχετε νομικά ζητήματα;<br /> Πείτε μας για αυτά!</p>
+            <p>{t('footer.contact')}<br /> {t('footer.services')}</p>
           </div>
           
           <div className="footer-blocks">
@@ -368,7 +371,7 @@ export default function Footer() {
                     <path d="M12 6v6l4 2" />
                   </svg>
                 </span>
-                <span>Δευτ.&nbsp;-&nbsp;Παρ.&nbsp;09:00&nbsp;-&nbsp;17:00</span>
+                <span>{t('footer.workingHours')}</span>
               </div>
             </div>
             
@@ -397,9 +400,9 @@ export default function Footer() {
               </div>
               
               <div className="footer-links-list">
-                <p>Πληροφορίες</p>
-                <a href="/terms">Όροι Χρήσης</a>
-                <a href="/privacy">Πολιτική απορρήτου</a>
+                <p>{t('footer.legal')}</p>
+                <a href="/terms">{t('footer.terms')}</a>
+                <a href="/privacy">{t('footer.privacy')}</a>
                 <CookieSettings />
               </div>
             </div>
@@ -408,7 +411,7 @@ export default function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Marina Ilyushina Law Office. All Rights Reserved</p>
+        <p>{t('footer.copyright')}</p>
       </div>
     </footer>
   );

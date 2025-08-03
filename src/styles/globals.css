@@ -300,7 +300,7 @@ select:focus {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: var(--primary-color);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   position: relative;
 }
 
@@ -406,6 +406,25 @@ select:focus {
     text-align: left;
     padding: 0 0.5rem;
   }
+  
+  /* Ensure services title underline is visible on mobile */
+  .services-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    border-radius: 2px;
+    display: block;
+  }
+  
+  /* Add more space for cards on mobile */
+  .services-title {
+    margin-bottom: 5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -437,6 +456,25 @@ select:focus {
   .law-area-description {
     font-size: 0.95rem;
     padding: 0 0.3rem;
+  }
+  
+  /* Ensure services title underline is visible on small mobile */
+  .services-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    border-radius: 2px;
+    display: block;
+  }
+  
+  /* Add more space for cards on small mobile */
+  .services-title {
+    margin-bottom: 4.5rem;
   }
 }
 

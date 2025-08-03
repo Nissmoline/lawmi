@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   shouldShowCookieBanner, 
   handleCookieConsent, 
@@ -9,6 +10,7 @@ import {
 import './CookieBanner.css';
 
 const CookieBanner = () => {
+  const { t } = useTranslation();
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
@@ -66,10 +68,9 @@ const CookieBanner = () => {
         <div className="cookie-banner">
           <div className="cookie-banner-content">
             <div className="cookie-banner-text">
-              <h3>Χρήση Cookies</h3>
+              <h3>{t('cookies.banner.title')}</h3>
               <p>
-                Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στον ιστότοπο μας. 
-                Τα cookies μας βοηθούν να κατανοήσουμε πώς χρησιμοποιείτε τον ιστότοπο και να τον κάνουμε καλύτερο.
+                {t('cookies.banner.description')}
               </p>
             </div>
             <div className="cookie-banner-buttons">
@@ -77,19 +78,19 @@ const CookieBanner = () => {
                 className="cookie-btn cookie-btn-secondary" 
                 onClick={openSettings}
               >
-                Ρυθμίσεις
+                {t('cookies.banner.settings')}
               </button>
               <button 
                 className="cookie-btn cookie-btn-secondary" 
                 onClick={declineAll}
               >
-                Απόρριψη Όλων
+                {t('cookies.banner.reject')}
               </button>
               <button 
                 className="cookie-btn cookie-btn-primary" 
                 onClick={acceptAll}
               >
-                Αποδοχή Όλων
+                {t('cookies.banner.accept')}
               </button>
             </div>
           </div>

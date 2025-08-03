@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
@@ -21,6 +22,8 @@ import './styles/globals.css';
 import './App.css';
 
 function App() {
+  const { t } = useTranslation();
+  
   useEffect(() => {
     initializeCookieSystem();
   }, []);
@@ -30,9 +33,9 @@ function App() {
       <div id="root">
         <SecurityHeaders />
         <SEOHead 
-          title="Μαρίνα Ιλιούσινα - Δικηγόρος στην Αθήνα | Νομικές Υπηρεσίες"
-          description="Δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα. Εξειδικευμένες νομικές υπηρεσίες σε οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο και εταιρικό δίκαιο. Επικοινωνήστε μαζί μας για δωρεάν πρώτη συμβουλή."
-          keywords="δικηγόρος αθήνα, νομικές υπηρεσίες, οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο, εταιρικό δίκαιο, μαρίνα ιλιούσινα"
+          title={t('seo.home.title')}
+          description={t('seo.home.description')}
+          keywords={t('seo.home.keywords')}
           canonical="https://milawyer.gr/"
         />
         <PerformanceOptimizer />

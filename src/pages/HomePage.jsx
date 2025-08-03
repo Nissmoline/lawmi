@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEOHead from '../components/SEOHead';
 
 function HomePage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <SEOHead 
-        title="Δικηγόρος Αθήνα | Μαρίνα Ιλιούσινα - Νομικές Υπηρεσίες | Οικογενειακό, Μεταναστευτικό, Ποινικό Δίκαιο"
-        description="Δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα. Εξειδικευμένες νομικές υπηρεσίες σε οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο και εταιρικό δίκαιο. Δωρεάν πρώτη συμβουλή. Επικοινωνήστε τώρα: +30-698-336-3775"
-        keywords="δικηγόρος αθήνα, δικηγόρος, νομικές υπηρεσίες αθήνα, οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο, εταιρικό δίκαιο, μαρίνα ιλιούσινα, δικηγόρος αθήνα, νομικές συμβουλές, golden visa, διαζύγια, μεταφράσεις, δικηγόρος ελλάδα, νομική βοήθεια, δικηγόρος αθήνα τιμές, δικηγόρος αθήνα επικοινωνία, δικηγόρος αθήνα τηλέφωνο, δικηγόρος αθήνα διεύθυνση, νομικό γραφείο αθήνα, δικηγόρος μεταναστών αθήνα, δικηγόρος οικογενειακού δικαίου αθήνα, δικηγόρος ποινικού δικαίου αθήνα"
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        keywords={t('seo.home.keywords')}
         canonical="https://milawyer.gr/"
         hreflang={{
           "el": "https://milawyer.gr/",
@@ -21,37 +24,37 @@ function HomePage() {
       {/* Hero Section */}
       <section id="hero">
         <div className="parallax-content">
-          <h1>Προστασία των νομικών συμφερόντων σας <br /> στην Ελλάδα</h1>
-          <p>Εξειδικευμένες νομικές συμβουλές</p>
-          <a href="tel:+306983363775" className="cta-button">Επικοινωνήστε μαζί μας</a>
+          <h1>{t('homepage.hero.title')}</h1>
+          <p>{t('homepage.hero.subtitle')}</p>
+          <a href="tel:+306983363775" className="cta-button">{t('homepage.hero.cta')}</a>
         </div>
       </section>
 
       {/* Services/Values Section */}
       <section id="services">
         <div className="container">
-          <h2 className="visually-hidden">Βασικές Αξίες</h2>
+          <h2 className="visually-hidden">{t('homepage.services.title')}</h2>
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/Clip path group.png" alt="Ακεραιότητα και Ηθική" />
+                <img src="/images/Clip path group.png" alt={t('homepage.services.integrity.title')} />
               </div>
-              <h3>Ακεραιότητα και Ηθική</h3>
-              <p>Δέσμευση σε υψηλά πρότυπα, ειλικρίνεια και διαφάνεια σε κάθε υπόθεση</p>
+              <h3>{t('homepage.services.integrity.title')}</h3>
+              <p>{t('homepage.services.integrity.description')}</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/Group.png" alt="Νομική Εξιδίκευση" />
+                <img src="/images/Group.png" alt={t('homepage.services.expertise.title')} />
               </div>
-              <h3>Νομική Εξιδίκευση</h3>
-              <p>Στοχευμένη γνώση και αποτελεσματική διαχείριση νομικών ζητημάτων</p>
+              <h3>{t('homepage.services.expertise.title')}</h3>
+              <p>{t('homepage.services.expertise.description')}</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/Group1.png" alt="Προσωπική Δέσμευση" />
+                <img src="/images/Group1.png" alt={t('homepage.services.commitment.title')} />
               </div>
-              <h3>Προσωπική Δέσμευση</h3>
-              <p>Προτεραιότητα στις ανάγκες σας και δυναμική υπεράσπιση των συμφερόντων σας</p>
+              <h3>{t('homepage.services.commitment.title')}</h3>
+              <p>{t('homepage.services.commitment.description')}</p>
             </div>
           </div>
         </div>
@@ -62,23 +65,13 @@ function HomePage() {
         <div className="container">
           <div className="about-content">
             <div className="about-text">
-              <h2>Σχετικά με εμένα</h2>
-              <p>Είμαι η <strong>Μαρίνα Ιλιούσινα, δικηγόρος στην Αθήνα</strong>, και παρέχω ολοκληρωμένες νομικές υπηρεσίες σε ιδιώτες και επιχειρήσεις <strong>σε όλη την Ελλάδα καθώς και σε πελάτες του εξωτερικού</strong>. Διαχειρίζομαι μεθοδικά κάθε υπόθεση, από την αρχική αξιολόγηση έως την τελική έκβαση, με στόχο την άμεση και δίκαιη επίλυση, σε πλήρη συμμόρφωση με το ελληνικό δίκαιο.</p>
+              <h2>{t('homepage.about.title')}</h2>
+              <p dangerouslySetInnerHTML={{ __html: t('homepage.about.description') }}></p>
               
-            {/*   <h3>Εξειδίκευση</h3>
-              <p>Διαθέτω πολυετή εμπειρία και εστιάζω στους εξής κλάδους δικαίου:</p>
-              <ul>
-                <li><strong>Οικογενειακό & Κληρονομικό Δίκαιο</strong> (διαζύγια, επιμέλεια/διατροφή, ρυθμίσεις επικοινωνίας, αποδοχή/αποποίηση κληρονομιάς, διαθήκες, κληρονομικές διαφορές).</li>
-                <li><strong>Μεταναστευτικό Δίκαιο</strong> – <strong>άδειες διαμονής</strong>, <strong>ιθαγένεια/πολιτογράφηση</strong>, ανανεώσεις, αντιρρήσεις, προσφυγές, καθώς και υποθέσεις επενδυτών.</li>
-                <li><strong>Ποινικό Δίκαιο</strong> – υπεράσπιση και υποστήριξη πολιτικής αγωγής σε όλα τα στάδια (προανάκριση, ανάκριση, ακροατήριο, ένδικα μέσα).</li>
-                <li><strong>Αστικό Δίκαιο</strong> – συμβάσεις, αποζημιώσεις, μισθώσεις, αδικοπραξίες, εμπράγματες και καταναλωτικές διαφορές.</li>
-                <li><strong>Εταιρικό & Εμπορικό Δίκαιο</strong> – σύσταση και υποστήριξη εταιρειών, εμπορικές συμβάσεις, εταιρικές μεταβολές και συμμόρφωση.</li>
-              </ul> */}
+              <h3>{t('homepage.about.workMethod.title')}</h3>
+              <p dangerouslySetInnerHTML={{ __html: t('homepage.about.workMethod.description') }}></p>
               
-              <h3>Ο τρόπος που εργάζομαι</h3>
-              <p>Συνδυάζω <strong>στρατηγική καθοδήγηση</strong>, διαφάνεια κόστους και <strong>δυναμική εκπροσώπηση</strong> σε κάθε στάδιο. <strong>Συνεργάζομαι με οργανωμένη ομάδα άνω των 10 έμπειρων δικηγόρων</strong>, ώστε να προσφέρουμε ολοκληρωμένες, εξειδικευμένες λύσεις ακόμη και σε σύνθετες υποθέσεις.</p>
-              
-              <p><strong>Χρειάζεστε αξιόπιστη νομική υποστήριξη;</strong> Επικοινωνήστε για αρχική αξιολόγηση και στοχευμένη πρόταση ενεργειών.</p>
+              <p dangerouslySetInnerHTML={{ __html: t('homepage.about.workMethod.cta') }}></p>
             </div>
             <div className="about-image">
               <img src="/images/Ilyushina.jpg" alt="Marina Ilyushina - Δικηγόρος" />
@@ -90,77 +83,111 @@ function HomePage() {
       {/* Areas of Expertise Section */}
       <section id="areas">
         <div className="container">
-          <h2>Τομείς Εξειδίκευσης</h2>
+          <h2>{t('homepage.areas.title')}</h2>
           <div className="areas-grid">
             <Link to="/family">
               <div className="area-card">
                 <div className="area-card-top">
-                  <h3>Οικογενειακό & Κληρονομικό Δίκαιο</h3>
+                  <h3>{t('homepage.areas.family.title')}</h3>
                   <div className="area-icon">
-                    <img src="/images/famaly.png" alt="Οικογενειακό Δίκαιο" />
+                    <img src="/images/famaly.png" alt={t('homepage.areas.family.title')} />
                   </div>
                 </div>
-                <p>Στοχευμένη νομική καθοδήγηση σε διαζύγια, επιμέλεια, διατροφές και διαθήκες, με σεβασμό, ταχύτητα και πλήρη προστασία περιουσιακών δικαιωμάτων, εξασφαλίζοντας αξιόπιστη επίλυση κάθε οικογενειακής διαφοράς.</p>
+                <div className="area-card-bottom">
+                  <p>{t('homepage.areas.family.description')}</p>
+                </div>
               </div>
             </Link>
             <Link to="/immigration">
               <div className="area-card">
                 <div className="area-card-top">
-                  <h3>Μεταναστευτικό Δίκαιο</h3>
+                  <h3>{t('homepage.areas.immigration.title')}</h3>
                   <div className="area-icon">
-                    <img src="/images/immigration.png" alt="Μεταναστευτικό Δίκαιο" />
+                    <img src="/images/immigration.png" alt={t('homepage.areas.immigration.title')} />
                   </div>
                 </div>
-                <p>Πλήρης υποστήριξη σε άδειες διαμονής, Golden Visa, ιθαγένεια και οικογενειακή επανένωση, με σαφή καθοδήγηση, γρήγορες διαδικασίες και υψηλά ποσοστά επιτυχίας για μετανάστες στην Ελλάδα.</p>
-                              </div>
+                <div className="area-card-bottom">
+                  <p>{t('homepage.areas.immigration.description')}</p>
+                </div>
+              </div>
             </Link>
             <Link to="/criminal">
               <div className="area-card">
                 <div className="area-card-top">
-                  <h3>Ποινικό Δίκαιο</h3>
+                  <h3>{t('homepage.areas.criminal.title')}</h3>
                   <div className="area-icon">
-                    <img src="/images/criminal.png" alt="Ποινικό Δίκαιο" />
+                    <img src="/images/criminal.png" alt={t('homepage.areas.criminal.title')} />
                   </div>
                 </div>
-                <p>Δυναμική ποινική υπεράσπιση σε πλημμελήματα και κακουργήματα, από έρευνα έως δίκη, διασφαλίζοντας τα δικαιώματά σας με στρατηγική, εμπειρία και πλήρη διαφάνεια σε κάθε στάδιο.</p>
-                              </div>
+                <div className="area-card-bottom">
+                  <p>{t('homepage.areas.criminal.description')}</p>
+                </div>
+              </div>
             </Link>
             <Link to="/civil">
               <div className="area-card">
                 <div className="area-card-top">
-                  <h3>Αστικό Δίκαιο</h3>
+                  <h3>{t('homepage.areas.civil.title')}</h3>
                   <div className="area-icon">
-                    <img src="/images/realestate.png" alt="Αστικό Δίκαιο" />
+                    <img src="/images/realestate.png" alt={t('homepage.areas.civil.title')} />
                   </div>
                 </div>
-                <p>Ολιστική νομική κάλυψη σε αποζημιώσεις, συμβατικές διαφορές, αδικοπραξίες και προστασία προσωπικών δικαιωμάτων, με άμεση, δίκαιη και αποτελεσματική επίλυση κάθε αστικής διαφοράς.</p>
-                              </div>
-            </Link>
-            <Link to="/translations">
-              <div className="area-card">
-                <div className="area-card-top">
-                  <h3>Μεταφράσεις & Επικυρώσεις</h3>
-                  <div className="area-icon">
-                    <img src="/images/translate.png" alt="Μεταφράσεις & Επικυρώσεις" />
-                  </div>
+                <div className="area-card-bottom">
+                  <p>{t('homepage.areas.civil.description')}</p>
                 </div>
-                <p>Επίσημες μεταφράσεις και επικυρώσεις νομικών εγγράφων, άμεσα αποδεκτές σε ελληνικές και διεθνείς αρχές, εξασφαλίζοντας ακρίβεια, εμπιστευτικότητα και πλήρη νομική ισχύ για κάθε χρήση.</p>
-                              </div>
+              </div>
             </Link>
             <Link to="/corporate">
               <div className="area-card">
                 <div className="area-card-top">
-                  <h3>Εταιρικό & Εμπορικό Δίκαιο</h3>
+                  <h3>{t('homepage.areas.corporate.title')}</h3>
                   <div className="area-icon">
-                    <img src="/images/corporate.png" alt="Εταιρικό & Εμπορικό Δίκαιο" />
+                    <img src="/images/corporate.png" alt={t('homepage.areas.corporate.title')} />
                   </div>
                 </div>
-                <p>Εξειδικευμένη νομική υποστήριξη σε ίδρυση εταιρειών, εμπορικές συμβάσεις, φορολογικό σχεδιασμό και εταιρικές διαφορές, με πρακτικές λύσεις που ενισχύουν την επιχειρηματική ανάπτυξη και προστατεύουν τα συμφέροντά σας.</p>
-                              </div>
+                <div className="area-card-bottom">
+                  <p>{t('homepage.areas.corporate.description')}</p>
+                </div>
+              </div>
+            </Link>
+            <Link to="/translations">
+              <div className="area-card">
+                <div className="area-card-top">
+                  <h3>{t('homepage.areas.translations.title')}</h3>
+                  <div className="area-icon">
+                    <img src="/images/translate.png" alt={t('homepage.areas.translations.title')} />
+                  </div>
+                </div>
+                <div className="area-card-bottom">
+                  <p>{t('homepage.areas.translations.description')}</p>
+                </div>
+              </div>
             </Link>
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      {/* <section id="contact">
+        <div className="container">
+          <h2>{t('homepage.contact.title')}</h2>
+          <p>{t('homepage.contact.description')}</p>
+          <div className="contact-info">
+            <div className="contact-item">
+              <strong>{t('homepage.contact.phone')}:</strong>
+              <a href="tel:+306983363775">+30 698 336 3775</a>
+            </div>
+            <div className="contact-item">
+              <strong>{t('homepage.contact.email')}:</strong>
+              <a href="mailto:info@milawyer.gr">info@milawyer.gr</a>
+            </div>
+            <div className="contact-item">
+              <strong>{t('homepage.contact.address')}:</strong>
+              <span>{t('homepage.contact.addressValue')}</span>
+            </div>
+          </div>
+        </div>
+      </section> */}
     </>
   );
 }

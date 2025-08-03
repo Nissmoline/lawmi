@@ -1,15 +1,32 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEOHead from '../components/SEOHead';
 
 function CivilPage() {
+  const { t } = useTranslation();
+
   return (
     <>
+      <SEOHead 
+        title={t('seo.civil.title')}
+        description={t('seo.civil.description')}
+        keywords={t('seo.civil.keywords')}
+        canonical="https://milawyer.gr/civil"
+        hreflang={{
+          "el": "https://milawyer.gr/civil",
+          "en": "https://milawyer.gr/en/civil",
+          "ru": "https://milawyer.gr/ru/civil",
+          "x-default": "https://milawyer.gr/civil"
+        }}
+      />
+
       {/* Law Area Section */}
       <section className="law-area-section">
         <div className="law-area-container">
-          <h1 className="law-area-title">Αστικό Δίκαιο</h1>
+          <h1 className="law-area-title">{t('pages.civil.title')}</h1>
           <div className="law-area-divider"></div>
           <p className="law-area-description">
-            Διαθέτω πολυετή εμπειρία σε αστικές υποθέσεις και παρέχω ολοκληρωμένες νομικές υπηρεσίες για την επίλυση αστικών διαφορών. Ασχολούμαι με όλες τις πτυχές του αστικού δικαίου – από αποζημιώσεις και συμβατικές διαφορές μέχρι αδικοπραξίες και προστασία προσωπικών δικαιωμάτων. Με γνώση των αστικών διαδικασιών και των δικαιωμάτων των πολιτών, παρέχω στρατηγική καθοδήγηση και αποτελεσματική εκπροσώπηση για την προστασία των συμφερόντων σας. Η προσέγγισή μου συνδυάζει νομική εμπειρογνωμοσύνη με πρακτικές λύσεις, εξασφαλίζοντας ότι τα δικαιώματά σας προστατεύονται και ότι λαμβάνετε δίκαιη μεταχείριση σύμφωνα με το ελληνικό αστικό δίκαιο.
+            {t('pages.civil.content.description')}
           </p>
         </div>
       </section>
@@ -17,32 +34,14 @@ function CivilPage() {
       {/* Services Section */}
       <section id="services" className="civil-services-section">
         <div className="container">
-          <h2 className="services-title">Υπηρεσίες Αστικού Δικαίου</h2>
+          <h2 className="services-title">{t('pages.civil.content.servicesTitle')}</h2>
           <div className="services-grid">
-            <div className="service-card">
-              <h3>Αποζημιώσεις</h3>
-              <p>Εξειδικευμένη υποστήριξη σε αξιώσεις αποζημίωσης για ζημιές, αδικοπραξίες και παραβιάσεις δικαιωμάτων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Συμβατικές Διαφορές</h3>
-              <p>Στρατηγική καθοδήγηση σε διαφορές συμβάσεων, παραβιάσεις όρων και αξιώσεις εκπλήρωσης συμβατικών υποχρεώσεων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Αδικοπραξίες</h3>
-              <p>Δυναμική εκπροσώπηση σε περιπτώσεις αδικοπραξιών και παραβιάσεων δικαιωμάτων με αποτελεσματική υπεράσπιση.</p>
-            </div>
-            <div className="service-card">
-              <h3>Προσωπικά Δικαιώματα</h3>
-              <p>Προστασία προσωπικών δικαιωμάτων, προστασία προσωπικότητας και αντιμετώπιση παραβιάσεων προσωπικής ζωής.</p>
-            </div>
-            <div className="service-card">
-              <h3>Ακίνητα & Εξοικείωση</h3>
-              <p>Νομική υποστήριξη σε θέματα ακινήτων, εξοικείωσης και διαφορών ιδιοκτησίας με πλήρη προστασία συμφερόντων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Εργατικό Δίκαιο</h3>
-              <p>Εξειδικευμένη υποστήριξη σε εργατικές διαφορές, απολύσεις και παραβιάσεις εργατικών δικαιωμάτων.</p>
-            </div>
+            {t('pages.civil.content.services', { returnObjects: true }).map((service, index) => (
+              <div key={index} className="service-card">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

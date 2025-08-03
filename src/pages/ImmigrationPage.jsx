@@ -1,15 +1,32 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEOHead from '../components/SEOHead';
 
 function ImmigrationPage() {
+  const { t } = useTranslation();
+
   return (
     <>
+      <SEOHead 
+        title={t('seo.immigration.title')}
+        description={t('seo.immigration.description')}
+        keywords={t('seo.immigration.keywords')}
+        canonical="https://milawyer.gr/immigration"
+        hreflang={{
+          "el": "https://milawyer.gr/immigration",
+          "en": "https://milawyer.gr/en/immigration",
+          "ru": "https://milawyer.gr/ru/immigration",
+          "x-default": "https://milawyer.gr/immigration"
+        }}
+      />
+
       {/* Law Area Section */}
       <section className="law-area-section">
         <div className="law-area-container">
-          <h1 className="law-area-title">Μεταναστευτικό Δίκαιο</h1>
+          <h1 className="law-area-title">{t('pages.immigration.title')}</h1>
           <div className="law-area-divider"></div>
           <p className="law-area-description">
-            Διαθέτω πολυετή εμπειρία σε μεταναστευτικά ζητήματα και παρέχω ολοκληρωμένες νομικές υπηρεσίες για μετανάστες στην Ελλάδα. Ασχολούμαι με όλες τις πτυχές του μεταναστευτικού δικαίου – από την αίτηση άδειας διαμονής και Golden Visa μέχρι την αίτηση ιθαγένειας και την οικογενειακή επανένωση. Με γνώση των νεότερων νομοθετικών αλλαγών και των διαδικασιών των ελληνικών αρχών, παρέχω αξιόπιστη καθοδήγηση και εκπροσώπηση για την επιτυχή επίλυση μεταναστευτικών ζητημάτων. Η προσέγγισή μου συνδυάζει νομική εμπειρογνωμοσύνη με κατανόηση των προκλήσεων που αντιμετωπίζουν οι μετανάστες, εξασφαλίζοντας την προστασία των δικαιωμάτων σας και την επιτυχή ολοκλήρωση των διαδικασιών σας.
+            {t('pages.immigration.content.description')}
           </p>
         </div>
       </section>
@@ -17,32 +34,14 @@ function ImmigrationPage() {
       {/* Services Section */}
       <section id="services" className="civil-services-section">
         <div className="container">
-          <h2 className="services-title">Υπηρεσίες Μεταναστευτικού Δικαίου</h2>
+          <h2 className="services-title">{t('pages.immigration.content.servicesTitle')}</h2>
           <div className="services-grid">
-            <div className="service-card">
-              <h3>Άδειες Διαμονής</h3>
-              <p>Πλήρης υποστήριξη σε αίτηση και ανανέωση άδειας διαμονής για όλους τους τύπους διαμονής στην Ελλάδα.</p>
-            </div>
-            <div className="service-card">
-              <h3>Golden Visa</h3>
-              <p>Εξειδικευμένη καθοδήγηση για την αγορά ακινήτου και την απόκτηση άδειας διαμονής μέσω επένδυσης.</p>
-            </div>
-            <div className="service-card">
-              <h3>Ιθαγένεια</h3>
-              <p>Στρατηγική καθοδήγηση για την αίτηση ελληνικής ιθαγένειας και την προετοιμασία των απαραίτητων εγγράφων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Οικογενειακή Επανένωση</h3>
-              <p>Νομική υποστήριξη για την επανένωση οικογένειας και την απόκτηση άδειας διαμονής για μέλη οικογένειας.</p>
-            </div>
-            <div className="service-card">
-              <h3>Ασύλου & Προστασίας</h3>
-              <p>Εξειδικευμένη υποστήριξη σε διαδικασίες ασύλου και διεθνούς προστασίας στην Ελλάδα.</p>
-            </div>
-            <div className="service-card">
-              <h3>Αντιρρήσεις & Εφέσεις</h3>
-              <p>Δυναμική εκπροσώπηση σε περιπτώσεις άρνησης και υποβολή αντιρρήσεων και εφέσεων.</p>
-            </div>
+            {t('pages.immigration.content.services', { returnObjects: true }).map((service, index) => (
+              <div key={index} className="service-card">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

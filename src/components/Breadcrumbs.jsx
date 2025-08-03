@@ -1,30 +1,32 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Breadcrumbs.css';
 
 const Breadcrumbs = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   
   const getBreadcrumbs = () => {
     const pathnames = location.pathname.split('/').filter(x => x);
     const breadcrumbs = [
-      { name: 'Αρχική', path: '/', current: pathnames.length === 0 }
+      { name: t('breadcrumbs.home'), path: '/', current: pathnames.length === 0 }
     ];
 
     pathnames.forEach((name, index) => {
       const path = `/${pathnames.slice(0, index + 1).join('/')}`;
       const isLast = index === pathnames.length - 1;
       
-      // Map route names to Greek titles
+      // Map route names to translated titles
       const routeNames = {
-        'family': 'Οικογενειακό Δίκαιο',
-        'immigration': 'Μεταναστευτικό Δίκαιο',
-        'criminal': 'Ποινικό Δίκαιο',
-        'civil': 'Αστικό Δίκαιο',
-        'translations': 'Μεταφράσεις & Επικυρώσεις',
-        'corporate': 'Εταιρικό Δίκαιο',
-        'terms': 'Όροι Χρήσης',
-        'privacy': 'Πολιτική Απορρήτου'
+        'family': t('breadcrumbs.family'),
+        'immigration': t('breadcrumbs.immigration'),
+        'criminal': t('breadcrumbs.criminal'),
+        'civil': t('breadcrumbs.civil'),
+        'translations': t('breadcrumbs.translations'),
+        'corporate': t('breadcrumbs.corporate'),
+        'terms': t('breadcrumbs.terms'),
+        'privacy': t('breadcrumbs.privacy')
       };
 
       breadcrumbs.push({

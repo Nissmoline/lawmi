@@ -1,0 +1,596 @@
+{
+  "navigation": {
+    "home": "Home",
+    "profile": "Profile",
+    "areas": "Areas",
+    "contact": "Contact",
+    "family": "Family & Inheritance Law",
+    "immigration": "Immigration Law",
+    "criminal": "Criminal Law",
+    "civil": "Civil Law",
+    "translations": "Translations & Certifications",
+    "corporate": "Corporate & Commercial Law"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "family": "Family Law",
+    "immigration": "Immigration Law",
+    "criminal": "Criminal Law",
+    "civil": "Civil Law",
+    "translations": "Translations & Certifications",
+    "corporate": "Corporate Law",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Protecting your legal interests in Greece",
+      "subtitle": "Specialized legal consultations",
+      "cta": "Contact us"
+    },
+    "services": {
+      "title": "Core Values",
+      "integrity": {
+        "title": "Integrity and Ethics",
+        "description": "Commitment to high standards, honesty and transparency in every case"
+      },
+      "expertise": {
+        "title": "Legal Expertise",
+        "description": "Targeted knowledge and effective management of legal issues"
+      },
+      "commitment": {
+        "title": "Personal Commitment",
+        "description": "Priority to your needs and dynamic defense of your interests"
+      }
+    },
+    "about": {
+      "title": "About me",
+      "description": "I am <strong>Marina Ilyushina, a lawyer in Athens</strong>, and I provide comprehensive legal services to individuals and businesses <strong>throughout Greece as well as to foreign clients</strong>. I methodically manage each case, from initial assessment to final outcome, with the goal of prompt and fair resolution, in full compliance with Greek law.",
+      "workMethod": {
+        "title": "How I work",
+        "description": "I combine <strong>strategic guidance</strong>, cost transparency and <strong>dynamic representation</strong> at every stage. <strong>I collaborate with an organized team of more than 10 experienced lawyers</strong>, to provide comprehensive, specialized solutions even in complex cases.",
+        "cta": "<strong>Need reliable legal support?</strong> Contact for initial assessment and targeted action proposal."
+      }
+    },
+    "areas": {
+      "title": "Areas of Expertise",
+      "family": {
+        "title": "Family & Inheritance Law",
+        "description": "Divorces, custody, alimony, wills"
+      },
+      "immigration": {
+        "title": "Immigration Law",
+        "description": "Residence permits, Golden Visa, citizenship"
+      },
+      "criminal": {
+        "title": "Criminal Law",
+        "description": "Criminal defense, misdemeanors and felonies"
+      },
+      "civil": {
+        "title": "Civil Law",
+        "description": "Compensation, contracts, torts"
+      },
+      "corporate": {
+        "title": "Corporate & Commercial Law",
+        "description": "Company formation, commercial contracts"
+      },
+      "translations": {
+        "title": "Translations & Certifications",
+        "description": "Official translations of legal documents"
+      }
+    },
+    "contact": {
+      "title": "Contact us",
+      "description": "Ready to discuss your case? Contact for free first consultation.",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "Filis 153, Athens, Greece"
+    }
+  },
+  "pages": {
+    "family": {
+      "title": "Family & Inheritance Law",
+      "description": "Specialized services in family law in Athens",
+      "services": [
+        "Divorces and property division",
+        "Custody and alimony",
+        "Wills and inheritance",
+        "Adoption"
+      ],
+      "content": {
+        "description": "I have years of experience in family law cases and inheritance disputes. I handle family matters such as divorces, child custody regulation and alimony, with priority to protecting your family's interests. In parallel, I deal with inheritance matters – from drafting and checking wills to managing inheritance and transferring property. With sensitivity and human-centered approach, I provide reliable advice and representation to protect your rights in family and inheritance disputes.",
+        "servicesTitle": "Family Law Services",
+        "services": [
+          {
+            "title": "Divorces",
+            "description": "Complete legal support in consensual and non-consensual divorces, ensuring your rights and those of your children."
+          },
+          {
+            "title": "Child custody",
+            "description": "Strategic guidance in custody, visitation and alimony matters for children, with priority to child welfare."
+          },
+          {
+            "title": "Alimony",
+            "description": "Specialized support in calculating and negotiating alimony for spouse and children, ensuring fair solutions."
+          },
+          {
+            "title": "Wills and inheritance",
+            "description": "Drafting and checking wills, managing inheritance matters and protecting property rights."
+          },
+          {
+            "title": "Family guardianship",
+            "description": "Legal support in family guardianship matters, protecting persons with special needs and elderly."
+          },
+          {
+            "title": "Adoption",
+            "description": "Complete legal accompaniment in adoption procedures, domestic and international, with experience and sensitivity."
+          }
+        ]
+      }
+    },
+    "immigration": {
+      "title": "Immigration Law",
+      "description": "Specialized services in immigration law in Athens",
+      "services": [
+        "Residence permits",
+        "Golden Visa",
+        "Citizenship",
+        "Visas and permits"
+      ],
+      "content": {
+        "description": "I specialize in immigration law and provide comprehensive legal services for foreign citizens who wish to live, work or invest in Greece. My experience covers all aspects of the immigration process – from obtaining residence permits and Golden Visa to acquiring Greek citizenship. I understand the complexities of immigration procedures and provide personalized solutions, adapted to the individual needs of each client.",
+        "servicesTitle": "Immigration Services",
+        "services": [
+          {
+            "title": "Residence permits",
+            "description": "Complete accompaniment in obtaining various types of residence permits in Greece for work, study or family reunification."
+          },
+          {
+            "title": "Golden Visa",
+            "description": "Specialized support in the Golden Visa program through real estate investments or other permitted investments."
+          },
+          {
+            "title": "Citizenship",
+            "description": "Expert assistance in the process of obtaining Greek citizenship through naturalization or other legal grounds."
+          },
+          {
+            "title": "Visas and permits",
+            "description": "Obtaining various types of visas for entry into Greece, including tourist, business and student visas."
+          },
+          {
+            "title": "Family reunification",
+            "description": "Legal support in family reunification procedures and obtaining permits for family members."
+          },
+          {
+            "title": "Appeals",
+            "description": "Representation in appeal procedures in case of rejection of immigration applications."
+          }
+        ]
+      }
+    },
+    "criminal": {
+      "title": "Criminal Law",
+      "description": "Specialized services in criminal law in Athens",
+      "services": [
+        "Criminal defense",
+        "Misdemeanors and felonies",
+        "Appeals",
+        "Pre-trial procedures"
+      ],
+      "content": {
+        "description": "I provide specialized defense in criminal cases, protecting the rights and freedoms of my clients at all stages of the criminal process. My experience covers a wide range of criminal cases, from minor misdemeanors to serious felonies. I am committed to ensuring fair judicial proceedings and protecting the constitutional rights of each client.",
+        "servicesTitle": "Criminal Defense",
+        "services": [
+          {
+            "title": "Criminal defense",
+            "description": "Complete defense in criminal cases, including representation at all stages of the judicial process."
+          },
+          {
+            "title": "Misdemeanors and felonies",
+            "description": "Specialized defense in misdemeanor and felony cases of various degrees of severity."
+          },
+          {
+            "title": "Pre-trial procedures",
+            "description": "Representation in pre-trial procedures, including interrogations and preliminary hearings."
+          },
+          {
+            "title": "Appeals",
+            "description": "Expert assistance in appeal procedures in criminal cases."
+          },
+          {
+            "title": "Violations",
+            "description": "Defense in violation cases, including traffic accidents and administrative violations."
+          },
+          {
+            "title": "Consultations",
+            "description": "Preliminary consultations in criminal cases and assessment of case prospects."
+          }
+        ]
+      }
+    },
+    "civil": {
+      "title": "Civil Law",
+      "description": "Specialized services in civil law in Athens",
+      "services": [
+        "Compensation",
+        "Contracts",
+        "Torts",
+        "Property"
+      ],
+      "content": {
+        "description": "I specialize in civil law and provide comprehensive legal services for resolving civil disputes and protecting property rights. My experience covers a wide range of civil cases, from damage compensation to complex contractual disputes. I am committed to achieving fair solutions for my clients.",
+        "servicesTitle": "Civil Services",
+        "services": [
+          {
+            "title": "Compensation",
+            "description": "Representation in damage compensation cases, including material and moral damages."
+          },
+          {
+            "title": "Contracts",
+            "description": "Drafting, checking and resolving disputes in civil and commercial contracts."
+          },
+          {
+            "title": "Torts",
+            "description": "Defense in civil tort cases and damage compensation."
+          },
+          {
+            "title": "Property",
+            "description": "Legal support in property matters, including disputes over possession and use."
+          },
+          {
+            "title": "Debt disputes",
+            "description": "Representation in debt collection disputes and credit obligations."
+          },
+          {
+            "title": "Insurance disputes",
+            "description": "Protection of interests in disputes with insurance companies and obtaining insurance payments."
+          }
+        ]
+      }
+    },
+    "corporate": {
+      "title": "Corporate & Commercial Law",
+      "description": "Specialized services in corporate law in Athens",
+      "services": [
+        "Company formation",
+        "Commercial contracts",
+        "Corporate disputes",
+        "Mergers and acquisitions"
+      ],
+      "content": {
+        "description": "I provide specialized legal services in corporate and commercial law for businesses of all sizes. My experience covers all aspects of corporate law, from company formation to complex corporate transactions. I work with entrepreneurs and companies to ensure their legal security and contribute to their commercial success.",
+        "servicesTitle": "Corporate Services",
+        "services": [
+          {
+            "title": "Company formation",
+            "description": "Complete accompaniment in the formation of various types of companies and corporate structures."
+          },
+          {
+            "title": "Commercial contracts",
+            "description": "Drafting and checking commercial contracts, agreements and corporate documents."
+          },
+          {
+            "title": "Corporate disputes",
+            "description": "Representation in corporate disputes and resolution of conflicts between shareholders."
+          },
+          {
+            "title": "Mergers and acquisitions",
+            "description": "Legal accompaniment in merger and acquisition transactions of companies."
+          },
+          {
+            "title": "Corporate governance",
+            "description": "Consultations on corporate governance matters and compliance with corporate rules."
+          },
+          {
+            "title": "Intellectual property",
+            "description": "Protection of intellectual property, including trademarks and patents."
+          }
+        ]
+      }
+    },
+    "translations": {
+      "title": "Translations & Certifications",
+      "description": "Official translations and certifications of legal documents in Athens",
+      "services": [
+        "Official translations",
+        "Document certifications",
+        "Apostille",
+        "International certifications"
+      ],
+      "content": {
+        "description": "I provide official translations and certifications of legal documents that are immediately accepted by Greek and international authorities. My experience covers a wide range of documents, from personal documents to complex corporate documents. I guarantee accuracy, confidentiality and timely delivery of all translations.",
+        "servicesTitle": "Translation Services",
+        "services": [
+          {
+            "title": "Official translations",
+            "description": "Translations of official documents, including birth, marriage, divorce certificates and other personal documents."
+          },
+          {
+            "title": "Document certifications",
+            "description": "Official certification of document authenticity and signatures for use in Greece and abroad."
+          },
+          {
+            "title": "Apostille",
+            "description": "Obtaining apostille for documents required for use in countries participating in the Hague Convention."
+          },
+          {
+            "title": "International certifications",
+            "description": "Certification of documents for use in international procedures and organizations."
+          },
+          {
+            "title": "Corporate translations",
+            "description": "Translations of corporate documents, contracts and legal documents for business."
+          },
+          {
+            "title": "Urgent translations",
+            "description": "Urgent document translations with quality and accuracy guarantee."
+          }
+        ]
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: July 27, 2025",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "This Privacy Policy explains how lawyer Marina Ilyushina, as the Data Controller, collects, uses, and protects personal data obtained through the Website. The processing of personal data is governed by the General Data Protection Regulation (EU 2016/679 – GDPR), Law 4624/2019, and Law 3471/2006. The lawyer is committed to respecting the privacy of visitors and protecting their personal data."
+        },
+        "dataCollection": {
+          "title": "2. What data we collect",
+          "content": "Providing personal data is not required for simple browsing of the Website. However, we collect data in the following cases:",
+          "list": [
+            "Contact data: When you send us an email or fill out a contact form, we collect your name, surname, email address, phone number, and message content to respond to your request.",
+            "Technical data: When visiting the Website, we may collect anonymous information such as IP address, browser type and version, operating system, visit time, and pages viewed, through cookies and other technologies. For more information, see our Cookie Policy."
+          ],
+          "note": "We do not require or collect sensitive data (e.g., health data) through the Website."
+        },
+        "dataCollectionMethods": {
+          "title": "3. How we collect data",
+          "content": "Personal data is provided directly by you when:",
+          "list": [
+            "you contact us by email, phone, or contact forms,",
+            "you subscribe to newsletters or request informational materials,",
+            "you provide us with information for the provision of legal services."
+          ],
+          "additional": "We may also collect anonymous information through cookies to improve website functionality and analyze traffic."
+        },
+        "legalBasis": {
+          "title": "4. Legal basis for processing",
+          "content": "Processing is carried out only when there is a legal basis, such as:",
+          "list": [
+            "Contract performance or pre-contractual relations: Processing is necessary for the provision of legal services or responding to your request.",
+            "Legitimate interest: We process data to communicate with you and respond to messages or requests (e.g., responding to emails), as there is a legitimate interest.",
+            "Consent: When your consent is requested for specific purposes (e.g., sending newsletters). You can withdraw your consent at any time.",
+            "Legal obligations: Processing may be necessary to comply with legal obligations (e.g., maintaining tax records)."
+          ]
+        },
+        "dataUsage": {
+          "title": "5. Use of data",
+          "content": "We use your personal data to:",
+          "list": [
+            "communicate with you and respond to requests or questions,",
+            "provide legal services that you request,",
+            "manage the website and improve user experience,",
+            "prevent and detect malicious activities or fraud."
+          ],
+          "note": "We do not use your data for commercial promotion purposes without your explicit consent."
+        },
+        "dataSharing": {
+          "title": "6. Sharing with third parties",
+          "content": "We do not sell or share your personal data with third parties for commercial purposes. Access to data may be granted to trusted external partners (e.g., hosting providers, IT companies) exclusively to the extent necessary for the provision of their services, and provided that they commit to appropriate security measures.",
+          "additional": "Data may be disclosed to government authorities or judicial bodies when required by law. We do not transfer data outside the European Economic Area (EEA) without complying with legal safeguards."
+        },
+        "rights": {
+          "title": "7. Data subject rights",
+          "content": "As a data subject, you have the following rights under GDPR and Law 4624/2019:",
+          "list": [
+            "Right of access: request confirmation that we process your data and obtain a copy.",
+            "Right of rectification or erasure: request correction of inaccurate data or their deletion when they are no longer necessary.",
+            "Right to restriction or objection to processing: request restriction or object to processing in certain cases.",
+            "Right to data portability: obtain your data in a structured, commonly used, and machine-readable format and transfer it to another controller.",
+            "Right to withdraw consent: withdraw your consent at any time without prejudice to the lawfulness of processing based on it before withdrawal.",
+            "Right to lodge a complaint: lodge a complaint with the Hellenic Data Protection Authority (Λεωφόρος Κηφισίας 1-3, Τ.Κ. 115 23 Αθήνα, www.dpa.gr) if you believe your rights are being violated."
+          ],
+          "contact": "To exercise your rights, you can contact us in writing at ilyushina.law@gmail.com. The lawyer reserves the right to request sufficient information for your identification before satisfying the request."
+        },
+        "security": {
+          "title": "8. Data security",
+          "content": "We have implemented appropriate technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized access, or disclosure. Despite these efforts, no method of data transmission or storage over the internet is absolutely secure, and therefore we cannot guarantee complete security.",
+          "additional": "Access to personal data is limited to authorized persons who commit to confidentiality and use the data exclusively for the purposes for which it was collected."
+        },
+        "retention": {
+          "title": "9. Data retention",
+          "content": "We retain your personal data only for the time necessary to fulfill the purposes for which it was collected, or as required by legislation. We delete it when:",
+          "list": [
+            "the purpose for which it was collected no longer exists,",
+            "you withdraw your consent, if processing was based on consent,",
+            "the legal retention period has expired."
+          ]
+        },
+        "cookies": {
+          "title": "10. Cookies",
+          "content": "We use cookies to improve website functionality and analyze traffic. For detailed information on how we use cookies, see our Cookie Policy."
+        },
+        "changes": {
+          "title": "11. Changes to the privacy policy",
+          "content": "We may update this Privacy Policy from time to time. Any changes will be published on this page with the date of the last update. It is recommended to check this page regularly for information about any changes."
+        },
+        "contact": {
+          "title": "12. Contact information",
+          "content": "For any questions regarding this Privacy Policy or the processing of your personal data, you can contact us:",
+          "info": [
+            "Email: ilyushina.law@gmail.com",
+            "Phone: +30 698 336 3775",
+            "Address: Filis 153, Athens, Greece"
+          ]
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "lastUpdated": "Last updated: July 27, 2025",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "Welcome to the website of lawyer Marina Ilyushina. By using this website, you agree to these Terms of Use. If you do not agree with any provisions of these terms, please do not use our website."
+        },
+        "services": {
+          "title": "2. Legal Services",
+          "content": "The information presented on this website is intended only for general informational purposes and does not constitute legal advice. Consultation with a qualified lawyer is necessary to obtain legal advice for your specific case.",
+          "disclaimer": "Use of information from this website does not create an attorney-client relationship."
+        },
+        "intellectualProperty": {
+          "title": "3. Intellectual Property",
+          "content": "All content on this website, including but not limited to texts, images, graphics, logos, and software, is the property of lawyer Marina Ilyushina or used with permission and is protected by intellectual property laws."
+        },
+        "use": {
+          "title": "4. Use of the website",
+          "content": "You may use this website only for lawful purposes and in accordance with these Terms of Use. It is prohibited to:",
+          "list": [
+            "use the website in any way that may damage, disable, or overload our servers,",
+            "attempt to gain unauthorized access to any parts of the website or systems,",
+            "use the website to transmit malicious software or other harmful content,",
+            "use the website to collect personal information of other users without their consent."
+          ]
+        },
+        "privacy": {
+          "title": "5. Privacy",
+          "content": "The use of your personal data is governed by our Privacy Policy, which is an integral part of these Terms of Use."
+        },
+        "limitation": {
+          "title": "6. Limitation of liability",
+          "content": "To the maximum extent permitted by law, lawyer Marina Ilyushina is not liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the website or information contained on it."
+        },
+        "changes": {
+          "title": "7. Changes to terms",
+          "content": "We reserve the right to change these Terms of Use at any time. Changes take effect from the moment they are published on the website. Continued use of the website after changes are made means acceptance of the new terms."
+        },
+        "contact": {
+          "title": "8. Contact information",
+          "content": "For any questions regarding these Terms of Use, you can contact us:",
+          "info": [
+            "Email: ilyushina.law@gmail.com",
+            "Phone: +30 698 336 3775",
+            "Address: Filis 153, Athens, Greece"
+          ]
+        }
+      }
+    }
+  },
+  "footer": {
+    "contact": "Have legal questions?",
+    "services": "Tell us about them!",
+    "legal": "Legal Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Filis 153, Athens, Greece",
+    "workingHours": "Mon - Fri 09:00 - 17:00",
+    "copyright": "© 2024 Marina Ilyushina. All rights reserved.",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "cookies": {
+    "banner": {
+      "title": "We use cookies",
+      "description": "We use cookies to improve your experience on our website.",
+      "accept": "Accept",
+      "reject": "Reject",
+      "settings": "Settings"
+    },
+    "settings": {
+      "title": "Cookie Settings",
+      "description": "Manage your cookie preferences.",
+      "necessary": "Necessary",
+      "necessaryDesc": "These cookies are necessary for the website to function.",
+      "analytics": "Analytics",
+      "analyticsDesc": "These cookies help us understand how the website is used.",
+      "save": "Save Settings",
+      "close": "Close"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Lawyer Athens | Marina Ilyushina - Legal Services",
+      "description": "Lawyer Marina Ilyushina in Athens. Specialized legal services in family law, immigration law, criminal law, civil law and corporate law. Free first consultation.",
+      "keywords": "lawyer athens, lawyer, legal services athens, family law, immigration law, criminal law, civil law, corporate law, marina ilyushina"
+    },
+    "family": {
+      "title": "Family Law Athens | Lawyer Marina Ilyushina",
+      "description": "Specialized lawyer in family law in Athens. Divorces, custody, alimony, wills. Free first consultation.",
+      "keywords": "family law athens, divorces athens, child custody, alimony, wills, family law lawyer athens"
+    },
+    "immigration": {
+      "title": "Immigration Law Athens | Lawyer Marina Ilyushina",
+      "description": "Specialized lawyer in immigration law in Athens. Residence permits, Golden Visa, citizenship. Free first consultation.",
+      "keywords": "immigration law athens, residence permits, golden visa, citizenship, immigration lawyer athens"
+    },
+    "criminal": {
+      "title": "Criminal Law Athens | Lawyer Marina Ilyushina",
+      "description": "Specialized lawyer in criminal law in Athens. Criminal defense in misdemeanors and felonies. Free first consultation.",
+      "keywords": "criminal law athens, criminal defense, misdemeanors, felonies, criminal law lawyer athens"
+    },
+    "civil": {
+      "title": "Civil Law Athens | Lawyer Marina Ilyushina",
+      "description": "Specialized lawyer in civil law in Athens. Compensation, contracts, torts. Free first consultation.",
+      "keywords": "civil law athens, compensation, contracts, torts, civil law lawyer athens"
+    },
+    "corporate": {
+      "title": "Corporate Law Athens | Lawyer Marina Ilyushina",
+      "description": "Specialized lawyer in corporate law in Athens. Company formation, commercial contracts. Free first consultation.",
+      "keywords": "corporate law athens, commercial law, company formation, commercial contracts, corporate law lawyer athens"
+    },
+    "translations": {
+      "title": "Translations & Certifications Athens | Lawyer Marina Ilyushina",
+      "description": "Official translations and certifications of legal documents in Athens. Immediately accepted by Greek and international authorities.",
+      "keywords": "translations athens, certifications, legal translations, official translations athens"
+    }
+  },
+  "keywords": {
+    "primary": [
+      "lawyer athens",
+      "lawyer",
+      "legal services athens",
+      "marina ilyushina",
+      "lawyer athens prices",
+      "lawyer athens contact",
+      "lawyer athens phone",
+      "lawyer athens address",
+      "law office athens"
+    ],
+    "services": [
+      "family law",
+      "immigration law",
+      "criminal law",
+      "civil law",
+      "corporate law",
+      "translations",
+      "certifications"
+    ],
+    "specific": [
+      "divorces",
+      "custody",
+      "alimony",
+      "wills",
+      "residence permits",
+      "golden visa",
+      "citizenship",
+      "criminal defense",
+      "misdemeanors",
+      "felonies",
+      "compensation",
+      "contracts",
+      "torts",
+      "company formation",
+      "commercial contracts"
+    ],
+    "location": [
+      "athens",
+      "greece",
+      "attica",
+      "filis 153"
+    ]
+  }
+} 

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* global process */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -345,7 +347,7 @@ function checkGreekTranslations(content) {
       }
     });
 
-  } catch (error) {
+  } catch {
     console.log('❌ Invalid JSON in translations file');
   }
 }

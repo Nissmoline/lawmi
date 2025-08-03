@@ -1,15 +1,32 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEOHead from '../components/SEOHead';
 
 function CorporatePage() {
+  const { t } = useTranslation();
+
   return (
     <>
+      <SEOHead 
+        title={t('seo.corporate.title')}
+        description={t('seo.corporate.description')}
+        keywords={t('seo.corporate.keywords')}
+        canonical="https://milawyer.gr/corporate"
+        hreflang={{
+          "el": "https://milawyer.gr/corporate",
+          "en": "https://milawyer.gr/en/corporate",
+          "ru": "https://milawyer.gr/ru/corporate",
+          "x-default": "https://milawyer.gr/corporate"
+        }}
+      />
+
       {/* Law Area Section */}
       <section className="law-area-section">
         <div className="law-area-container">
-          <h1 className="law-area-title">Εταιρικό & Εμπορικό Δίκαιο</h1>
+          <h1 className="law-area-title">{t('pages.corporate.title')}</h1>
           <div className="law-area-divider"></div>
           <p className="law-area-description">
-            Διαθέτω πολυετή εμπειρία σε εταιρικό και εμπορικό δίκαιο και παρέχω ολοκληρωμένες νομικές υπηρεσίες για επιχειρήσεις και εταιρείες. Ασχολούμαι με όλες τις πτυχές του εταιρικού δικαίου – από την ίδρυση εταιρειών και τη διαχείριση εταιρικών διαφορών μέχρι εμπορικές συμβάσεις και φορολογικό σχεδιασμό. Με γνώση των εταιρικών διαδικασιών και των εμπορικών νομικών απαιτήσεων, παρέχω στρατηγική καθοδήγηση και αποτελεσματική εκπροσώπηση για την προστασία των επιχειρηματικών συμφερόντων σας. Η προσέγγισή μου συνδυάζει νομική εμπειρογνωμοσύνη με πρακτικές επιχειρηματικές λύσεις, εξασφαλίζοντας ότι η επιχείρησή σας λειτουργεί σύμφωνα με το ελληνικό δίκαιο και ότι τα συμφέροντά σας προστατεύονται σε κάθε στάδιο της επιχειρηματικής ανάπτυξης.
+            {t('pages.corporate.content.description')}
           </p>
         </div>
       </section>
@@ -17,32 +34,14 @@ function CorporatePage() {
       {/* Services Section */}
       <section id="services" className="civil-services-section">
         <div className="container">
-          <h2 className="services-title">Υπηρεσίες Εταιρικού & Εμπορικού Δικαίου</h2>
+          <h2 className="services-title">{t('pages.corporate.content.servicesTitle')}</h2>
           <div className="services-grid">
-            <div className="service-card">
-              <h3>Ίδρυση Εταιρειών</h3>
-              <p>Πλήρης νομική υποστήριξη στην ίδρυση εταιρειών, επιλογή νομικής μορφής και προετοιμασία εταιρικών εγγράφων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Εμπορικές Συμβάσεις</h3>
-              <p>Σύνταξη και διαπραγμάτευση εμπορικών συμβάσεων, συμφωνητικών και εταιρικών συμφωνητικών με προστασία συμφερόντων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Φορολογικός Σχεδιασμός</h3>
-              <p>Στρατηγικός φορολογικός σχεδιασμός για επιχειρήσεις και εταιρείες με συμμόρφωση προς την ελληνική νομοθεσία.</p>
-            </div>
-            <div className="service-card">
-              <h3>Εταιρικές Διαφορές</h3>
-              <p>Εξειδικευμένη εκπροσώπηση σε εταιρικές διαφορές, διαχείριση μετόχων και εταιρικές διαδικασίες.</p>
-            </div>
-            <div className="service-card">
-              <h3>Διεθνείς Συναλλαγές</h3>
-              <p>Νομική υποστήριξη σε διεθνείς εμπορικές συναλλαγές, εξαγωγές και εισαγωγές με συμμόρφωση προς διεθνείς κανονισμούς.</p>
-            </div>
-            <div className="service-card">
-              <h3>Επιχειρηματική Συμβουλή</h3>
-              <p>Στρατηγική νομική συμβουλή για την ανάπτυξη επιχειρήσεων και την προστασία επιχειρηματικών συμφερόντων.</p>
-            </div>
+            {t('pages.corporate.content.services', { returnObjects: true }).map((service, index) => (
+              <div key={index} className="service-card">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

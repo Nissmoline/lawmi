@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   getAllCookiePreferences, 
   updateCookiePreferences, 
@@ -7,6 +8,7 @@ import {
 import './CookieSettings.css';
 
 const CookieSettings = () => {
+  const { t } = useTranslation();
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState(getAllCookiePreferences());
 
@@ -37,7 +39,7 @@ const CookieSettings = () => {
         className="cookie-settings-link" 
         onClick={() => setShowSettings(true)}
       >
-        Ρυθμίσεις Cookies
+        {t('cookies.settings.title')}
       </button>
     );
   }
@@ -46,7 +48,7 @@ const CookieSettings = () => {
     <div className="cookie-settings-overlay">
       <div className="cookie-settings-modal">
         <div className="cookie-settings-header">
-          <h3>Ρυθμίσεις Cookies</h3>
+          <h3>{t('cookies.settings.title')}</h3>
           <button className="cookie-close-btn" onClick={handleCancel}>
             ×
           </button>

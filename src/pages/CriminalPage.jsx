@@ -1,15 +1,32 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEOHead from '../components/SEOHead';
 
 function CriminalPage() {
+  const { t } = useTranslation();
+
   return (
     <>
+      <SEOHead 
+        title={t('seo.criminal.title')}
+        description={t('seo.criminal.description')}
+        keywords={t('seo.criminal.keywords')}
+        canonical="https://milawyer.gr/criminal"
+        hreflang={{
+          "el": "https://milawyer.gr/criminal",
+          "en": "https://milawyer.gr/en/criminal",
+          "ru": "https://milawyer.gr/ru/criminal",
+          "x-default": "https://milawyer.gr/criminal"
+        }}
+      />
+
       {/* Law Area Section */}
       <section className="law-area-section">
         <div className="law-area-container">
-          <h1 className="law-area-title">Ποινικό Δίκαιο</h1>
+          <h1 className="law-area-title">{t('pages.criminal.title')}</h1>
           <div className="law-area-divider"></div>
           <p className="law-area-description">
-            Διαθέτω πολυετή εμπειρία σε ποινικές υποθέσεις και παρέχω δυναμική υπεράσπιση σε πλημμελήματα και κακουργήματα. Ασχολούμαι με όλες τις πτυχές του ποινικού δικαίου – από την αρχική έρευνα και τη σύλληψη μέχρι τη δίκη και την εφέση. Με γνώση των ποινικών διαδικασιών και των δικαιωμάτων του κατηγορουμένου, παρέχω στρατηγική καθοδήγηση και αποτελεσματική εκπροσώπηση για την προστασία των συμφερόντων σας. Η προσέγγισή μου συνδυάζει νομική εμπειρογνωμοσύνη με δυναμική υπεράσπιση, εξασφαλίζοντας ότι τα δικαιώματά σας προστατεύονται σε κάθε στάδιο της ποινικής διαδικασίας και ότι λαμβάνετε δίκαιη μεταχείριση σύμφωνα με το ελληνικό δίκαιο.
+            {t('pages.criminal.content.description')}
           </p>
         </div>
       </section>
@@ -17,32 +34,14 @@ function CriminalPage() {
       {/* Services Section */}
       <section id="services" className="civil-services-section">
         <div className="container">
-          <h2 className="services-title">Υπηρεσίες Ποινικού Δικαίου</h2>
+          <h2 className="services-title">{t('pages.criminal.content.servicesTitle')}</h2>
           <div className="services-grid">
-            <div className="service-card">
-              <h3>Πλημμελήματα</h3>
-              <p>Εξειδικευμένη υπεράσπιση σε περιπτώσεις πλημμελημάτων με στρατηγική προσέγγιση για την ελαχιστοποίηση των συνέπειων.</p>
-            </div>
-            <div className="service-card">
-              <h3>Κακουργήματα</h3>
-              <p>Δυναμική υπεράσπιση σε σοβαρές ποινικές υποθέσεις με πλήρη προστασία των δικαιωμάτων του κατηγορουμένου.</p>
-            </div>
-            <div className="service-card">
-              <h3>Έρευνα & Σύλληψη</h3>
-              <p>Άμεση νομική υποστήριξη κατά τη διάρκεια έρευνας και σύλληψης για την προστασία των δικαιωμάτων σας.</p>
-            </div>
-            <div className="service-card">
-              <h3>Δικαστική Εκπροσώπηση</h3>
-              <p>Αποτελεσματική εκπροσώπηση σε δικαστήρια με στρατηγική υπεράσπιση και πειστικά επιχειρήματα.</p>
-            </div>
-            <div className="service-card">
-              <h3>Εφέσεις</h3>
-              <p>Εξειδικευμένη υποστήριξη σε εφέσεις και αναθεώρηση ποινικών αποφάσεων για δίκαιη μεταχείριση.</p>
-            </div>
-            <div className="service-card">
-              <h3>Προσωρινή Διαταγή</h3>
-              <p>Στρατηγική καθοδήγηση για την αποφυγή προσωρινής διαταγής και την προστασία της ελευθερίας σας.</p>
-            </div>
+            {t('pages.criminal.content.services', { returnObjects: true }).map((service, index) => (
+              <div key={index} className="service-card">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
