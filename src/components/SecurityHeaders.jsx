@@ -1,11 +1,17 @@
 import { useEffect } from 'react';
 
+/**
+ * SecurityHeaders Component
+ * 
+ * Note: X-Frame-Options must be set via HTTP header, not meta tag.
+ * It's already configured in _headers file and server configuration.
+ */
 const SecurityHeaders = () => {
   useEffect(() => {
     // Add security headers dynamically
     const addSecurityHeaders = () => {
       // Content Security Policy
-      const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
+      const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
       
       // Add CSP meta tag if not exists
       if (!document.querySelector('meta[http-equiv="Content-Security-Policy"]')) {
@@ -15,10 +21,9 @@ const SecurityHeaders = () => {
         document.head.appendChild(cspMeta);
       }
 
-      // Add other security meta tags
+      // Add other security meta tags (excluding X-Frame-Options which must be set via HTTP header)
       const securityMetaTags = [
         { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' },
-        { httpEquiv: 'X-Frame-Options', content: 'DENY' },
         { httpEquiv: 'X-XSS-Protection', content: '1; mode=block' },
         { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
         { httpEquiv: 'Permissions-Policy', content: 'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()' }
