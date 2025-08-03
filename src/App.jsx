@@ -9,6 +9,7 @@ import Breadcrumbs from './components/Breadcrumbs';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SecurityHeaders from './components/SecurityHeaders';
 import DynamicSEO from './components/DynamicSEO';
+import LanguageInitializer from './components/LanguageInitializer';
 import { initializeCookieSystem } from './utils/cookieUtils';
 import HomePage from './pages/HomePage';
 import FamilyLawPage from './pages/FamilyLawPage';
@@ -32,6 +33,7 @@ function App() {
   return (
     <Router>
       <div id="root">
+        <LanguageInitializer />
         <SecurityHeaders />
         <SEOHead 
           title={t('seo.home.title')}

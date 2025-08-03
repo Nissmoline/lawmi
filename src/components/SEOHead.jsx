@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const SEOHead = ({ 
   title, 
@@ -13,6 +14,7 @@ const SEOHead = ({
   nofollow = false
 }) => {
   const location = useLocation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     // Update document title
@@ -92,13 +94,13 @@ const SEOHead = ({
       twitterImage.setAttribute('content', image);
     }
 
-    // Update hreflang tags dynamically
+    // Update hreflang tags dynamically with current language
     if (Object.keys(hreflang).length > 0) {
       // Remove existing hreflang tags
       const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
       existingHreflang.forEach(tag => tag.remove());
 
-      // Add new hreflang tags
+      // Add new hreflang tags with current language
       Object.entries(hreflang).forEach(([lang, url]) => {
         const link = document.createElement('link');
         link.rel = 'alternate';
@@ -106,6 +108,16 @@ const SEOHead = ({
         link.href = url;
         document.head.appendChild(link);
       });
+      
+      // Add current language hreflang
+      const currentLang = i18n.language;
+      if (hreflang[currentLang]) {
+        const currentLangLink = document.createElement('link');
+        currentLangLink.rel = 'alternate';
+        currentLangLink.hreflang = currentLang;
+        currentLangLink.href = hreflang[currentLang];
+        document.head.appendChild(currentLangLink);
+      }
     }
 
     // Update structured data if provided
@@ -142,7 +154,7 @@ const SEOHead = ({
     // Scroll to top on route change
     window.scrollTo(0, 0);
 
-  }, [title, description, keywords, image, canonical, structuredData, hreflang, noindex, nofollow, location.pathname]);
+  }, [title, description, keywords, image, canonical, structuredData, hreflang, noindex, nofollow, location.pathname, i18n.language]);
 
   // Function to update breadcrumb structured data
   const updateBreadcrumbStructuredData = (pathname) => {
