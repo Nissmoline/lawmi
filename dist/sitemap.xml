@@ -1,149 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- All pages with hreflang for multiple languages -->
   <url>
     <loc>https://milawyer.gr/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/family</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/family"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/family"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/family"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/family"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/family"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/family"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/immigration</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/immigration"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/immigration"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/immigration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/immigration"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/immigration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/immigration"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/criminal</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/criminal"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/criminal"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/criminal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/criminal"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/criminal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/criminal"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/civil</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/civil"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/civil"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/civil"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/civil"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/civil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/civil"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/corporate</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/corporate"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/corporate"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/corporate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/corporate"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/corporate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/corporate"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/translations</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/translations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/translations"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/translations"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/translations"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/translations"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/translations"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/terms</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/terms"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/terms"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/terms"/>
   </url>
+  
   <url>
     <loc>https://milawyer.gr/privacy</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/privacy"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/privacy"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milawyer.gr/privacy"/>
   </url>
-  <url>
-    <loc>https://milawyer.gr/en/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/"/>
-  </url>
-  <url>
-    <loc>https://milawyer.gr/ru/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/"/>
-  </url>
-  <!-- Additional Greek-specific pages for better SEO -->
-  <url>
-    <loc>https://milawyer.gr/dikigoros-athina</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/dikigoros-athina"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/dikigoros-athina"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/dikigoros-athina"/>
-  </url>
-  <url>
-    <loc>https://milawyer.gr/nomikes-ypiresies</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/nomikes-ypiresies"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/nomikes-ypiresies"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/nomikes-ypiresies"/>
-  </url>
-  <url>
-    <loc>https://milawyer.gr/metanaftiko-dikaio</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/metanaftiko-dikaio"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/metanaftiko-dikaio"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/metanaftiko-dikaio"/>
-  </url>
-  <url>
-    <loc>https://milawyer.gr/oikogeneiako-dikaio</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/oikogeneiako-dikaio"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/oikogeneiako-dikaio"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/oikogeneiako-dikaio"/>
-  </url>
-  <url>
-    <loc>https://milawyer.gr/poiniko-dikaio</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/poiniko-dikaio"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://milawyer.gr/en/poiniko-dikaio"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://milawyer.gr/ru/poiniko-dikaio"/>
-  </url>
+  
 </urlset> 

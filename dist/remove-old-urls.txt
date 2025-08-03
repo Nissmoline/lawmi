@@ -1,0 +1,55 @@
+# URLs to remove from Google Search Console
+# These are old language URLs that should be redirected to the default language
+
+# Old language URLs that should be redirected
+https://milawyer.gr/de/
+https://milawyer.gr/de/family
+https://milawyer.gr/de/immigration
+https://milawyer.gr/de/criminal
+https://milawyer.gr/de/civil
+https://milawyer.gr/de/translations
+https://milawyer.gr/de/corporate
+https://milawyer.gr/de/terms
+https://milawyer.gr/de/privacy
+
+https://milawyer.gr/en/
+https://milawyer.gr/en/family
+https://milawyer.gr/en/immigration
+https://milawyer.gr/en/criminal
+https://milawyer.gr/en/civil
+https://milawyer.gr/en/translations
+https://milawyer.gr/en/corporate
+https://milawyer.gr/en/terms
+https://milawyer.gr/en/privacy
+
+https://milawyer.gr/ru/
+https://milawyer.gr/ru/family
+https://milawyer.gr/ru/immigration
+https://milawyer.gr/ru/criminal
+https://milawyer.gr/ru/civil
+https://milawyer.gr/ru/translations
+https://milawyer.gr/ru/corporate
+https://milawyer.gr/ru/terms
+https://milawyer.gr/ru/privacy
+
+https://milawyer.gr/el/
+https://milawyer.gr/el/family
+https://milawyer.gr/el/immigration
+https://milawyer.gr/el/criminal
+https://milawyer.gr/el/civil
+https://milawyer.gr/el/translations
+https://milawyer.gr/el/corporate
+https://milawyer.gr/el/terms
+https://milawyer.gr/el/privacy
+
+# Instructions for Google Search Console:
+# 1. Go to Google Search Console
+# 2. Select your property (milawyer.gr)
+# 3. Go to "Removals" in the left menu
+# 4. Click "New request"
+# 5. Add these URLs one by one or in bulk
+# 6. Select "Temporarily hide" for each URL
+# 7. Submit the request
+
+# Alternative: Use 301 redirects in _redirects file
+# The _redirects file already contains redirects for all language paths to / 

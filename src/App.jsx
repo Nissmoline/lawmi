@@ -8,7 +8,7 @@ import SEOHead from './components/SEOHead';
 import Breadcrumbs from './components/Breadcrumbs';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SecurityHeaders from './components/SecurityHeaders';
-
+import DynamicSEO from './components/DynamicSEO';
 import { initializeCookieSystem } from './utils/cookieUtils';
 import HomePage from './pages/HomePage';
 import FamilyLawPage from './pages/FamilyLawPage';
@@ -46,6 +46,7 @@ function App() {
           }}
         />
         <PerformanceOptimizer />
+        <DynamicSEO />
         <Header />
         <Breadcrumbs />
         <main>

@@ -33,6 +33,14 @@ Allow: /corporate
 Allow: /terms
 Allow: /privacy
 
+# Allow important SEO pages
+Allow: /images/
+Allow: /public/
+Allow: /favicon.ico
+Allow: /site.webmanifest
+Allow: /sitemap.xml
+Allow: /robots.txt
+
 # Allow favicon and important assets
 Allow: /favicon.ico
 Allow: /images/faviconBlack.svg
