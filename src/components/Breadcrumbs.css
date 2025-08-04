@@ -54,7 +54,7 @@
   .breadcrumbs {
     padding: 0.75rem 0;
     margin-bottom: 1.5rem;
-    padding-top: 5px; /* Add top padding to account for fixed header */
+    padding-top: 30px; /* Add top padding to account for fixed header */
 
   }
 
@@ -68,7 +68,7 @@
   .breadcrumbs {
     padding: 0.5rem 0;
     margin-bottom: 1rem;
-    padding-top: 80px; /* Add top padding to account for fixed header */
+    padding-top: 30px; /* Add top padding to account for fixed header */
   }
 
   .breadcrumbs-list {
