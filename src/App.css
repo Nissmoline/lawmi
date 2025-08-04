@@ -12,6 +12,21 @@ section {
   display: block;
 }
 
+/* Text alignment for mobile devices */
+@media (max-width: 768px) {
+  /* Home page - only about section text */
+  #about .about-text p {
+    text-align: justify;
+  }
+  
+  /* All other pages except Privacy and Terms - all text */
+  .service-card p,
+  .process-step p,
+  .area-card p {
+    text-align: center;
+  }
+}
+
 /* Hero Section */
 #hero {
   height: 100vh;
@@ -425,10 +440,6 @@ section {
     padding-top: 0;
   }
   
-  p {
-    text-align: justify;
-  }
-  
   .container {
     padding: 2rem 1rem !important;
   }
@@ -577,10 +588,6 @@ section {
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem 1rem !important;
-  }
-  
-  p {
-    text-align: justify;
   }
   
   #hero {

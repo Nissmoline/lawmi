@@ -365,10 +365,6 @@ select:focus {
     font-size: 15px;
   }
   
-  p {
-    text-align: justify;
-  }
-  
   .container {
     width: 95%;
     padding: 0 15px;
@@ -429,16 +425,20 @@ select:focus {
   .services-title {
     margin-bottom: 5rem;
   }
+  
+  /* Text alignment for all pages except Privacy and Terms */
+  .law-area-description,
+  .service-card p,
+  .process-step p,
+  .contact-info p {
+    text-align: justify;
+  }
 }
 
 @media (max-width: 480px) {
   body {
     padding-top: 45px;
     font-size: 14px;
-  }
-  
-  p {
-    text-align: justify;
   }
   
   .container {
@@ -484,6 +484,14 @@ select:focus {
   /* Add more space for cards on small mobile */
   .services-title {
     margin-bottom: 4.5rem;
+  }
+  
+  /* Text alignment for small mobile devices */
+  .law-area-description,
+  .service-card p,
+  .process-step p,
+  .contact-info p {
+    text-align: justify;
   }
 }
 
