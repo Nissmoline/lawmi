@@ -566,7 +566,7 @@ section {
   
   /* Move parallax-content up by 20% on mobile */
   .parallax-content {
-    transform: translateY(-20%);
+    transform: translateY(-25%);
   }
 }
 

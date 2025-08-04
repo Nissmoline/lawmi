@@ -181,7 +181,7 @@ const Header = () => {
             </ul>
           </li>
           <li><button onClick={() => navigateToSection('contact')} className="nav-link">{t('navigation.contact')}</button></li>
-          <li className="language-selector-item"><LanguageSelector /></li>
+          <li className="language-selector-item"><LanguageSelector onLanguageChange={closeMenu} /></li>
         </ul>
         <div className="mobile-actions">
           <a 

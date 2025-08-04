@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './LanguageSelector.css';
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ onLanguageChange }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -18,6 +18,10 @@ const LanguageSelector = () => {
   const handleLanguageChange = (languageCode) => {
     i18n.changeLanguage(languageCode);
     setIsOpen(false);
+    // Call the callback if provided
+    if (onLanguageChange) {
+      onLanguageChange();
+    }
   };
 
   const toggleDropdown = (e) => {
