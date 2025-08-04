@@ -365,6 +365,10 @@ select:focus {
     font-size: 15px;
   }
   
+  p {
+    text-align: justify;
+  }
+  
   .container {
     width: 95%;
     padding: 0 15px;
@@ -403,7 +407,7 @@ select:focus {
 
   .law-area-description {
     font-size: 1rem;
-    text-align: left;
+    text-align: justify;
     padding: 0 0.5rem;
   }
   
@@ -433,6 +437,10 @@ select:focus {
     font-size: 14px;
   }
   
+  p {
+    text-align: justify;
+  }
+  
   .container {
     width: 100%;
     padding: 0 10px;
@@ -455,6 +463,7 @@ select:focus {
 
   .law-area-description {
     font-size: 0.95rem;
+    text-align: justify;
     padding: 0 0.3rem;
   }
   

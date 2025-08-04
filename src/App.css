@@ -425,6 +425,10 @@ section {
     padding-top: 0;
   }
   
+  p {
+    text-align: justify;
+  }
+  
   .container {
     padding: 2rem 1rem !important;
   }
@@ -561,7 +565,7 @@ section {
   }
 
   .about-text p {
-    text-align: left;
+    text-align: justify;
   }
   
   /* Move parallax-content up by 20% on mobile */
@@ -573,6 +577,10 @@ section {
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem 1rem !important;
+  }
+  
+  p {
+    text-align: justify;
   }
   
   #hero {
