@@ -563,6 +563,11 @@ section {
   .about-text p {
     text-align: left;
   }
+  
+  /* Move parallax-content up by 20% on mobile */
+  .parallax-content {
+    transform: translateY(-20%);
+  }
 }
 
 @media (max-width: 480px) {
