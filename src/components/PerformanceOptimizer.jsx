@@ -63,12 +63,17 @@ const PerformanceOptimizer = () => {
       });
     }
 
-    // Performance monitoring
-    if ('performance' in window) {
+    // Performance monitoring (only in development)
+    const isDev = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.DEV;
+    if (isDev && 'performance' in window) {
       window.addEventListener('load', () => {
         setTimeout(() => {
           const perfData = performance.getEntriesByType('navigation')[0];
-          console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+          if (perfData) {
+            console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+            console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+            console.log('First Contentful Paint:', performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 'N/A', 'ms');
+          }
         }, 0);
       });
     }

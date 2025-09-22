@@ -61,10 +61,13 @@ npm run preview
 
 ```
 React MiLawyer/
-├── public/                 # Static assets
-│   ├── images/            # Images and icons
-│   ├── .htaccess         # Apache security config
-│   ├── robots.txt        # SEO robots file
+├── docs/                 # Project documentation
+│   ├── security/        # Security policies
+│   └── seo/             # SEO research and keyword plans
+├── public/              # Static assets served as-is
+│   ├── images/          # Images and icons
+│   ├── .htaccess        # Apache security config
+│   ├── robots.txt       # SEO robots file
 │   ├── sitemap.xml      # SEO sitemap
 │   └── security.txt     # Security policy
 ├── src/
@@ -72,11 +75,11 @@ React MiLawyer/
 │   ├── pages/           # Page components
 │   ├── styles/          # CSS styles
 │   ├── utils/           # Utility functions
-│   └── locales/         # Internationalization
+│   └── locales/         # Internationalization resources
 ├── scripts/             # Build and utility scripts
-├── index.html           # Main HTML file
+├── index.html           # Vite entry point
 ├── vite.config.js       # Vite configuration
-└── package.json         # Dependencies
+└── package.json         # Project dependencies & scripts
 ```
 
 ## 🔧 Configuration
@@ -152,7 +155,7 @@ runSEOCheck()
 - [ ] Security headers enabled
 
 ### Files to Upload
-- [ ] `dist/` folder (built files)
+- [ ] Production bundle generated with `npm run build` (creates `dist/`)
 - [ ] `.htaccess` file
 - [ ] `security.txt` file
 - [ ] `robots.txt` file

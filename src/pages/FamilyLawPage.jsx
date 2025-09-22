@@ -14,8 +14,8 @@ function FamilyLawPage() {
         canonical="https://milawyer.gr/family"
         hreflang={{
           "el": "https://milawyer.gr/family",
-          "en": "https://milawyer.gr/en/family",
-          "ru": "https://milawyer.gr/ru/family",
+          "en": "https://milawyer.gr/family",
+          "ru": "https://milawyer.gr/family",
           "x-default": "https://milawyer.gr/family"
         }}
       />

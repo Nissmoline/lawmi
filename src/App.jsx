@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
@@ -8,18 +8,26 @@ import SEOHead from './components/SEOHead';
 import Breadcrumbs from './components/Breadcrumbs';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SecurityHeaders from './components/SecurityHeaders';
-import DynamicSEO from './components/DynamicSEO';
 import LanguageInitializer from './components/LanguageInitializer';
+import LoadingSpinner from './components/LoadingSpinner';
 import { initializeCookieSystem } from './utils/cookieUtils';
-import HomePage from './pages/HomePage';
-import FamilyLawPage from './pages/FamilyLawPage';
-import ImmigrationPage from './pages/ImmigrationPage';
-import CriminalPage from './pages/CriminalPage';
-import CivilPage from './pages/CivilPage';
-import TranslationsPage from './pages/TranslationsPage';
-import CorporatePage from './pages/CorporatePage';
-import TermsPage from './pages/TermsPage';
-import PrivacyPage from './pages/PrivacyPage';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage'));
+const FamilyLawPage = lazy(() => import('./pages/FamilyLawPage'));
+const ImmigrationPage = lazy(() => import('./pages/ImmigrationPage'));
+const CriminalPage = lazy(() => import('./pages/CriminalPage'));
+const CivilPage = lazy(() => import('./pages/CivilPage'));
+const TranslationsPage = lazy(() => import('./pages/TranslationsPage'));
+const CorporatePage = lazy(() => import('./pages/CorporatePage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const GoldenVisaPage = lazy(() => import('./pages/GoldenVisaPage'));
+const DivorcePage = lazy(() => import('./pages/DivorcePage'));
+const MultilingualBlogPage = lazy(() => import('./pages/MultilingualBlogPage'));
+const ImpressumPage = lazy(() => import('./pages/ImpressumPage'));
+
+const GoogleAnalytics = lazy(() => import('./components/GoogleAnalytics'));
 import './styles/globals.css';
 import './App.css';
 
@@ -48,20 +56,27 @@ function App() {
           }}
         />
         <PerformanceOptimizer />
-        <DynamicSEO />
+        <Suspense fallback={<LoadingSpinner />}>
+          <GoogleAnalytics />
+        </Suspense>
         <Header />
         <Breadcrumbs />
         <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/family" element={<FamilyLawPage />} />
-            <Route path="/immigration" element={<ImmigrationPage />} />
-            <Route path="/criminal" element={<CriminalPage />} />
-            <Route path="/civil" element={<CivilPage />} />
-            <Route path="/translations" element={<TranslationsPage />} />
-            <Route path="/corporate" element={<CorporatePage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/family" element={<FamilyLawPage />} />
+              <Route path="/immigration" element={<ImmigrationPage />} />
+              <Route path="/criminal" element={<CriminalPage />} />
+              <Route path="/civil" element={<CivilPage />} />
+              <Route path="/translations" element={<TranslationsPage />} />
+              <Route path="/corporate" element={<CorporatePage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/golden-visa" element={<GoldenVisaPage />} />
+              <Route path="/divorce" element={<DivorcePage />} />
+              <Route path="/blog" element={<MultilingualBlogPage />} />
+              <Route path="/impressum" element={<ImpressumPage />} />
             
             {/* Redirect old language URLs to default */}
             <Route path="/de" element={<Navigate to="/" replace />} />
@@ -70,7 +85,8 @@ function App() {
             <Route path="/en/*" element={<Navigate to="/" replace />} />
             <Route path="/ru" element={<Navigate to="/" replace />} />
             <Route path="/ru/*" element={<Navigate to="/" replace />} />
-          </Routes>
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <CookieBanner />

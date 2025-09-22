@@ -8,8 +8,27 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
+          // Core React libraries
+          'react-vendor': ['react', 'react-dom'],
+          // Routing
+          'router': ['react-router-dom'],
+          // i18n
+          'i18n': ['react-i18next', 'i18next', 'i18next-browser-languagedetector'],
+          // Analytics
+          'analytics': ['./src/components/GoogleAnalytics.jsx'],
+          // Pages (lazy loaded)
+          'pages': [
+            './src/pages/HomePage.jsx',
+            './src/pages/FamilyLawPage.jsx',
+            './src/pages/ImmigrationPage.jsx',
+            './src/pages/CriminalPage.jsx',
+            './src/pages/CivilPage.jsx',
+            './src/pages/TranslationsPage.jsx',
+            './src/pages/CorporatePage.jsx',
+            './src/pages/GoldenVisaPage.jsx',
+            './src/pages/DivorcePage.jsx',
+            './src/pages/MultilingualBlogPage.jsx'
+          ]
         },
         // Add versioning to prevent cache issues
         entryFileNames: 'assets/[name]-[hash].js',

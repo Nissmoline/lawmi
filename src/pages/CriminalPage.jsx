@@ -14,8 +14,8 @@ function CriminalPage() {
         canonical="https://milawyer.gr/criminal"
         hreflang={{
           "el": "https://milawyer.gr/criminal",
-          "en": "https://milawyer.gr/en/criminal",
-          "ru": "https://milawyer.gr/ru/criminal",
+          "en": "https://milawyer.gr/criminal",
+          "ru": "https://milawyer.gr/criminal",
           "x-default": "https://milawyer.gr/criminal"
         }}
       />

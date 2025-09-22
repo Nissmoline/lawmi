@@ -15,8 +15,8 @@ function HomePage() {
         canonical="https://milawyer.gr/"
         hreflang={{
           "el": "https://milawyer.gr/",
-          "en": "https://milawyer.gr/en/",
-          "ru": "https://milawyer.gr/ru/",
+          "en": "https://milawyer.gr/",
+          "ru": "https://milawyer.gr/",
           "x-default": "https://milawyer.gr/"
         }}
       />

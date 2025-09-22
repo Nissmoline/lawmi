@@ -9,7 +9,11 @@
     "criminal": "Criminal Law",
     "civil": "Civil Law",
     "translations": "Translations & Certifications",
-    "corporate": "Corporate & Commercial Law"
+    "corporate": "Corporate & Commercial Law",
+    "goldenVisa": "Golden Visa",
+    "divorce": "Divorce",
+    "blog": "Blog",
+    "impressum": "Legal Notice"
   },
   "breadcrumbs": {
     "home": "Home",
@@ -20,7 +24,11 @@
     "translations": "Translations & Certifications",
     "corporate": "Corporate Law",
     "terms": "Terms of Use",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "goldenVisa": "Golden Visa",
+    "divorce": "Divorce",
+    "blog": "Blog",
+    "impressum": "Legal Notice"
   },
   "homepage": {
     "hero": {
@@ -45,7 +53,7 @@
     },
     "about": {
       "title": "About me",
-      "description": "I am <strong>Marina Ilyushina, a lawyer in Athens</strong>, and I provide comprehensive legal services to individuals and businesses <strong>throughout Greece as well as to foreign clients</strong>. I am a graduate of the <strong>National and Kapodistrian University of Athens</strong> and a member of the <strong>Piraeus Bar Association</strong>. I methodically manage each case, from initial assessment to final outcome, with the goal of prompt and fair resolution, in full compliance with Greek law.",
+      "description": "I am <strong>Marina Ilyushina, a lawyer in Athens</strong>, and I provide comprehensive legal services to individuals and businesses <strong>throughout Greece as well as to foreign clients</strong>. I am a graduate of the <strong>National and Kapodistrian University of Athens</strong> and a member of the <strong>Piraeus Bar Association</strong> with registration number A.M 004418. I methodically manage each case, from initial assessment to final outcome, with the goal of prompt and fair resolution, in full compliance with Greek law.",
       "workMethod": {
         "title": "How I work",
         "description": "I combine <strong>strategic guidance</strong>, cost transparency and <strong>dynamic representation</strong> at every stage. <strong>I collaborate with an organized team of more than 10 experienced lawyers</strong>, to provide comprehensive, specialized solutions even in complex cases.",
@@ -85,7 +93,7 @@
       "phone": "Phone",
       "email": "Email",
       "address": "Address",
-      "addressValue": "Filis 153, Athens, Greece"
+      "addressValue": "Stournari 39, Athens, Greece"
     }
   },
   "pages": {
@@ -331,150 +339,314 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "lastUpdated": "Last updated: July 27, 2025",
+      "lastUpdated": "Last updated: February 20, 2025",
       "sections": {
         "introduction": {
-          "title": "1. Introduction",
-          "content": "This Privacy Policy explains how lawyer Marina Ilyushina, as the Data Controller, collects, uses, and protects personal data obtained through the Website. The processing of personal data is governed by the General Data Protection Regulation (EU 2016/679 – GDPR), Law 4624/2019, and Law 3471/2006. The lawyer is committed to respecting the privacy of visitors and protecting their personal data."
+          "title": "1. Purpose of this notice",
+          "content": "This Privacy Policy explains how the law office of Marina Ilyushina, established at Stournari 39, Athens 106 82, Greece, processes personal data when you browse https://milawyer.gr, contact us, or become a client. We comply with the General Data Protection Regulation (EU) 2016/679, Law 4624/2019 and Law 3471/2006. By engaging with the Website you acknowledge that you have read this notice."
         },
         "dataCollection": {
-          "title": "2. What data we collect",
-          "content": "Providing personal data is not required for simple browsing of the Website. However, we collect data in the following cases:",
+          "title": "2. Personal data we collect",
+          "content": "We only collect information that is necessary to respond to enquiries, assess potential engagements and deliver our legal services.",
           "list": [
-            "Contact data: When you send us an email or fill out a contact form, we collect your name, surname, email address, phone number, and message content to respond to your request.",
-            "Technical data: When visiting the Website, we may collect anonymous information such as IP address, browser type and version, operating system, visit time, and pages viewed, through cookies and other technologies. For more information, see our Cookie Policy."
+            "<strong>Identification details</strong> such as your first name, last name, nationality and professional capacity.",
+            "<strong>Contact details</strong> including email address, telephone number, correspondence address and preferred language of communication.",
+            "<strong>Background information relating to your matter</strong> such as documents you voluntarily provide, meeting notes, timelines and counterparties.",
+            "<strong>Technical and usage data</strong> (IP address, browser type, device identifiers, language settings, referral URLs and analytics data) generated through cookies and similar technologies."
           ],
-          "note": "We do not require or collect sensitive data (e.g., health data) through the Website."
+          "note": "Please avoid sharing special categories of data (e.g. health information or data about minors) through online forms unless we specifically request them during a secure exchange."
         },
         "dataCollectionMethods": {
-          "title": "3. How we collect data",
-          "content": "Personal data is provided directly by you when:",
+          "title": "3. How we obtain data",
+          "content": "Personal data reaches us in three ways:",
           "list": [
-            "you contact us by email, phone, or contact forms,",
-            "you subscribe to newsletters or request informational materials,",
-            "you provide us with information for the provision of legal services."
+            "directly from you when you call, email, book a consultation or sign an engagement letter",
+            "through supporting professionals who collaborate on your case after you authorise the exchange",
+            "automatically via cookies and analytics tools that measure the performance and security of the Website"
           ],
-          "additional": "We may also collect anonymous information through cookies to improve website functionality and analyze traffic."
+          "additional": "We do not purchase marketing lists nor scrape social media. Any third-party data we receive is checked to make sure the disclosure was lawful before we store it."
         },
         "legalBasis": {
-          "title": "4. Legal basis for processing",
-          "content": "Processing is carried out only when there is a legal basis, such as:",
+          "title": "4. Legal bases for processing",
+          "content": "Processing is carried out on one or more of the following lawful bases under Article 6 GDPR:",
           "list": [
-            "Contract performance or pre-contractual relations: Processing is necessary for the provision of legal services or responding to your request.",
-            "Legitimate interest: We process data to communicate with you and respond to messages or requests (e.g., responding to emails), as there is a legitimate interest.",
-            "Consent: When your consent is requested for specific purposes (e.g., sending newsletters). You can withdraw your consent at any time.",
-            "Legal obligations: Processing may be necessary to comply with legal obligations (e.g., maintaining tax records)."
+            "<strong>Contractual necessity</strong> – to review your request, perform a conflict check and provide legal services.",
+            "<strong>Legal obligation</strong> – to comply with statutory duties (anti-money laundering, accounting, professional conduct).",
+            "<strong>Consent</strong> – for optional actions such as subscribing to updates or receiving event invitations. You may withdraw your consent at any time.",
+            "<strong>Legitimate interest</strong> – to secure our systems, improve our services, manage our relationship and defend legal claims."
           ]
         },
         "dataUsage": {
-          "title": "5. Use of data",
-          "content": "We use your personal data to:",
+          "title": "5. How we use personal data",
+          "content": "We use the personal data we collect for the following purposes:",
           "list": [
-            "communicate with you and respond to requests or questions,",
-            "provide legal services that you request,",
-            "manage the website and improve user experience,",
-            "prevent and detect malicious activities or fraud."
+            "responding to enquiries and scheduling consultations",
+            "conducting conflict checks and onboarding new clients",
+            "preparing, negotiating and executing legal strategies on your behalf",
+            "maintaining billing, file management and document archiving processes",
+            "monitoring site performance, preventing fraud and safeguarding communications",
+            "sending essential updates, legal alerts or invitations that may interest our clients"
           ],
-          "note": "We do not use your data for commercial promotion purposes without your explicit consent."
+          "note": "We do not sell personal data, use automated decision-making, or profile visitors for advertising purposes."
         },
         "dataSharing": {
-          "title": "6. Sharing with third parties",
-          "content": "We do not sell or share your personal data with third parties for commercial purposes. Access to data may be granted to trusted external partners (e.g., hosting providers, IT companies) exclusively to the extent necessary for the provision of their services, and provided that they commit to appropriate security measures.",
-          "additional": "Data may be disclosed to government authorities or judicial bodies when required by law. We do not transfer data outside the European Economic Area (EEA) without complying with legal safeguards."
+          "title": "6. Disclosure of data",
+          "content": "Your data is treated as confidential. We only disclose it when necessary:",
+          "additional": "Trusted processors (cloud hosting within the EU, secure email provider, bookkeeping support) process data under written agreements and only on our instructions. Where we need to collaborate with co-counsel, notaries, interpreters or experts, we share the minimum data required and always subject to professional secrecy. We store data in the EU. If a transfer outside the EEA becomes necessary, we rely on GDPR-approved safeguards such as Standard Contractual Clauses."
         },
         "rights": {
-          "title": "7. Data subject rights",
-          "content": "As a data subject, you have the following rights under GDPR and Law 4624/2019:",
+          "title": "7. Your rights",
+          "content": "You may exercise the following rights at any time, subject to legal limitations:",
           "list": [
-            "Right of access: request confirmation that we process your data and obtain a copy.",
-            "Right of rectification or erasure: request correction of inaccurate data or their deletion when they are no longer necessary.",
-            "Right to restriction or objection to processing: request restriction or object to processing in certain cases.",
-            "Right to data portability: obtain your data in a structured, commonly used, and machine-readable format and transfer it to another controller.",
-            "Right to withdraw consent: withdraw your consent at any time without prejudice to the lawfulness of processing based on it before withdrawal.",
-            "Right to lodge a complaint: lodge a complaint with the Hellenic Data Protection Authority (Λεωφόρος Κηφισίας 1-3, Τ.Κ. 115 23 Αθήνα, www.dpa.gr) if you believe your rights are being violated."
+            "access to the personal data we hold about you",
+            "rectification of inaccurate or incomplete data",
+            "erasure when data is no longer required or processing is unlawful",
+            "restriction of processing pending verification or objection",
+            "data portability where we process data based on consent or contract",
+            "objection to processing carried out on legitimate interest grounds",
+            "withdrawal of consent without affecting prior lawful processing",
+            "lodging a complaint with the Hellenic Data Protection Authority (www.dpa.gr)"
           ],
-          "contact": "To exercise your rights, you can contact us in writing at ilyushina.law@gmail.com. The lawyer reserves the right to request sufficient information for your identification before satisfying the request."
+          "contact": "To exercise your rights, email ilyushina.law@gmail.com or write to Marina Ilyushina Law Office, Stournari 39, Athens 106 82, Greece."
         },
         "security": {
-          "title": "8. Data security",
-          "content": "We have implemented appropriate technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized access, or disclosure. Despite these efforts, no method of data transmission or storage over the internet is absolutely secure, and therefore we cannot guarantee complete security.",
-          "additional": "Access to personal data is limited to authorized persons who commit to confidentiality and use the data exclusively for the purposes for which it was collected."
+          "title": "8. Information security",
+          "content": "We implement layered safeguards such as encrypted communications (HTTPS and secure email gateways), hardened devices, role-based access controls, regular backups and confidentiality agreements with staff and partners.",
+          "additional": "Despite our efforts, no online transmission can be guaranteed absolutely secure. Please contact us if you suspect any unauthorised use of your data."
         },
         "retention": {
-          "title": "9. Data retention",
-          "content": "We retain your personal data only for the time necessary to fulfill the purposes for which it was collected, or as required by legislation. We delete it when:",
+          "title": "9. Retention periods",
+          "content": "We retain personal data only for as long as necessary to fulfil the purposes outlined above and to comply with professional obligations.",
           "list": [
-            "the purpose for which it was collected no longer exists,",
-            "you withdraw your consent, if processing was based on consent,",
-            "the legal retention period has expired."
+            "Initial enquiries and declined matters: kept for up to 18 months to document conflict checks.",
+            "Client case files: stored for at least 5 years after the conclusion of the matter, unless longer retention is required by law or requested by the client.",
+            "Accounting and tax records: retained for 10 years in accordance with Greek legislation."
           ]
         },
         "cookies": {
-          "title": "10. Cookies",
-          "content": "We use cookies to improve website functionality and analyze traffic. For detailed information on how we use cookies, see our Cookie Policy."
+          "title": "10. Cookies and analytics",
+          "content": "Essential cookies keep the Website secure and functional. Optional analytics cookies (e.g. Google Analytics 4) help us understand aggregated usage trends. You can change preferences at any time via the cookie banner or by adjusting your browser settings."
         },
         "changes": {
-          "title": "11. Changes to the privacy policy",
-          "content": "We may update this Privacy Policy from time to time. Any changes will be published on this page with the date of the last update. It is recommended to check this page regularly for information about any changes."
+          "title": "11. Updates to this policy",
+          "content": "We may revise this Privacy Policy to reflect legal or operational changes. The updated version will be published on this page with a new revision date."
         },
         "contact": {
-          "title": "12. Contact information",
-          "content": "For any questions regarding this Privacy Policy or the processing of your personal data, you can contact us:",
+          "title": "12. Contact details",
+          "content": "For privacy questions or requests please reach out to:",
           "info": [
-            "Email: ilyushina.law@gmail.com",
+            "Marina Ilyushina Law Office",
+            "Stournari 39, Athens 106 82, Greece",
             "Phone: +30 698 336 3775",
-            "Address: Filis 153, Athens, Greece"
+            "Email: ilyushina.law@gmail.com"
           ]
         }
       }
     },
     "terms": {
       "title": "Terms of Use",
-      "lastUpdated": "Last updated: July 27, 2025",
+      "lastUpdated": "Last updated: February 20, 2025",
       "sections": {
         "introduction": {
-          "title": "1. Introduction",
-          "content": "Welcome to the website of lawyer Marina Ilyushina. By using this website, you agree to these Terms of Use. If you do not agree with any provisions of these terms, please do not use our website."
+          "title": "1. Scope",
+          "content": "These Terms govern access to and use of https://milawyer.gr (the \"Website\"), operated by Marina Ilyushina Law Office, Stournari 39, Athens 106 82, Greece. By browsing the Website you confirm that you are at least 18 years old and agree to comply with these Terms as well as applicable Greek and EU law."
         },
         "services": {
-          "title": "2. Legal Services",
-          "content": "The information presented on this website is intended only for general informational purposes and does not constitute legal advice. Consultation with a qualified lawyer is necessary to obtain legal advice for your specific case.",
-          "disclaimer": "Use of information from this website does not create an attorney-client relationship."
+          "title": "2. Informational nature of content",
+          "content": "All articles, guides, news items and downloadable resources on the Website are provided for general information only. They do not constitute legal or tax advice and may not reflect the most recent developments. Personalised legal advice is delivered exclusively after we sign a written engagement letter.",
+          "disclaimer": "Using the Website or communicating through its forms does not create a lawyer–client relationship until we expressly accept the matter in writing."
         },
         "intellectualProperty": {
-          "title": "3. Intellectual Property",
-          "content": "All content on this website, including but not limited to texts, images, graphics, logos, and software, is the property of lawyer Marina Ilyushina or used with permission and is protected by intellectual property laws."
+          "title": "3. Intellectual property",
+          "content": "Unless otherwise indicated, the Website and its content (texts, graphics, photographs, videos, logo, layout and source code) are protected by Greek and European intellectual property laws. You may print or download extracts for personal reference provided that you do not modify the material or remove authorship notices. Any other reproduction, distribution, publication or commercial exploitation requires our prior written consent."
         },
         "use": {
-          "title": "4. Use of the website",
-          "content": "You may use this website only for lawful purposes and in accordance with these Terms of Use. It is prohibited to:",
+          "title": "4. Acceptable use",
+          "content": "When using the Website you agree not to:",
           "list": [
-            "use the website in any way that may damage, disable, or overload our servers,",
-            "attempt to gain unauthorized access to any parts of the website or systems,",
-            "use the website to transmit malicious software or other harmful content,",
-            "use the website to collect personal information of other users without their consent."
+            "violate any applicable law, regulation or professional secrecy obligation",
+            "upload, transmit or introduce malicious code, automated scripts or any material that disrupts the Website",
+            "attempt to gain unauthorised access to accounts, servers or databases connected with the Website",
+            "misrepresent your identity or affiliation when contacting the firm",
+            "use scraping, data-mining or similar techniques without our written permission"
           ]
         },
         "privacy": {
-          "title": "5. Privacy",
-          "content": "The use of your personal data is governed by our Privacy Policy, which is an integral part of these Terms of Use."
+          "title": "5. Privacy and cookies",
+          "content": "Our processing of personal data is described in the Privacy Policy and the Cookie Policy, which form part of these Terms. By continuing to use the Website you agree to those policies."
         },
         "limitation": {
           "title": "6. Limitation of liability",
-          "content": "To the maximum extent permitted by law, lawyer Marina Ilyushina is not liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the website or information contained on it."
+          "content": "We strive to keep the information on the Website accurate and up to date, but we make no warranties (express or implied) regarding completeness, suitability or availability. To the maximum extent permitted by law we are not liable for any loss or damage arising from reliance on general information, temporary unavailability of the Website, or third-party content accessed through links. This limitation does not apply where liability cannot be excluded under Greek law."
         },
         "changes": {
-          "title": "7. Changes to terms",
-          "content": "We reserve the right to change these Terms of Use at any time. Changes take effect from the moment they are published on the website. Continued use of the website after changes are made means acceptance of the new terms."
+          "title": "7. Updates to the Website and Terms",
+          "content": "We may update, suspend or discontinue any part of the Website at any time and may amend these Terms to reflect legal or operational changes. The revised version becomes effective once published on this page."
         },
         "contact": {
-          "title": "8. Contact information",
-          "content": "For any questions regarding these Terms of Use, you can contact us:",
+          "title": "8. Contact and governing law",
+          "content": "These Terms are governed by Greek law and any dispute shall be submitted to the exclusive jurisdiction of the courts of Athens. For questions or requests please contact:",
           "info": [
-            "Email: ilyushina.law@gmail.com",
+            "Marina Ilyushina Law Office",
+            "Stournari 39, Athens 106 82, Greece",
             "Phone: +30 698 336 3775",
-            "Address: Filis 153, Athens, Greece"
+            "Email: ilyushina.law@gmail.com"
           ]
+        }
+      }
+    },
+    "goldenVisa": {
+      "hero": {
+        "title": "Golden Visa Greece 2024",
+        "description": "Specialized Golden Visa services for investors and families. Property acquisitions, residence permits and citizenship with full legal guidance."
+      },
+      "services": {
+        "title": "Golden Visa Services",
+        "items": [
+          {
+            "title": "Property Acquisition",
+            "description": "Due diligence and completion of property purchases of €250,000+ for Golden Visa eligibility."
+          },
+          {
+            "title": "Investor Residence Permit",
+            "description": "Document preparation, translations and submission of the residence permit application."
+          },
+          {
+            "title": "Greek Citizenship",
+            "description": "Guidance for citizenship applications after legal residency and strategic investments."
+          },
+          {
+            "title": "Family Reunification",
+            "description": "Residence permits for spouse, children and dependents with fast-track processing."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Golden Visa FAQs",
+        "items": [
+          {
+            "question": "What is the minimum investment for the Golden Visa?",
+            "answer": "The minimum investment is €250,000 in real estate or a qualifying combination of property investments."
+          },
+          {
+            "question": "How long does the approval process take?",
+            "answer": "Approval typically takes 2-4 months once the complete application is submitted."
+          },
+          {
+            "question": "Can I work and open a business with a Golden Visa?",
+            "answer": "Yes, the Golden Visa allows employment, company formation and unrestricted travel within the Schengen zone."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Start Your Golden Visa Application",
+        "description": "Book a free first consultation for Golden Visa and investment solutions in Greece.",
+        "button": "Contact Us Now"
+      }
+    },
+    "divorce": {
+      "hero": {
+        "title": "Divorce in Athens",
+        "description": "Dedicated legal support for uncontested and contested divorces, protecting your family's rights throughout the process."
+      },
+      "services": {
+        "title": "Divorce Services",
+        "items": [
+          {
+            "title": "Uncontested Divorce",
+            "description": "Complete management of uncontested divorce proceedings with swift completion and cost efficiency."
+          },
+          {
+            "title": "Contested Divorce",
+            "description": "Strategic representation in contested divorces and complex family disputes."
+          },
+          {
+            "title": "Custody & Parenting Plans",
+            "description": "Arranging custody, parenting time and residence with the child's best interest in focus."
+          },
+          {
+            "title": "Alimony & Property",
+            "description": "Negotiating and securing alimony, child support and division of marital assets."
+          }
+        ]
+      },
+      "process": {
+        "title": "Divorce Process",
+        "steps": [
+          {
+            "title": "1. Consultation",
+            "description": "Case assessment, document review and selection of the appropriate legal strategy."
+          },
+          {
+            "title": "2. File Preparation",
+            "description": "Drafting agreements, gathering evidence and preparing documents for submission."
+          },
+          {
+            "title": "3. Filing & Court",
+            "description": "Filing the petition or lawsuit and representing you before the competent court."
+          },
+          {
+            "title": "4. Final Settlement",
+            "description": "Final decision, custody arrangements, support orders and property distribution."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Divorce FAQs",
+        "items": [
+          {
+            "question": "How long does a divorce take in Greece?",
+            "answer": "An uncontested divorce is completed within 2-3 months, while court procedures may take 6-12 months."
+          },
+          {
+            "question": "How is child custody determined?",
+            "answer": "Custody is determined based on the child's welfare and may be settled by agreement or court decision."
+          },
+          {
+            "question": "What does alimony include after divorce?",
+            "answer": "Alimony covers essential needs of the spouse and children and depends on income and documented expenses."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Need Help with a Divorce?",
+        "description": "Book a free first consultation for divorce and family law matters.",
+        "button": "Schedule a Meeting"
+      }
+    },
+    "impressum": {
+      "title": "Legal Notice (Impressum)",
+      "lastUpdated": "Last updated: February 20, 2025",
+      "sections": {
+        "office": {
+          "title": "1. Provider of the Website",
+          "content": "The Website is operated by Marina Ilyushina Law Office, a sole practitioner admitted to the Piraeus Bar Association under registration number 004418, with professional premises at Stournari 39, Athens 106 82, Greece."
+        },
+        "contact": {
+          "title": "2. Contact details",
+          "content": "You may reach the office using the following channels:",
+          "info": [
+            "Phone: +30 698 336 3775",
+            "Email: ilyushina.law@gmail.com",
+            "Privacy enquiries: ilyushina.law@gmail.com",
+            "Website: https://milawyer.gr"
+          ]
+        },
+        "regulator": {
+          "title": "3. Professional supervision",
+          "content": "The practice is subject to the disciplinary supervision of the Piraeus Bar Association (www.dsp.gr)."
+        },
+        "professionalRules": {
+          "title": "4. Professional rules",
+          "content": "Legal services are rendered in accordance with Greek Law 4194/2013 (Code of Lawyers), the Code of Conduct of the Piraeus Bar Association and the applicable rules on the prevention of money laundering (Law 4557/2018)."
+        },
+        "liability": {
+          "title": "6. Liability insurance",
+          "content": "Professional liability insurance is maintained with Ethniki Insurance S.A. (policy no. available upon request)."
+        },
+        "dispute": {
+          "title": "7. Alternative dispute resolution",
+          "content": "In case of consumer disputes you may refer the matter to the European Commission Online Dispute Resolution platform (https://ec.europa.eu/consumers/odr). The competent Greek Authority for the Consumer Ombudsman is also available (www.synigoroskatanaloti.gr)."
         }
       }
     }
@@ -486,7 +658,7 @@
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "addressValue": "Filis 153, Athens, Greece",
+    "addressValue": "Stournari 39, Athens, Greece",
     "workingHours": "Mon - Fri 09:00 - 17:00",
     "copyright": "© 2024 Marina Ilyushina. All rights reserved.",
     "terms": "Terms of Use",
@@ -513,39 +685,62 @@
   },
   "seo": {
     "home": {
-      "title": "Lawyer Athens | Marina Ilyushina - Legal Services",
-      "description": "Lawyer Marina Ilyushina in Athens. Specialized legal services in family law, immigration law, criminal law, civil law and corporate law. Free first consultation.",
-      "keywords": "lawyer athens, lawyer, legal services athens, family law, immigration law, criminal law, civil law, corporate law, marina ilyushina"
+      "title": "Lawyer Athens | Russian Speaking Lawyer Greece | Marina Ilyushina",
+      "description": "Russian-speaking lawyer Marina Ilyushina in Athens. 24/7 legal services in family, immigration, criminal, civil and corporate law, Golden Visa and certified translations. Free first consultation.",
+      "keywords": "lawyer athens, russian speaking lawyer greece, legal services 24/7, marina ilyushina lawyer, lawyer greece"
     },
     "family": {
-      "title": "Family Law Athens | Lawyer Marina Ilyushina",
-      "description": "Specialized lawyer in family law in Athens. Divorces, custody, alimony, wills. Free first consultation.",
-      "keywords": "family law athens, divorces athens, child custody, alimony, wills, family law lawyer athens"
+      "title": "Family & Inheritance Law Athens | Lawyer Marina Ilyushina",
+      "description": "Family law attorney in Athens for divorces, child custody, alimony, wills and inheritance disputes. Tailored strategies with personal attention.",
+      "keywords": "family law lawyer athens, divorce lawyer, child custody attorney, alimony lawyer, inheritance disputes"
     },
     "immigration": {
-      "title": "Immigration Law Athens | Lawyer Marina Ilyushina",
-      "description": "Specialized lawyer in immigration law in Athens. Residence permits, Golden Visa, citizenship. Free first consultation.",
-      "keywords": "immigration law athens, residence permits, golden visa, citizenship, immigration lawyer athens"
+      "title": "Immigration Law & Residence Permits Athens | Lawyer Marina Ilyushina",
+      "description": "Immigration lawyer in Athens for Golden Visa, residence permits, citizenship, visas and family reunification.",
+      "keywords": "immigration lawyer athens, golden visa greece, residence permit lawyer, citizenship applications, visa assistance"
     },
     "criminal": {
-      "title": "Criminal Law Athens | Lawyer Marina Ilyushina",
-      "description": "Specialized lawyer in criminal law in Athens. Criminal defense in misdemeanors and felonies. Free first consultation.",
-      "keywords": "criminal law athens, criminal defense, misdemeanors, felonies, criminal law lawyer athens"
+      "title": "Criminal Defense Lawyer Athens | Marina Ilyushina",
+      "description": "Criminal defense for misdemeanors, felonies, pre-trial procedures and appeals with 24/7 representation.",
+      "keywords": "criminal defense athens, criminal lawyer greece, misdemeanor lawyer, felony defense, appeals attorney"
     },
     "civil": {
-      "title": "Civil Law Athens | Lawyer Marina Ilyushina",
-      "description": "Specialized lawyer in civil law in Athens. Compensation, contracts, torts. Free first consultation.",
-      "keywords": "civil law athens, compensation, contracts, torts, civil law lawyer athens"
+      "title": "Civil Law & Property Contracts Athens | Lawyer Marina Ilyushina",
+      "description": "Civil law services in Athens covering compensation claims, property transactions, contracts, torts and debt disputes.",
+      "keywords": "civil law lawyer athens, property purchase lawyer, contract lawyer, compensation claims, tort disputes"
     },
     "corporate": {
-      "title": "Corporate Law Athens | Lawyer Marina Ilyushina",
-      "description": "Specialized lawyer in corporate law in Athens. Company formation, commercial contracts. Free first consultation.",
-      "keywords": "corporate law athens, commercial law, company formation, commercial contracts, corporate law lawyer athens"
+      "title": "Corporate & Commercial Law Athens | Lawyer Marina Ilyushina",
+      "description": "Corporate law counsel for company formation, commercial contracts, mergers, acquisitions and corporate governance.",
+      "keywords": "corporate lawyer athens, company formation greece, commercial contracts lawyer, corporate disputes, mergers and acquisitions"
     },
     "translations": {
-      "title": "Translations & Certifications Athens | Lawyer Marina Ilyushina",
-      "description": "Official translations and certifications of legal documents in Athens. Immediately accepted by Greek and international authorities.",
-      "keywords": "translations athens, certifications, legal translations, official translations athens"
+      "title": "Legal Translations & Certifications Athens | Marina Ilyushina",
+      "description": "Official legal translations, apostille and document legalization in Athens in Greek, Russian and English.",
+      "keywords": "legal translations athens, certified translations greece, apostille services, document legalization, translation lawyer"
+    },
+    "goldenVisa": {
+      "title": "Golden Visa Greece 2024 | Golden Visa Lawyer Athens",
+      "description": "Comprehensive Golden Visa legal services in Greece: property investment, residence permits, citizenship and family reunification.",
+      "keywords": "golden visa greece, golden visa lawyer athens, investor residence permit, property investment greece, golden visa application"
+    },
+    "divorce": {
+      "title": "Divorce & Family Disputes Athens | Lawyer Marina Ilyushina",
+      "description": "Divorce lawyer in Athens handling uncontested and contested divorces, child custody, alimony and asset division.",
+      "keywords": "divorce lawyer athens, family disputes attorney, child custody lawyer, alimony lawyer, uncontested divorce greece"
+    },
+    "blog": {
+      "title": "Legal Blog | Russian Speaking Lawyer Athens | Marina Ilyushina",
+      "description": "Legal blog in Greek, Russian and English with guides on Golden Visa, divorces, immigration law and corporate matters from lawyer Marina Ilyushina.",
+      "keywords": "legal blog, greek legal advice, russian speaking lawyer blog, golden visa news, divorce tips greece, immigration law blog"
+    },
+    "common": {
+      "keywords": "lawyer athens, lawyer greece, russian speaking lawyer athens, lawyer 24/7, legal services, contracts, house purchase, family law lawyer, divorces athens, divorce lawyer, child custody, alimony, wills, inheritance, adoption, immigration law lawyer, residence permit, residence permit lawyer, golden visa, citizenship, family reunification, visas and permits, criminal law lawyer, criminal defense, misdemeanor lawyer, felony lawyer, pre-trial procedures, appeals, civil law lawyer, compensation, torts, property, debt disputes, insurance disputes, corporate law lawyer, company formation, commercial contracts, corporate disputes, mergers and acquisitions, commercial agreements, corporate governance, translations athens, official translations, legal translations, document legalization, apostille, international certifications, corporate translations, child support lawyer, golden visa lawyer, real estate purchase lawyer, translation lawyer, free first consultation, lawyer who speaks russian, child custody lawyer, wills and inheritance lawyer, adoption lawyer"
+    },
+    "impressum": {
+      "title": "Legal Notice | Marina Ilyushina Law Office",
+      "description": "Official legal notice (Impressum) for Marina Ilyushina Law Office in Athens with regulatory, tax and contact information for Greek, English and Russian speaking clients.",
+      "keywords": "legal notice, impressum, marina ilyushina law office, regulatory information, greek lawyer contact"
     }
   },
   "keywords": {
@@ -593,4 +788,4 @@
       "filis 153"
     ]
   }
-} 
+}

@@ -14,8 +14,8 @@ function CorporatePage() {
         canonical="https://milawyer.gr/corporate"
         hreflang={{
           "el": "https://milawyer.gr/corporate",
-          "en": "https://milawyer.gr/en/corporate",
-          "ru": "https://milawyer.gr/ru/corporate",
+          "en": "https://milawyer.gr/corporate",
+          "ru": "https://milawyer.gr/corporate",
           "x-default": "https://milawyer.gr/corporate"
         }}
       />

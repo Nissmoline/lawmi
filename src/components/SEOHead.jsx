@@ -1,6 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
+const GA_MEASUREMENT_ID = 'G-5CY4QQN1FW';
+const GA_STREAM_ID = '12194715519';
 
 const SEOHead = ({ 
   title, 
@@ -14,9 +17,203 @@ const SEOHead = ({
   nofollow = false
 }) => {
   const location = useLocation();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const updateBreadcrumbStructuredData = useCallback((pathname) => {
+    const baseUrl = 'https://milawyer.gr';
+    const breadcrumbMap = {
+      '/family': 'family',
+      '/immigration': 'immigration',
+      '/criminal': 'criminal',
+      '/civil': 'civil',
+      '/corporate': 'corporate',
+      '/translations': 'translations',
+      '/golden-visa': 'goldenVisa',
+      '/divorce': 'divorce',
+      '/privacy': 'privacy',
+      '/terms': 'terms',
+      '/blog': 'blog'
+    };
+
+    const breadcrumbData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": t('breadcrumbs.home'),
+          "item": `${baseUrl}/`
+        }
+      ]
+    };
+
+    const breadcrumbKey = breadcrumbMap[pathname];
+    if (breadcrumbKey) {
+      breadcrumbData.itemListElement.push({
+        "@type": "ListItem",
+        "position": 2,
+        "name": t(`breadcrumbs.${breadcrumbKey}`),
+        "item": `${baseUrl}${pathname}`
+      });
+    }
+
+    const existingBreadcrumb = document.querySelector('script[data-seo-breadcrumb]');
+    if (existingBreadcrumb) {
+      existingBreadcrumb.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-seo-breadcrumb', 'true');
+    script.textContent = JSON.stringify(breadcrumbData);
+    document.head.appendChild(script);
+  }, [t]);
+
+  const addLocalBusinessStructuredData = useCallback((pathname) => {
+    const language = i18n.language || 'el';
+    const baseUrl = 'https://milawyer.gr';
+    const normalizedPath = pathname === '/' ? '' : pathname;
+
+    const alternateNames = {
+      el: 'Μαρίνα Ιλιούσινα - Δικηγόρος',
+      en: 'Marina Ilyushina - Lawyer',
+      ru: 'Марина Ильюшина - Адвокат'
+    };
+
+    const localizedDescription = t('seo.home.description');
+
+    const serviceTypeMap = {
+      '/': {
+        el: ['Οικογενειακό Δίκαιο', 'Μεταναστευτικό Δίκαιο', 'Ποινικό Δίκαιο', 'Αστικό Δίκαιο', 'Εταιρικό Δίκαιο', 'Golden Visa', 'Μεταφράσεις Νομικών Εγγράφων'],
+        en: ['Family Law', 'Immigration Law', 'Criminal Law', 'Civil Law', 'Corporate Law', 'Golden Visa', 'Legal Translations'],
+        ru: ['Семейное право', 'Иммиграционное право', 'Уголовное право', 'Гражданское право', 'Корпоративное право', 'Golden Visa', 'Юридические переводы']
+      },
+      '/family': {
+        el: ['Οικογενειακό Δίκαιο', 'Διαζύγια', 'Επιμέλεια Παιδιών', 'Διατροφές', 'Διαθήκες'],
+        en: ['Family Law', 'Divorces', 'Child Custody', 'Alimony', 'Wills'],
+        ru: ['Семейное право', 'Разводы', 'Опека детей', 'Алименты', 'Завещания']
+      },
+      '/immigration': {
+        el: ['Μεταναστευτικό Δίκαιο', 'Golden Visa', 'Άδειες Διαμονής', 'Ιθαγένεια'],
+        en: ['Immigration Law', 'Golden Visa', 'Residence Permits', 'Citizenship'],
+        ru: ['Иммиграционное право', 'Golden Visa', 'Виды на жительство', 'Гражданство']
+      },
+      '/criminal': {
+        el: ['Ποινικό Δίκαιο', 'Ποινική Υπεράσπιση', 'Πλημμελήματα', 'Κακουργήματα'],
+        en: ['Criminal Law', 'Criminal Defense', 'Misdemeanors', 'Felonies'],
+        ru: ['Уголовное право', 'Уголовная защита', 'Проступки', 'Преступления']
+      },
+      '/civil': {
+        el: ['Αστικό Δίκαιο', 'Αγοραπωλησία Ακινήτων', 'Συμβόλαια', 'Αποζημιώσεις'],
+        en: ['Civil Law', 'Property Transactions', 'Contracts', 'Compensation Claims'],
+        ru: ['Гражданское право', 'Сделки с недвижимостью', 'Договоры', 'Компенсации']
+      },
+      '/corporate': {
+        el: ['Εταιρικό Δίκαιο', 'Ίδρυση Εταιρειών', 'Εμπορικές Συμβάσεις', 'Εταιρική Διακυβέρνηση'],
+        en: ['Corporate Law', 'Company Formation', 'Commercial Contracts', 'Corporate Governance'],
+        ru: ['Корпоративное право', 'Создание компаний', 'Коммерческие договоры', 'Корпоративное управление']
+      },
+      '/translations': {
+        el: ['Μεταφράσεις', 'Επικυρώσεις', 'Αποστίλ'],
+        en: ['Legal Translations', 'Certifications', 'Apostille'],
+        ru: ['Юридические переводы', 'Заверения', 'Апостиль']
+      },
+      '/golden-visa': {
+        el: ['Golden Visa', 'Άδειες Διαμονής Επενδυτών', 'Επενδυτικές Υπηρεσίες'],
+        en: ['Golden Visa', 'Investor Residence Permits', 'Investment Services'],
+        ru: ['Golden Visa', 'ВНЖ инвестора', 'Инвестиционные услуги']
+      },
+      '/divorce': {
+        el: ['Διαζύγια', 'Επιμέλεια Παιδιών', 'Διατροφές', 'Οικογενειακές Διαφορές'],
+        en: ['Divorces', 'Child Custody', 'Alimony', 'Family Disputes'],
+        ru: ['Разводы', 'Опека детей', 'Алименты', 'Семейные споры']
+      }
+    };
+
+    const serviceTypes = (serviceTypeMap[pathname] && serviceTypeMap[pathname][language])
+      || serviceTypeMap['/'][language];
+
+    const localBusinessData = {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "LegalService"],
+      "name": "Marina Ilyushina Law Office",
+      "alternateName": alternateNames[language] || alternateNames.en,
+      "description": localizedDescription.trim(),
+      "url": `${baseUrl}${normalizedPath}`,
+      "logo": "https://milawyer.gr/favicon.ico",
+      "image": "https://milawyer.gr/images/Ilyushina.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Στουρνάρη 39",
+        "addressLocality": "Αθήνα",
+        "postalCode": "106 82",
+        "addressCountry": "GR",
+        "addressRegion": "Αττική"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+30-698-336-3775",
+        "contactType": "customer service",
+        "availableLanguage": ["Greek", "Russian", "English"],
+        "areaServed": "GR",
+        "email": "ilyushina.law@gmail.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Greece"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9849,
+        "longitude": 23.7312
+      },
+      "sameAs": [
+        "https://www.facebook.com/aquamarinegr/",
+        "https://www.instagram.com/aquamarinegr/",
+        "https://t.me/aquamarineru",
+        "https://maps.google.com/?q=Στουρνάρη+39,+Αθήνα+106+82"
+      ],
+      "foundingDate": "2020",
+      "numberOfEmployees": "1",
+      "priceRange": "€€",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "hasMap": "https://maps.google.com/?q=Στουρνάρη+39,+Αθήνα+106+82"
+    };
+
+    if (serviceTypes && serviceTypes.length > 0) {
+      localBusinessData.serviceType = serviceTypes;
+    }
+
+    const existingLocalBusiness = document.querySelector('script[data-seo-local-business]');
+    if (existingLocalBusiness) {
+      existingLocalBusiness.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-seo-local-business', 'true');
+    script.textContent = JSON.stringify(localBusinessData);
+    document.head.appendChild(script);
+  }, [i18n.language, t]);
 
   useEffect(() => {
+    const globalKeywords = t('seo.common.keywords', { defaultValue: '' }).trim();
+    const combinedKeywords = [keywords, globalKeywords]
+      .map(value => (typeof value === 'string' ? value.trim() : ''))
+      .filter(value => value.length > 0)
+      .join(', ');
+    const language = i18n.language || 'el';
+    const ogLocaleMap = {
+      el: 'el_GR',
+      en: 'en_GB',
+      ru: 'ru_RU'
+    };
+
+    document.documentElement.lang = language;
+
     // Update document title
     if (title) {
       document.title = title;
@@ -24,14 +221,15 @@ const SEOHead = ({
 
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription && description) {
-      metaDescription.setAttribute('content', description);
+    const trimmedDescription = description ? description.trim() : '';
+    if (metaDescription && trimmedDescription) {
+      metaDescription.setAttribute('content', trimmedDescription);
     }
 
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords && keywords) {
-      metaKeywords.setAttribute('content', keywords);
+    if (metaKeywords && combinedKeywords) {
+      metaKeywords.setAttribute('content', combinedKeywords);
     }
 
     // Update robots meta tag
@@ -60,12 +258,18 @@ const SEOHead = ({
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription && description) {
-      ogDescription.setAttribute('content', description);
+      ogDescription.setAttribute('content', description.trim());
     }
 
     const ogUrl = document.querySelector('meta[property="og:url"]');
+    const pageUrl = `https://milawyer.gr${location.pathname}`;
     if (ogUrl) {
-      ogUrl.setAttribute('content', `https://milawyer.gr${location.pathname}`);
+      ogUrl.setAttribute('content', pageUrl);
+    }
+
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) {
+      ogLocale.setAttribute('content', ogLocaleMap[language] || ogLocaleMap.el);
     }
 
     const ogImage = document.querySelector('meta[property="og:image"]');
@@ -81,12 +285,12 @@ const SEOHead = ({
 
     const twitterDescription = document.querySelector('meta[property="twitter:description"]');
     if (twitterDescription && description) {
-      twitterDescription.setAttribute('content', description);
+      twitterDescription.setAttribute('content', description.trim());
     }
 
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
     if (twitterUrl) {
-      twitterUrl.setAttribute('content', `https://milawyer.gr${location.pathname}`);
+      twitterUrl.setAttribute('content', pageUrl);
     }
 
     const twitterImage = document.querySelector('meta[property="twitter:image"]');
@@ -121,27 +325,48 @@ const SEOHead = ({
     }
 
     // Update structured data if provided
-    if (structuredData) {
-      const existingScript = document.querySelector('script[data-seo-structured]');
-      if (existingScript) {
-        existingScript.remove();
+    const defaultStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      "url": pageUrl,
+      "name": title || document.title,
+      "description": trimmedDescription || metaDescription?.getAttribute('content') || '',
+      "inLanguage": language,
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://milawyer.gr/#website"
+      },
+      "primaryImageOfPage": image || 'https://milawyer.gr/images/Ilyushina.jpg',
+      "about": {
+        "@type": "Organization",
+        "name": 'Marina Ilyushina Law Office',
+        "url": 'https://milawyer.gr'
       }
+    };
 
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.setAttribute('data-seo-structured', 'true');
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+    const structuredDataPayload = structuredData || defaultStructuredData;
+
+    const existingScript = document.querySelector('script[data-seo-structured]');
+    if (existingScript) {
+      existingScript.remove();
     }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-seo-structured', 'true');
+    script.textContent = JSON.stringify(structuredDataPayload);
+    document.head.appendChild(script);
 
     // Update page URL for analytics
     if (window.gtag) {
-      window.gtag('config', 'G-XXXXXXXXXX', {
+      window.gtag('config', GA_MEASUREMENT_ID, {
         page_title: title || document.title,
-        page_location: `https://milawyer.gr${location.pathname}`,
+        page_location: pageUrl,
         send_page_view: true,
         anonymize_ip: true,
-        cookie_flags: 'SameSite=None;Secure'
+        cookie_flags: 'SameSite=None;Secure',
+        stream_id: GA_STREAM_ID
       });
     }
 
@@ -154,161 +379,7 @@ const SEOHead = ({
     // Scroll to top on route change
     window.scrollTo(0, 0);
 
-  }, [title, description, keywords, image, canonical, structuredData, hreflang, noindex, nofollow, location.pathname, i18n.language]);
-
-  // Function to update breadcrumb structured data
-  const updateBreadcrumbStructuredData = (pathname) => {
-    const breadcrumbData = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Αρχική",
-          "item": "https://milawyer.gr/"
-        }
-      ]
-    };
-
-    // Add breadcrumbs based on current path
-    if (pathname === '/family') {
-      breadcrumbData.itemListElement.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Οικογενειακό Δίκαιο",
-        "item": "https://milawyer.gr/family"
-      });
-    } else if (pathname === '/immigration') {
-      breadcrumbData.itemListElement.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Μεταναστευτικό Δίκαιο",
-        "item": "https://milawyer.gr/immigration"
-      });
-    } else if (pathname === '/criminal') {
-      breadcrumbData.itemListElement.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Ποινικό Δίκαιο",
-        "item": "https://milawyer.gr/criminal"
-      });
-    } else if (pathname === '/civil') {
-      breadcrumbData.itemListElement.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Αστικό Δίκαιο",
-        "item": "https://milawyer.gr/civil"
-      });
-    } else if (pathname === '/corporate') {
-      breadcrumbData.itemListElement.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Εταιρικό Δίκαιο",
-        "item": "https://milawyer.gr/corporate"
-      });
-    } else if (pathname === '/translations') {
-      breadcrumbData.itemListElement.push({
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Μεταφράσεις & Επικυρώσεις",
-        "item": "https://milawyer.gr/translations"
-      });
-    }
-
-    // Remove existing breadcrumb structured data
-    const existingBreadcrumb = document.querySelector('script[data-seo-breadcrumb]');
-    if (existingBreadcrumb) {
-      existingBreadcrumb.remove();
-    }
-
-    // Add new breadcrumb structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute('data-seo-breadcrumb', 'true');
-    script.textContent = JSON.stringify(breadcrumbData);
-    document.head.appendChild(script);
-  };
-
-  // Function to add local business structured data for Greek SEO
-  const addLocalBusinessStructuredData = (pathname) => {
-    const localBusinessData = {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Marina Ilyushina Law Office",
-      "alternateName": "Μαρίνα Ιλιούσινα - Δικηγόρος",
-      "description": "Δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα. Εξειδικευμένες νομικές υπηρεσίες σε οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο και εταιρικό δίκαιο.",
-      "url": `https://milawyer.gr${pathname}`,
-      "logo": "https://milawyer.gr/favicon.ico",
-      "image": "https://milawyer.gr/images/Ilyushina.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Φυλής 153",
-        "addressLocality": "Αθήνα",
-        "postalCode": "112 51",
-        "addressCountry": "GR",
-        "addressRegion": "Αττική"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+30-698-336-3775",
-        "contactType": "customer service",
-        "availableLanguage": ["Greek", "Russian", "English"],
-        "areaServed": "GR",
-        "email": "ilyushina.law@gmail.com"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Greece"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.9838,
-        "longitude": 23.7275
-      },
-      "sameAs": [
-        "https://www.facebook.com/aquamarinegr/",
-        "https://www.instagram.com/aquamarinegr/",
-        "https://t.me/aquamarineru"
-      ],
-      "foundingDate": "2020",
-      "numberOfEmployees": "1",
-      "priceRange": "€€",
-      "openingHours": "Mo-Fr 09:00-17:00",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-      "hasMap": "https://maps.google.com/?q=Φυλής+153,+Αθήνα+112+51"
-    };
-
-    // Add service-specific information based on pathname
-    if (pathname === '/family') {
-      localBusinessData.serviceType = ["Οικογενειακό Δίκαιο", "Διαζύγια", "Επιμέλεια", "Διατροφές", "Διαθήκες"];
-    } else if (pathname === '/immigration') {
-      localBusinessData.serviceType = ["Μεταναστευτικό Δίκαιο", "Άδειες Διαμονής", "Golden Visa", "Ιθαγένεια"];
-    } else if (pathname === '/criminal') {
-      localBusinessData.serviceType = ["Ποινικό Δίκαιο", "Ποινική Υπεράσπιση", "Πλημμελήματα", "Κακουργήματα"];
-    } else if (pathname === '/civil') {
-      localBusinessData.serviceType = ["Αστικό Δίκαιο", "Αποζημιώσεις", "Συμβόλαια", "Αδικοπραξίες"];
-    } else if (pathname === '/corporate') {
-      localBusinessData.serviceType = ["Εταιρικό Δίκαιο", "Εμπορικό Δίκαιο", "Εταιρική Δομή", "Εμπορικές Συμβάσεις"];
-    } else if (pathname === '/translations') {
-      localBusinessData.serviceType = ["Μεταφράσεις", "Επικυρώσεις", "Νομικές Μεταφράσεις"];
-    }
-
-    // Remove existing local business structured data
-    const existingLocalBusiness = document.querySelector('script[data-seo-local-business]');
-    if (existingLocalBusiness) {
-      existingLocalBusiness.remove();
-    }
-
-    // Add new local business structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute('data-seo-local-business', 'true');
-    script.textContent = JSON.stringify(localBusinessData);
-    document.head.appendChild(script);
-  };
-
+  }, [title, description, keywords, image, canonical, structuredData, hreflang, noindex, nofollow, location.pathname, i18n.language, t, updateBreadcrumbStructuredData, addLocalBusinessStructuredData]);
   return null; // This component doesn't render anything
 };
 

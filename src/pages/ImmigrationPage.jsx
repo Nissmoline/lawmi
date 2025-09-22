@@ -14,8 +14,8 @@ function ImmigrationPage() {
         canonical="https://milawyer.gr/immigration"
         hreflang={{
           "el": "https://milawyer.gr/immigration",
-          "en": "https://milawyer.gr/en/immigration",
-          "ru": "https://milawyer.gr/ru/immigration",
+          "en": "https://milawyer.gr/immigration",
+          "ru": "https://milawyer.gr/immigration",
           "x-default": "https://milawyer.gr/immigration"
         }}
       />

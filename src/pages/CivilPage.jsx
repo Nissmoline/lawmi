@@ -14,8 +14,8 @@ function CivilPage() {
         canonical="https://milawyer.gr/civil"
         hreflang={{
           "el": "https://milawyer.gr/civil",
-          "en": "https://milawyer.gr/en/civil",
-          "ru": "https://milawyer.gr/ru/civil",
+          "en": "https://milawyer.gr/civil",
+          "ru": "https://milawyer.gr/civil",
           "x-default": "https://milawyer.gr/civil"
         }}
       />

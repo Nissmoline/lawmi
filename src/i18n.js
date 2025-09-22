@@ -4,19 +4,17 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { getSupportedLanguage } from './utils/languageUtils';
 
 // Import translation files
-import elTranslations from './locales/el/translations.json';
-import enTranslations from './locales/en/translations.json';
-import ruTranslations from './locales/ru/translations.json';
+import { translations } from './locales';
 
 const resources = {
   el: {
-    translation: elTranslations
+    translation: translations.el
   },
   en: {
-    translation: enTranslations
+    translation: translations.en
   },
   ru: {
-    translation: ruTranslations
+    translation: translations.ru
   }
 };
 

@@ -1,15 +1,5 @@
-/* CSS Variables */
-:root {
-  --primary-color: #0A2B4C;
-  --secondary-color: #CAB8A8;
-  --accent-color: #D4A373;
-  --light-bg: #FFFFFF;
-  --dark-text: #212529;
-  --light-text: #f8f9fa;
-  --neutral-gray: #718787;
-  --section-bg-light: #EFEFEF;
-  --footer-bg: #343a40;
-}
+/* Import CSS Variables */
+@import './variables.css';
 
 /* Reset */
 *, *::before, *::after {
@@ -38,6 +28,15 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes loadingSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #root {

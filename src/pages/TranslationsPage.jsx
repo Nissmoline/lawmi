@@ -14,8 +14,8 @@ function TranslationsPage() {
         canonical="https://milawyer.gr/translations"
         hreflang={{
           "el": "https://milawyer.gr/translations",
-          "en": "https://milawyer.gr/en/translations",
-          "ru": "https://milawyer.gr/ru/translations",
+          "en": "https://milawyer.gr/translations",
+          "ru": "https://milawyer.gr/translations",
           "x-default": "https://milawyer.gr/translations"
         }}
       />

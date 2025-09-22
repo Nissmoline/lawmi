@@ -14,8 +14,8 @@ function TermsPage() {
         canonical="https://milawyer.gr/terms"
         hreflang={{
           "el": "https://milawyer.gr/terms",
-          "en": "https://milawyer.gr/en/terms",
-          "ru": "https://milawyer.gr/ru/terms",
+          "en": "https://milawyer.gr/terms",
+          "ru": "https://milawyer.gr/terms",
           "x-default": "https://milawyer.gr/terms"
         }}
       />

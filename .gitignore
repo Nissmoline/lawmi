@@ -1,213 +1,74 @@
-# Dependencies
+# Dependency directories
 node_modules/
+
+# Build outputs
+/dist/
+/dist-ssr/
+/build/
+
+# Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Production builds - KEEP dist/ for Cloudflare deployment
-# dist/
-# dist-ssr/
-# build/
-
 # Environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 
-# Logs
-logs
-*.log
+# Cache and temp files
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_*/
+/tmp/
+/temp/
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
+# Testing artifacts
 coverage/
+.nyc_output/
 *.lcov
 
-# nyc test coverage
-.nyc_output
+# Tooling
+*.tsbuildinfo
 
-# Dependency directories
-jspm_packages/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Optional stylelint cache
-.stylelintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-
-# Gatsby files
-.cache/
-# public - KEEP for Cloudflare deployment
-
-# Storybook build outputs
-.out
-.storybook-out
-
-# Temporary folders
-tmp/
-temp/
-
-# Editor directories and files
-.vscode/*
+# Editors and IDEs
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# OS generated files
+# OS files
+.DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Security files (don't commit sensitive data)
+# Archives and packages
+*.tgz
+
+# Wrangler / Cloudflare caches
+.wrangler/
+.cloudflare/
+
+# Security and secrets
 *.pem
 *.key
 *.crt
 *.p12
 *.pfx
-
-# Backup files
-*.bak
-*.backup
-*.old
-*.orig
-*.save
-*.swp
-*.tmp
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-
-# IDE files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Local development
-*.local
-
-# Testing
-coverage/
-.nyc_output/
-
-# Build artifacts
-*.tsbuildinfo
-
-# KEEP generated files for Cloudflare deployment
-# public/favicon-*.png
-# public/apple-touch-icon.png
-# public/android-chrome-*.png
-
-# Security: Don't commit any sensitive configuration
 config/secrets.json
 config/private.json
 
-# Cloudflare specific - ensure these are NOT ignored
-# _headers
-# _redirects
-# _worker.js
-wrangler.toml
-
-# SEO and Deployment - IMPORTANT: DO NOT IGNORE THESE FILES
-!public/sitemap.xml
-!public/robots.txt
-!public/favicon.ico
-!public/site.webmanifest
-!public/sw.js
-!public/CNAME
-!public/ads.txt
-!public/app-ads.txt
-!public/security-policy.html
-!public/.htaccess
-!public/logo.svg
-!public/srcfavicon.ico
-
-# Keep SEO documentation
-!SEO-OPTIMIZATION.md
-!DEPLOYMENT_GUIDE.md
-!CLOUDFLARE_DEPLOYMENT.md
-!GITHUB_UPLOAD.md
-!SECURITY.md
-
-# Keep Cloudflare configuration files
-!_headers
-!_redirects
-!wrangler.toml
-
-# Keep build output for deployment
-!dist/
-!dist-ssr/
-!build/
-
-# Keep public directory structure
-!public/
-!public/images/
-!public/.well-known/
-
-# Development files to ignore
-.wrangler/
-.cloudflare/
-.github/
-scripts/seo-checker.js
-test-seo.js
-*.test.js
-*.spec.js
-
-# Language detection test files
-LANGUAGE_DETECTION.md
-src/components/LanguageTest.jsx
-
-# Node modules and dependencies
-node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Environment and local files
-.env*
-!.env.example
+# Local overrides
 *.local

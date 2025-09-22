@@ -7,10 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "build:cloudflare": "vite build && cp _headers dist/ && cp _redirects dist/",
+    "build:seo": "node scripts/update-sitemap.js && npm run build",
+    "test": "npm run lint",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:worker":"npm run build && wrangler pages dev dist",
-    "deploy:worker":"npm run build && wrangler pages deploy dist --project-name=milawyer-react"
+    "deploy:worker":"npm run build:seo && wrangler pages deploy dist --project-name=milawyer-react",
+    "seo:check": "node scripts/seo-checker.js",
+    "seo:update": "node scripts/update-sitemap.js"
   },
   "dependencies": {
     "i18next": "^25.3.2",

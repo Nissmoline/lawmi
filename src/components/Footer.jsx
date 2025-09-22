@@ -403,6 +403,7 @@ export default function Footer() {
                 <p>{t('footer.legal')}</p>
                 <a href="/terms">{t('footer.terms')}</a>
                 <a href="/privacy">{t('footer.privacy')}</a>
+                <a href="/impressum">{t('navigation.impressum')}</a>
                 <CookieSettings />
               </div>
             </div>

@@ -14,8 +14,8 @@ function PrivacyPage() {
         canonical="https://milawyer.gr/privacy"
         hreflang={{
           "el": "https://milawyer.gr/privacy",
-          "en": "https://milawyer.gr/en/privacy",
-          "ru": "https://milawyer.gr/ru/privacy",
+          "en": "https://milawyer.gr/privacy",
+          "ru": "https://milawyer.gr/privacy",
           "x-default": "https://milawyer.gr/privacy"
         }}
       />
