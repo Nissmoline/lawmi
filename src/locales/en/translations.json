@@ -13,7 +13,7 @@
     "goldenVisa": "Golden Visa",
     "divorce": "Divorce",
     "blog": "Blog",
-    "impressum": "Legal Notice"
+    "impressum": "Impressum"
   },
   "breadcrumbs": {
     "home": "Home",
@@ -639,6 +639,10 @@
         "professionalRules": {
           "title": "4. Professional rules",
           "content": "Legal services are rendered in accordance with Greek Law 4194/2013 (Code of Lawyers), the Code of Conduct of the Piraeus Bar Association and the applicable rules on the prevention of money laundering (Law 4557/2018)."
+        },
+        "education": {
+          "title": "5. Education",
+          "content": "<strong>Marina Ilyushina (Μαρίνα Ιλιουσίνα)</strong> is a graduate of the <strong>National and Kapodistrian University of Athens</strong> (<em>Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών</em>), <strong>Faculty of Law</strong>.<br><br>📋 <strong>Graduation confirmation:</strong> page 210, number 3772<br>📄 <strong>Official university document:</strong> <a href=\"https://www.uoa.gr/fileadmin/user_upload/PDF-files/anakoinwseis/simantikes/FOITITES_KENTRO-2o.pdf\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #2c5aa0; text-decoration: underline;\">Download PDF document</a>"
         },
         "liability": {
           "title": "6. Liability insurance",

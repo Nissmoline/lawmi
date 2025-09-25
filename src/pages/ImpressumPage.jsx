@@ -33,11 +33,13 @@ function ImpressumPage() {
               return (
                 <div key={key}>
                   <h2>{section.title}</h2>
-                  {section.content && <p>{section.content}</p>}
+                  {section.content && (
+                    <p dangerouslySetInnerHTML={{ __html: section.content }}></p>
+                  )}
                   {Array.isArray(section.info) && (
                     <ul>
                       {section.info.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
                       ))}
                     </ul>
                   )}
