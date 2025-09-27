@@ -180,6 +180,7 @@ const Header = () => {
               <li role="none"><Link to="/corporate" onClick={closeMenu} role="menuitem">{t('navigation.corporate')}</Link></li>
             </ul>
           </li>
+          <li><Link to="/blog" onClick={closeMenu} className="nav-link">{t('navigation.blog')}</Link></li>
           <li><button onClick={() => navigateToSection('contact')} className="nav-link">{t('navigation.contact')}</button></li>
           <li className="language-selector-item"><LanguageSelector onLanguageChange={closeMenu} /></li>
         </ul>

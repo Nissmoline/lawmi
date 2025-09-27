@@ -5,7 +5,6 @@ import SEOHead from '../components/SEOHead';
 
 function HomePage() {
   const { t } = useTranslation();
-
   return (
     <>
       <SEOHead 

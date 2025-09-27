@@ -26,9 +26,9 @@ export const ROUTE_LABELS = {
   [ROUTES.TRANSLATIONS]: 'navigation.translations',
   [ROUTES.TERMS]: 'breadcrumbs.terms',
   [ROUTES.PRIVACY]: 'breadcrumbs.privacy',
-  [ROUTES.GOLDEN_VISA]: 'Golden Visa',
-  [ROUTES.DIVORCE]: 'Διαζύγια',
-  [ROUTES.BLOG]: 'Blog',
+  [ROUTES.GOLDEN_VISA]: 'navigation.goldenVisa',
+  [ROUTES.DIVORCE]: 'navigation.divorce',
+  [ROUTES.BLOG]: 'navigation.blog',
   [ROUTES.IMPRESSUM]: 'navigation.impressum'
 };
 
@@ -69,6 +69,18 @@ export const ROUTE_META = {
   [ROUTES.PRIVACY]: {
     seoKey: 'seo.privacy',
     canonical: 'https://milawyer.gr/privacy'
+  },
+  [ROUTES.GOLDEN_VISA]: {
+    seoKey: 'seo.goldenVisa',
+    canonical: 'https://milawyer.gr/golden-visa'
+  },
+  [ROUTES.DIVORCE]: {
+    seoKey: 'seo.divorce',
+    canonical: 'https://milawyer.gr/divorce'
+  },
+  [ROUTES.BLOG]: {
+    seoKey: 'seo.blog',
+    canonical: 'https://milawyer.gr/blog'
   },
   [ROUTES.IMPRESSUM]: {
     seoKey: 'seo.impressum',

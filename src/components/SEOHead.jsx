@@ -76,9 +76,9 @@ const SEOHead = ({
     const normalizedPath = pathname === '/' ? '' : pathname;
 
     const alternateNames = {
-      el: 'Μαρίνα Ιλιούσινα - Δικηγόρος',
-      en: 'Marina Ilyushina - Lawyer',
-      ru: 'Марина Ильюшина - Адвокат'
+      el: 'Δικηγόρος Αθήνα Μαρίνα Ιλιούσινα - Ρωσόφωνος Δικηγόρος',
+      en: 'Marina Ilyushina - Greek Lawyer in Athens',
+      ru: 'Марина Илюшина - русскоязычный адвокат в Афинах'
     };
 
     const localizedDescription = t('seo.home.description');
@@ -136,7 +136,8 @@ const SEOHead = ({
 
     const localBusinessData = {
       "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "LegalService"],
+      "@type": ["LocalBusiness", "LegalService", "Attorney"],
+      "@id": `${baseUrl}${normalizedPath}#legalService`,
       "name": "Marina Ilyushina Law Office",
       "alternateName": alternateNames[language] || alternateNames.en,
       "description": localizedDescription.trim(),
@@ -154,11 +155,12 @@ const SEOHead = ({
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+30-698-336-3775",
-        "contactType": "customer service",
+        "contactType": "legal services",
         "availableLanguage": ["Greek", "Russian", "English"],
         "areaServed": "GR",
         "email": "ilyushina.law@gmail.com"
       },
+      "knowsLanguage": ["Greek", "Russian", "English"],
       "areaServed": {
         "@type": "Country",
         "name": "Greece"

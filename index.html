@@ -123,10 +123,13 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "additionalType": "LegalService",
+      "@type": [
+        "LocalBusiness",
+        "LegalService",
+        "Attorney"
+      ],
       "name": "Marina Ilyushina Law Office",
-      "alternateName": "Μαρίνα Ιλιούσινα - Δικηγόρος",
+      "alternateName": "Δικηγόρος Αθήνα Μαρίνα Ιλιούσινα - Ρωσόφωνος Δικηγόρος",
       "description": "Ρωσόφωνος δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα. Νομικές υπηρεσίες 24/7 σε οικογενειακό, μεταναστευτικό, ποινικό, αστικό και εταιρικό δίκαιο, Golden Visa, μεταφράσεις.",
       "url": "https://milawyer.gr",
       "logo": "https://milawyer.gr/favicon.ico",
@@ -142,15 +145,29 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+30-698-336-3775",
-        "contactType": "customer service",
-        "availableLanguage": ["Greek", "Russian", "English"],
-        "areaServed": "GR",
+        "contactType": "legal services",
+        "availableLanguage": [
+          "Greek",
+          "Russian",
+          "English"
+        ],
+        "areaServed": [
+          "Athens",
+          "Attica",
+          "Greece"
+        ],
         "email": "ilyushina.law@gmail.com"
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Greece"
-      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Αθήνα"
+        },
+        {
+          "@type": "Country",
+          "name": "Greece"
+        }
+      ],
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 37.9849,
@@ -177,6 +194,12 @@
         "Εταιρικό Δίκαιο",
         "Golden Visa",
         "Μεταφράσεις Νομικών Εγγράφων"
+      ],
+      "@id": "https://milawyer.gr#legalService",
+      "knowsLanguage": [
+        "Greek",
+        "Russian",
+        "English"
       ]
     }
     </script>
