@@ -53,7 +53,7 @@
     },
     "about": {
       "title": "About me",
-      "description": "I am <strong>Marina Ilyushina, a lawyer in Athens</strong>, and I provide comprehensive legal services to individuals and businesses <strong>throughout Greece as well as to foreign clients</strong>. I am a graduate of the <strong>National and Kapodistrian University of Athens</strong> and a member of the <strong>Piraeus Bar Association</strong> with registration number A.M 004418. I methodically manage each case, from initial assessment to final outcome, with the goal of prompt and fair resolution, in full compliance with Greek law.",
+      "description": "I am <strong>Marina Ilyushina, a lawyer in Athens</strong>, and I provide comprehensive legal services to individuals and businesses <strong>throughout Greece as well as to foreign clients</strong>. I am a graduate of the <strong>National and Kapodistrian University of Athens</strong> and a member of the <strong>Piraeus Bar Association</strong>. I methodically manage each case, from initial assessment to final outcome, with the goal of prompt and fair resolution, in full compliance with Greek law.",
       "workMethod": {
         "title": "How I work",
         "description": "I combine <strong>strategic guidance</strong>, cost transparency and <strong>dynamic representation</strong> at every stage. <strong>I collaborate with an organized team of more than 10 experienced lawyers</strong>, to provide comprehensive, specialized solutions even in complex cases.",
@@ -620,7 +620,7 @@
       "sections": {
         "office": {
           "title": "1. Provider of the Website",
-          "content": "The Website is operated by Marina Ilyushina Law Office, a sole practitioner admitted to the Piraeus Bar Association under registration number 004418, with professional premises at Stournari 39, Athens 106 82, Greece."
+          "content": "The Website is operated by Marina Ilyushina Law Office, a sole practitioner admitted to the Piraeus Bar Association, with professional premises at Stournari 39, Athens 106 82, Greece."
         },
         "contact": {
           "title": "2. Contact details",
