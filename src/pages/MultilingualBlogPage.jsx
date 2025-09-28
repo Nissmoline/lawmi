@@ -211,7 +211,7 @@ const contentMap = {
         paragraphs: [
           "Το οικογενειακό δίκαιο απαιτεί ευαισθησία και σχέδιο. Αναλύουμε πώς επηρεάζει ο νόμος τη διανομή περιουσίας, τη διατροφή και την επιμέλεια. Ένας δικηγόρος διαζυγίου Αθήνα διασφαλίζει ότι οι συμφωνίες αντικατοπτρίζουν τις πραγματικές ανάγκες των μερών.",
           "Σε δύσκολες υποθέσεις προτείνουμε διαμεσολάβηση και προετοιμάζουμε τον πελάτη για ακροάσεις σε Αθήνα ή Πειραιά. Τα αποδεικτικά στοιχεία μαζεύονται εγκαίρως: επικοινωνία, οικονομικά στοιχεία, εκθέσεις ειδικών.",
-          "Για να οργανώσετε καλύτερα τα επόμενα βήματα συμβουλευτείτε την ενότητα [[Семейное право]], όπου υπάρχουν οδηγίες για γονική μέριμνα και οικογενειακές συμφωνίες.",
+          "Για να οργανώσετε καλύτερα τα επόμενα βήματα συμβουλευτείτε την ενότητα [[Οικογενειακό Δίκαιο]], όπου υπάρχουν οδηγίες για γονική μέριμνα και οικογενειακές συμφωνίες.",
         ],
       },
       {
@@ -223,19 +223,11 @@ const contentMap = {
         ],
       },
       {
-        heading: "εργατολόγος Αθήνα: προστασία με δικηγόρος εργατικού δικαίου",
-        paragraphs: [
-          "Οι εργατικές σχέσεις έχουν αυστηρούς κανόνες. Ο εργατολόγος Αθήνα ελέγχει συμβάσεις, εσωτερικούς κανονισμούς και αλληλογραφία για να εντοπίσει παραβάσεις.",
-          "Πριν την προσφυγή συγκεντρώνουμε στοιχεία για υπερωρίες, μισθούς, αδικαιολόγητες ποινές. Ο δικηγόρος εργατικού δικαίου προτείνει λύσεις είτε μέσω διαπραγμάτευσης είτε μέσω αγωγής.",
-          "Χρήσιμα δείγματα εγγράφων θα βρείτε στην ενότητα [[Трудовые споры]], ώστε να έρθετε προετοιμασμένοι στη συνάντηση.",
-        ],
-      },
-      {
         heading: "δικηγόρος ακινήτων Αθήνα: ασφάλεια σε Κτηματολόγιο και συμβόλαια",
         paragraphs: [
           "Οι αγοραπωλησίες απαιτούν ελέγχους στο Κτηματολόγιο, στα βάρη και στα φορολογικά δεδομένα. Ο δικηγόρος ακινήτων Αθήνα αναλύει την ιστορία του ακινήτου και οργανώνει τον φάκελο.",
           "Σε επενδύσεις στα Βόρεια ή Νότια Προάστια συνεργαζόμαστε με μηχανικούς και εκτιμητές. Έτσι εξασφαλίζεται ότι ο προϋπολογισμός είναι ρεαλιστικός και τα δικαιολογητικά πλήρη.",
-          "Επιπλέον πληροφορίες για δάνεια, μισθώσεις και εμπορικά ακίνητα θα βρείτε στην ενότητα [[Недвижимость]].",
+          "Επιπλέον πληροφορίες για δάνεια, μισθώσεις και εμπορικά ακίνητα θα βρείτε στην ενότητα [[Ακίνητα]].",
         ],
       },
       {
@@ -243,7 +235,7 @@ const contentMap = {
         paragraphs: [
           "Τα κληρονομικά Αθήνα έχουν συγκεκριμένα χρονικά όρια. Ο δικηγόρος για κληρονομικά βοηθά στη συγκέντρωση πιστοποιητικών, στην πληρωμή φόρων και στην κατάθεση δηλώσεων.",
           "Όταν οι κληρονόμοι ζουν σε διαφορετικές χώρες συντονίζουμε μεταφράσεις, apostille και επικοινωνία με τράπεζες.",
-          "Χρήσιμες οδηγίες και λίστες θα βρείτε στην ενότητα [[Наследство]], ώστε να γνωρίζετε ακριβώς τι χρειάζεται.",
+          "Χρήσιμες οδηγίες και λίστες θα βρείτε στην ενότητα [[Κληρονομικά]], ώστε να γνωρίζετε ακριβώς τι χρειάζεται.",
         ],
       },
       {
@@ -251,7 +243,7 @@ const contentMap = {
         paragraphs: [
           "Οι νομοθετικές αλλαγές είναι συνεχείς. Ο δικηγόρος μετανάστευσης Αθήνα αξιολογεί τα δικαιολογητικά για άδεια διαμονής, οργανώνει μεταφράσεις και παρακολουθεί ημερομηνίες.",
           "Για στόχο την ιθαγένεια χαράζουμε πλάνο: αποδείξεις διαμονής, δηλώσεις εισοδήματος, προετοιμασία για το τεστ πολιτογράφησης.",
-          "Στην ενότητα [[Миграция]] θα βρείτε ενημερώσεις για παρατάσεις, αλλαγές καθεστώτος και πρακτικά tips.",
+          "Στην ενότητα [[Μετανάστευση]] θα βρείτε ενημερώσεις για παρατάσεις, αλλαγές καθεστώτος και πρακτικά tips.",
         ],
       },
     ],
@@ -336,7 +328,7 @@ const contentMap = {
     ],
     cta: {
       heading: "Κλείστε συμβουλευτική",
-      paragraph: "Περιγράψτε μας την υπόθεση και δικηγόρος Αθήνα θα προτείνει τα βήματα. Χρησιμοποιήστε τα [[Контакты]], στείλτε μήνυμα ή καλέστε μας για να ορίσουμε ραντεβού.",
+      paragraph: "Περιγράψτε μας την υπόθεση και δικηγόρος Αθήνα θα προτείνει τα βήματα. Χρησιμοποιήστε τα [[Επικοινωνία]], στείλτε μήνυμα ή καλέστε μας για να ορίσουμε ραντεβού.",
       primary: "Κλείστε ραντεβού",
       secondary: "Καλέστε +30 698 336 3775",
     },
@@ -399,7 +391,7 @@ const contentMap = {
         paragraphs: [
           "Family law requires empathy and structure. We explain how οικογενειακό δίκαιο affects property division, child support and parenting plans. A δικηγόρος διαζυγίου Αθήνα ensures the court sees realistic arrangements.",
           "We prepare clients for mediation or hearings in Αθήνα and Πειραιάς, gathering evidence such as financial records and expert reports. Proper preparation keeps the διαζύγιο timeline under control.",
-          "You can explore additional checklists in [[Семейное право]] to get ready before meeting your counsel.",
+          "You can explore additional checklists in [[Family Law]] to get ready before meeting your counsel.",
         ],
       },
       {
@@ -415,7 +407,7 @@ const contentMap = {
         paragraphs: [
           "Labour disputes revolve around facts and timing. An εργατολόγος Αθήνα reviews contracts, policies and communication to identify breaches.",
           "We assemble payroll records, overtime logs and medical certificates. A δικηγόρος εργατικού δικαίου advises whether to negotiate or litigate, and outlines realistic compensation.",
-          "Templates and reminders in [[Трудовые споры]] help you collect documents before the consultation.",
+          "Templates and reminders in [[Labour Disputes]] help you collect documents before the consultation.",
         ],
       },
       {
@@ -423,7 +415,7 @@ const contentMap = {
         paragraphs: [
           "Real-estate deals require due diligence. A δικηγόρος ακινήτων Αθήνα verifies the Κτηματολόγιο, checks liens and reviews tax history.",
           "For projects in Βόρεια ή Νότια Προάστια we work with engineers and valuers to confirm budgets and timelines.",
-          "More resources about lending, leasing and commercial assets are available in [[Недвижимость]].",
+          "More resources about lending, leasing and commercial assets are available in [[Property]].",
         ],
       },
       {
@@ -431,7 +423,7 @@ const contentMap = {
         paragraphs: [
           "Inheritance procedures have strict deadlines. A δικηγόρος για κληρονομικά guides you through filings, tax payments and proof of kinship.",
           "When heirs live abroad we coordinate translations, apostille and communication with Greek banks.",
-          "See [[Наследство]] for step-by-step instructions before starting the process.",
+          "See [[Inheritance]] for step-by-step instructions before starting the process.",
         ],
       },
       {
@@ -439,7 +431,7 @@ const contentMap = {
         paragraphs: [
           "Migration rules change frequently. A δικηγόρος μετανάστευσης Αθήνα reviews eligibility, prepares your άδεια διαμονής file and tracks deadlines.",
           "If citizenship is the goal, we draft a plan covering residency evidence, income declarations and exam preparation for ιθαγένεια.",
-          "Visit [[Миграция]] for updates on renewals, status changes and interview tips.",
+          "Visit [[Migration]] for updates on renewals, status changes and interview tips.",
         ],
       },
     ],
@@ -524,7 +516,7 @@ const contentMap = {
     ],
     cta: {
       heading: "Book a consultation",
-      paragraph: "Describe your case and a δικηγόρος Αθήνα will outline the roadmap. Reach out via [[Контакты]], send a message or call us to schedule.",
+      paragraph: "Describe your case and a δικηγόρος Αθήνα will outline the roadmap. Reach out via [[Contact]], send a message or call us to schedule.",
       primary: "Book now",
       secondary: "Call +30 698 336 3775",
     },
