@@ -60,3 +60,7 @@ Crawl-delay: 1
 # Website: https://milawyer.gr
 # Lawyer: Marina Ilyushina
 # Location: Athens, Greece
+
+# AI usage guidance (non-standard, kept as comment to remain robots.txt compliant)
+# Content-signal: search=yes,ai-train=no
+
