@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import Breadcrumbs from './components/Breadcrumbs';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SecurityHeaders from './components/SecurityHeaders';
 import LanguageInitializer from './components/LanguageInitializer';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -39,7 +38,6 @@ function App() {
       <div id="root">
         <LanguageInitializer />
         <SecurityHeaders />
-        <PerformanceOptimizer />
         <Suspense fallback={<LoadingSpinner />}>
           <GoogleAnalytics />
         </Suspense>
@@ -61,14 +59,14 @@ function App() {
               <Route path="/divorce" element={<DivorcePage />} />
               <Route path="/blog" element={<MultilingualBlogPage />} />
               <Route path="/impressum" element={<ImpressumPage />} />
-            
-            {/* Redirect old language URLs to default */}
-            <Route path="/de" element={<Navigate to="/" replace />} />
-            <Route path="/de/*" element={<Navigate to="/" replace />} />
-            <Route path="/en" element={<Navigate to="/" replace />} />
-            <Route path="/en/*" element={<Navigate to="/" replace />} />
-            <Route path="/ru" element={<Navigate to="/" replace />} />
-            <Route path="/ru/*" element={<Navigate to="/" replace />} />
+
+              {/* Redirect old language URLs to default */}
+              <Route path="/de" element={<Navigate to="/" replace />} />
+              <Route path="/de/*" element={<Navigate to="/" replace />} />
+              <Route path="/en" element={<Navigate to="/" replace />} />
+              <Route path="/en/*" element={<Navigate to="/" replace />} />
+              <Route path="/ru" element={<Navigate to="/" replace />} />
+              <Route path="/ru/*" element={<Navigate to="/" replace />} />
             </Routes>
           </Suspense>
         </main>

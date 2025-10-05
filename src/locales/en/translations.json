@@ -697,69 +697,71 @@
       "analytics": "Analytics",
       "analyticsDesc": "These cookies help us understand how the website is used.",
       "save": "Save Settings",
-      "close": "Close"
+      "close": "Close",
+      "functional": "Functional",
+      "functionalDesc": "These cookies enable enhanced functionality and personalization."
     }
   },
   "seo": {
-  "home": {
-    "title": "Lawyer in Athens | Russian-Speaking Lawyer | Marina Iliousina",
-    "description": "Lawyer in Athens — Marina Iliousina. Specialization in Golden Visa, divorces, and immigration law. ✅ Trilingual service (Greek, Russian, English). 📞 Free first consultation: +30-698-336-3775",
-    "keywords": "lawyer in Athens, lawyer, Russian-speaking lawyer, experienced lawyer Athens, golden visa lawyer, divorce lawyer Athens, immigration law lawyer, legal services Athens, lawyer Greece, Marina Iliousina"
+    "home": {
+      "title": "Lawyer in Athens | Russian-Speaking Lawyer | Marina Iliousina",
+      "description": "Lawyer in Athens — Marina Iliousina. Specialization in Golden Visa, divorces, and immigration law. ✅ Trilingual service (Greek, Russian, English). 📞 Free first consultation: +30-698-336-3775",
+      "keywords": "lawyer in Athens, lawyer, Russian-speaking lawyer, experienced lawyer Athens, golden visa lawyer, divorce lawyer Athens, immigration law lawyer, legal services Athens, lawyer Greece, Marina Iliousina"
+    },
+    "family": {
+      "title": "Family Law Lawyer in Athens | Marina Iliousina",
+      "description": "Family law lawyer in Athens — Marina Iliousina. ✅ Divorces, child custody, alimony, wills, inheritance. Russian-speaking lawyer with 10+ years of experience. 📞 Free consultation: +30-698-336-3775",
+      "keywords": "family law lawyer Athens, divorce lawyer, child custody lawyer, alimony lawyer, wills lawyer, inheritance lawyer, Russian-speaking family lawyer"
+    },
+    "immigration": {
+      "title": "Immigration Lawyer & Golden Visa Athens",
+      "description": "Immigration lawyer in Athens — Marina Iliousina. ✅ Golden Visa, residence permits, citizenship, family reunification. Russian-speaking lawyer with expertise. 📞 Free consultation: +30-698-336-3775",
+      "keywords": "immigration lawyer Athens, golden visa lawyer, residence permit lawyer, citizenship lawyer, migration lawyer, Russian-speaking immigration lawyer"
+    },
+    "criminal": {
+      "title": "Criminal Lawyer Athens | Criminal Defense",
+      "description": "Criminal lawyer in Athens — Marina Iliousina. ✅ Criminal defense in misdemeanors & felonies. Pre-trial procedures, appeals. 📞 24/7 support: +30-698-336-3775",
+      "keywords": "criminal lawyer Athens, criminal defense lawyer, misdemeanor lawyer, felony lawyer, criminal attorney Athens, Russian-speaking criminal lawyer"
+    },
+    "civil": {
+      "title": "Civil Law & Contracts Lawyer Athens | Marina Iliousina",
+      "description": "Civil law lawyer in Athens — Marina Iliousina. ✅ Compensation claims, real estate transactions, contracts, torts. Expertise in real estate. 📞 Free consultation: +30-698-336-3775",
+      "keywords": "civil law lawyer Athens, compensation lawyer, real estate transaction lawyer, contracts lawyer, torts lawyer, Russian-speaking civil lawyer"
+    },
+    "corporate": {
+      "title": "Corporate & Commercial Lawyer Athens | Marina Iliousina",
+      "description": "Corporate law lawyer in Athens — Marina Iliousina. ✅ Company formation, commercial contracts, mergers, corporate governance. Expertise for businesses. 📞 Consultation: +30-698-336-3775",
+      "keywords": "corporate law lawyer Athens, company formation lawyer, commercial contracts, corporate disputes, business lawyer, Russian-speaking corporate lawyer"
+    },
+    "translations": {
+      "title": "Translations & Legal Document Certifications Athens | Marina Iliousina",
+      "description": "Official legal translations, apostille, and document certifications in Athens. Services in Greek, Russian, and English.",
+      "keywords": "translations Athens, legal translations, official translations, document certifications, apostille Athens"
+    },
+    "goldenVisa": {
+      "title": "Golden Visa Greece 2024 | Golden Visa Lawyer Athens",
+      "description": "Specialized legal support for Golden Visa in Greece. Property purchase, residence permits, citizenship, and investments.",
+      "keywords": "golden visa greece, golden visa lawyer, investor residence permit, golden visa property purchase, investments in greece"
+    },
+    "divorce": {
+      "title": "Divorces & Family Disputes Athens | Lawyer Marina Iliousina",
+      "description": "Divorce lawyer in Athens for uncontested and contested divorces, child custody, alimony, and property arrangements.",
+      "keywords": "divorce lawyer, divorces Athens, child custody, alimony, family disputes"
+    },
+    "blog": {
+      "title": "Lawyer in Athens | Legal Blog | Marina Iliousina",
+      "description": "Legal blog with articles on Golden Visa, divorces, criminal and corporate law by lawyer Marina Iliousina in Athens.",
+      "keywords": "lawyer blog, legal blog Athens, Russian-speaking lawyer blog, golden visa articles, family law blog, criminal law blog"
+    },
+    "common": {
+      "keywords": "lawyer Athens, lawyer Greece, Russian-speaking lawyer Athens, lawyer, legal services, contracts, home purchase, family law lawyer, divorces Athens, divorce lawyer, child custody, alimony, wills, inheritance, adoption, immigration law lawyer, residence permit, residence permit lawyer, golden visa, citizenship, family reunification, visas and permits, criminal law lawyer, criminal defense, misdemeanor lawyer, felony lawyer, pre-trial procedures, appeals, civil law lawyer, compensation claims, torts, property, debt disputes, insurance disputes, corporate law lawyer, company formation, commercial contracts, corporate disputes, mergers and acquisitions, commercial agreements, corporate governance, translations Athens, official translations, legal translations, document certifications, apostille, international certifications, corporate translations, child support lawyer, golden visa lawyer, real estate purchase and sale lawyer, translations lawyer, free first consultation, lawyer who speaks Russian, child custody lawyer, wills and inheritance lawyer, adoption lawyer"
+    },
+    "impressum": {
+      "title": "Legal Notice | Lawyer Marina Iliousina",
+      "description": "Official legal notice (Impressum) of the Law Office of Marina Iliousina in Athens, including supervisory details, tax information, and contact.",
+      "keywords": "legal notice, impressum, lawyer athens, supervisory details, contact details"
+    }
   },
-  "family": {
-    "title": "Family Law Lawyer in Athens | Marina Iliousina",
-    "description": "Family law lawyer in Athens — Marina Iliousina. ✅ Divorces, child custody, alimony, wills, inheritance. Russian-speaking lawyer with 10+ years of experience. 📞 Free consultation: +30-698-336-3775",
-    "keywords": "family law lawyer Athens, divorce lawyer, child custody lawyer, alimony lawyer, wills lawyer, inheritance lawyer, Russian-speaking family lawyer"
-  },
-  "immigration": {
-    "title": "Immigration Lawyer & Golden Visa Athens",
-    "description": "Immigration lawyer in Athens — Marina Iliousina. ✅ Golden Visa, residence permits, citizenship, family reunification. Russian-speaking lawyer with expertise. 📞 Free consultation: +30-698-336-3775",
-    "keywords": "immigration lawyer Athens, golden visa lawyer, residence permit lawyer, citizenship lawyer, migration lawyer, Russian-speaking immigration lawyer"
-  },
-  "criminal": {
-    "title": "Criminal Lawyer Athens | Criminal Defense",
-    "description": "Criminal lawyer in Athens — Marina Iliousina. ✅ Criminal defense in misdemeanors & felonies. Pre-trial procedures, appeals. 📞 24/7 support: +30-698-336-3775",
-    "keywords": "criminal lawyer Athens, criminal defense lawyer, misdemeanor lawyer, felony lawyer, criminal attorney Athens, Russian-speaking criminal lawyer"
-  },
-  "civil": {
-    "title": "Civil Law & Contracts Lawyer Athens | Marina Iliousina",
-    "description": "Civil law lawyer in Athens — Marina Iliousina. ✅ Compensation claims, real estate transactions, contracts, torts. Expertise in real estate. 📞 Free consultation: +30-698-336-3775",
-    "keywords": "civil law lawyer Athens, compensation lawyer, real estate transaction lawyer, contracts lawyer, torts lawyer, Russian-speaking civil lawyer"
-  },
-  "corporate": {
-    "title": "Corporate & Commercial Lawyer Athens | Marina Iliousina",
-    "description": "Corporate law lawyer in Athens — Marina Iliousina. ✅ Company formation, commercial contracts, mergers, corporate governance. Expertise for businesses. 📞 Consultation: +30-698-336-3775",
-    "keywords": "corporate law lawyer Athens, company formation lawyer, commercial contracts, corporate disputes, business lawyer, Russian-speaking corporate lawyer"
-  },
-  "translations": {
-    "title": "Translations & Legal Document Certifications Athens | Marina Iliousina",
-    "description": "Official legal translations, apostille, and document certifications in Athens. Services in Greek, Russian, and English.",
-    "keywords": "translations Athens, legal translations, official translations, document certifications, apostille Athens"
-  },
-  "goldenVisa": {
-    "title": "Golden Visa Greece 2024 | Golden Visa Lawyer Athens",
-    "description": "Specialized legal support for Golden Visa in Greece. Property purchase, residence permits, citizenship, and investments.",
-    "keywords": "golden visa greece, golden visa lawyer, investor residence permit, golden visa property purchase, investments in greece"
-  },
-  "divorce": {
-    "title": "Divorces & Family Disputes Athens | Lawyer Marina Iliousina",
-    "description": "Divorce lawyer in Athens for uncontested and contested divorces, child custody, alimony, and property arrangements.",
-    "keywords": "divorce lawyer, divorces Athens, child custody, alimony, family disputes"
-  },
-  "blog": {
-    "title": "Lawyer in Athens | Legal Blog | Marina Iliousina",
-    "description": "Legal blog with articles on Golden Visa, divorces, criminal and corporate law by lawyer Marina Iliousina in Athens.",
-    "keywords": "lawyer blog, legal blog Athens, Russian-speaking lawyer blog, golden visa articles, family law blog, criminal law blog"
-  },
-  "common": {
-    "keywords": "lawyer Athens, lawyer Greece, Russian-speaking lawyer Athens, lawyer, legal services, contracts, home purchase, family law lawyer, divorces Athens, divorce lawyer, child custody, alimony, wills, inheritance, adoption, immigration law lawyer, residence permit, residence permit lawyer, golden visa, citizenship, family reunification, visas and permits, criminal law lawyer, criminal defense, misdemeanor lawyer, felony lawyer, pre-trial procedures, appeals, civil law lawyer, compensation claims, torts, property, debt disputes, insurance disputes, corporate law lawyer, company formation, commercial contracts, corporate disputes, mergers and acquisitions, commercial agreements, corporate governance, translations Athens, official translations, legal translations, document certifications, apostille, international certifications, corporate translations, child support lawyer, golden visa lawyer, real estate purchase and sale lawyer, translations lawyer, free first consultation, lawyer who speaks Russian, child custody lawyer, wills and inheritance lawyer, adoption lawyer"
-  },
-  "impressum": {
-    "title": "Legal Notice | Lawyer Marina Iliousina",
-    "description": "Official legal notice (Impressum) of the Law Office of Marina Iliousina in Athens, including supervisory details, tax information, and contact.",
-    "keywords": "legal notice, impressum, lawyer athens, supervisory details, contact details"
-  }
-},
   "keywords": {
     "primary": [
       "lawyer athens",

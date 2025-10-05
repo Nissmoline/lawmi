@@ -11,14 +11,15 @@
     "test": "npm run lint",
     "lint": "eslint .",
     "preview": "vite preview",
-    "preview:worker":"npm run build && wrangler pages dev dist",
-    "deploy:worker":"npm run build:seo && wrangler pages deploy dist --project-name=milawyer-react",
+    "preview:worker": "npm run build && wrangler pages dev dist",
+    "deploy:worker": "npm run build:seo && wrangler pages deploy dist --project-name=milawyer-react",
     "seo:check": "node scripts/seo-checker.js",
-    "seo:update": "node scripts/update-sitemap.js"
+    "seo:update": "node scripts/update-sitemap.js",
+    "validate:robots": "node scripts/validate-robots.js",
+    "check:analytics": "node scripts/check-analytics.js"
   },
   "dependencies": {
     "i18next": "^25.3.2",
-    "i18next-browser-languagedetector": "^8.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-i18next": "^15.6.1",

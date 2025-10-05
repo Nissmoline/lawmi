@@ -1,32 +1,32 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { detectOptimalLanguage, getBrowserLanguage, isLanguageSupported } from '../utils/languageUtils';
+import { detectOptimalLanguage, isLanguageSupported } from '../utils/languageUtils';
+import { loadLanguageResources } from '../i18n';
 
 const LanguageInitializer = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Получаем язык браузера и определяем оптимальный язык
-    const browserLanguage = getBrowserLanguage();
     const detectedLanguage = detectOptimalLanguage();
-    
-    // Проверяем, не установлен ли уже язык в localStorage
-    const savedLanguage = localStorage.getItem('i18nextLng');
-    
-    if (!savedLanguage) {
-      // Если язык не сохранен, устанавливаем определенный язык
-      i18n.changeLanguage(detectedLanguage);
-      console.log(`Автоматически установлен язык: ${detectedLanguage} (браузер: ${browserLanguage})`);
-    } else {
-      // Если язык уже сохранен, проверяем его валидность
-      if (!isLanguageSupported(savedLanguage)) {
-        i18n.changeLanguage('en');
-        console.log('Сохраненный язык не поддерживается, установлен английский');
+    const savedLanguage = typeof window !== 'undefined' ? window.localStorage?.getItem('i18nextLng') : null;
+
+    const ensureLanguage = async (language) => {
+      await loadLanguageResources(language);
+      if (i18n.language !== language) {
+        await i18n.changeLanguage(language);
       }
+    };
+
+    if (!savedLanguage) {
+      ensureLanguage(detectedLanguage);
+    } else if (!isLanguageSupported(savedLanguage)) {
+      ensureLanguage('en');
+    } else {
+      loadLanguageResources(savedLanguage);
     }
   }, [i18n]);
 
-  return null; // Компонент не рендерит ничего
+  return null;
 };
 
 export default LanguageInitializer; 

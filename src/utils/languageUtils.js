@@ -1,3 +1,5 @@
+export const LANGUAGE_SWITCH_EVENT = 'language-switch';
+
 // Утилиты для работы с языками
 
 /**

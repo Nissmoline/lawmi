@@ -1,34 +1,41 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { loadLanguageResources } from '../i18n';
+import { LANGUAGE_SWITCH_EVENT } from '../utils/languageUtils';
 import './LanguageSelector.css';
+
+const languages = [
+  { code: 'el', name: 'EL' },
+  { code: 'en', name: 'EN' },
+  { code: 'ru', name: 'RU' }
+];
 
 const LanguageSelector = ({ onLanguageChange }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const languages = [
-    { code: 'el', /* flag: '🇬🇷', */ name: 'EΛ' },
-    { code: 'en', /* flag: '🇬🇧', */ name: 'EN' },
-    { code: 'ru', /* flag: '🇷🇺', */ name: 'RU' }
-  ];
+  const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const handleLanguageChange = async (languageCode) => {
+    await loadLanguageResources(languageCode);
+    await i18n.changeLanguage(languageCode);
 
-  const handleLanguageChange = (languageCode) => {
-    i18n.changeLanguage(languageCode);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent(LANGUAGE_SWITCH_EVENT, { detail: { language: languageCode } }));
+    }
+
     setIsOpen(false);
-    // Call the callback if provided
+
     if (onLanguageChange) {
-      onLanguageChange();
+      onLanguageChange(languageCode);
     }
   };
 
-  const toggleDropdown = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('Toggle dropdown clicked, current state:', isOpen);
-    setIsOpen(!isOpen);
+  const toggleDropdown = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setIsOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -47,7 +54,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
     document.addEventListener('keydown', handleEscape);
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
@@ -55,7 +62,6 @@ const LanguageSelector = ({ onLanguageChange }) => {
     };
   }, []);
 
-  // Close dropdown when window is resized to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 900) {
@@ -82,7 +88,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
         {currentLanguage.name}
         <span className="language-arrow">&#9662;</span>
       </button>
-      
+
       <ul className="language-dropdown" role="menu">
         {languages.map((language) => (
           <li key={language.code} role="none">
@@ -91,6 +97,8 @@ const LanguageSelector = ({ onLanguageChange }) => {
               onClick={() => handleLanguageChange(language.code)}
               role="menuitem"
               type="button"
+              data-value={language.code}
+              value={language.code}
             >
               {language.name}
             </button>

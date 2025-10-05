@@ -1,118 +1,132 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+import { canUseAnalytics, COOKIE_PREFERENCES_EVENT } from '../utils/cookieUtils';
+import { LANGUAGE_SWITCH_EVENT } from '../utils/languageUtils';
 
 const GA_MEASUREMENT_ID = 'G-5CY4QQN1FW';
 const GA_STREAM_ID = '12194715519';
+const SERVICE_PAGES = ['/family', '/immigration', '/criminal', '/civil', '/corporate', '/translations', '/golden-visa', '/divorce', '/blog'];
+let gaScriptInjected = false;
 
 const GoogleAnalytics = () => {
   const location = useLocation();
+  const [analyticsAllowed, setAnalyticsAllowed] = useState(() => canUseAnalytics());
+
+  const trackEvent = useCallback((action, category, label, value) => {
+    if (!analyticsAllowed || typeof window.gtag !== 'function') {
+      return;
+    }
+
+    window.gtag('event', action, {
+      event_category: category,
+      event_label: label,
+      value,
+    });
+  }, [analyticsAllowed]);
 
   useEffect(() => {
-    // Initialize Google Analytics
-    const initGA = () => {
-      // Load Google Analytics script
+    const handlePreferenceChange = () => {
+      setAnalyticsAllowed(canUseAnalytics());
+    };
+
+    window.addEventListener(COOKIE_PREFERENCES_EVENT, handlePreferenceChange);
+    return () => {
+      window.removeEventListener(COOKIE_PREFERENCES_EVENT, handlePreferenceChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!analyticsAllowed) {
+      return;
+    }
+
+    if (!gaScriptInjected) {
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
       document.head.appendChild(script);
-
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA_MEASUREMENT_ID, {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true,
-        anonymize_ip: true,
-        cookie_flags: 'SameSite=None;Secure',
-        stream_id: GA_STREAM_ID,
-        // Enhanced ecommerce for legal services
-        custom_map: {
-          'custom_parameter_1': 'service_type',
-          'custom_parameter_2': 'language',
-          'custom_parameter_3': 'page_category'
-        }
-      });
-    };
-
-    // Track page view on route change
-    const trackPageView = () => {
-      if (window.gtag) {
-        window.gtag('config', GA_MEASUREMENT_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: location.pathname,
-          send_page_view: true,
-          stream_id: GA_STREAM_ID
-        });
-      }
-    };
-
-    // Initialize GA on first load
-    if (!window.gtag) {
-      initGA();
+      gaScriptInjected = true;
     }
 
-    // Track page view on route change
-    trackPageView();
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag() {
+      window.dataLayer.push(arguments);
+    };
 
-  }, [location.pathname]);
+    window.gtag('js', new Date());
+  }, [analyticsAllowed]);
 
-  // Track specific events
-  const trackEvent = (action, category, label, value) => {
-    if (window.gtag) {
-      window.gtag('event', action, {
-        event_category: category,
-        event_label: label,
-        value: value
-      });
-    }
-  };
-
-  // Track phone clicks
   useEffect(() => {
+    if (!analyticsAllowed || typeof window.gtag !== 'function') {
+      return;
+    }
+
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: location.pathname,
+      send_page_view: true,
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure',
+      stream_id: GA_STREAM_ID,
+    });
+  }, [analyticsAllowed, location.pathname]);
+
+  useEffect(() => {
+    if (!analyticsAllowed) {
+      return;
+    }
+
+    const phoneHandler = () => trackEvent('phone_click', 'contact', 'phone_number', 1);
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-    phoneLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        trackEvent('phone_click', 'contact', 'phone_number', 1);
-      });
-    });
-  }, []);
+    phoneLinks.forEach((link) => link.addEventListener('click', phoneHandler));
 
-  // Track email clicks
+    return () => {
+      phoneLinks.forEach((link) => link.removeEventListener('click', phoneHandler));
+    };
+  }, [analyticsAllowed, trackEvent]);
+
   useEffect(() => {
+    if (!analyticsAllowed) {
+      return;
+    }
+
+    const emailHandler = () => trackEvent('email_click', 'contact', 'email_address', 1);
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-    emailLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        trackEvent('email_click', 'contact', 'email_address', 1);
-      });
-    });
-  }, []);
+    emailLinks.forEach((link) => link.addEventListener('click', emailHandler));
 
-  // Track service page visits
+    return () => {
+      emailLinks.forEach((link) => link.removeEventListener('click', emailHandler));
+    };
+  }, [analyticsAllowed, trackEvent]);
+
   useEffect(() => {
-    const servicePages = ['/family', '/immigration', '/criminal', '/civil', '/corporate', '/translations', '/golden-visa', '/divorce', '/blog'];
-    if (servicePages.includes(location.pathname)) {
+    if (!analyticsAllowed) {
+      return;
+    }
+
+    if (SERVICE_PAGES.includes(location.pathname)) {
       const serviceType = location.pathname.substring(1);
       trackEvent('service_page_view', 'service', serviceType, 1);
     }
-  }, [location.pathname]);
+  }, [analyticsAllowed, location.pathname, trackEvent]);
 
-  // Track language changes
   useEffect(() => {
-    const languageSelector = document.querySelector('.language-selector');
-    if (languageSelector) {
-      languageSelector.addEventListener('change', (e) => {
-        trackEvent('language_change', 'user_interaction', e.target.value, 1);
-      });
+    if (!analyticsAllowed) {
+      return;
     }
-  }, []);
 
-  return null; // This component doesn't render anything
+    const handleLanguageSwitch = (event) => {
+      trackEvent('language_change', 'user_interaction', event.detail?.language || '', 1);
+    };
+
+    window.addEventListener(LANGUAGE_SWITCH_EVENT, handleLanguageSwitch);
+    return () => {
+      window.removeEventListener(LANGUAGE_SWITCH_EVENT, handleLanguageSwitch);
+    };
+  }, [analyticsAllowed, trackEvent]);
+
+  return null;
 };
 
 export default GoogleAnalytics;

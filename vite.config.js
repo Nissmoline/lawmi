@@ -7,30 +7,17 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Core React libraries
-          'react-vendor': ['react', 'react-dom'],
-          // Routing
-          'router': ['react-router-dom'],
-          // i18n
-          'i18n': ['react-i18next', 'i18next', 'i18next-browser-languagedetector'],
-          // Analytics
-          'analytics': ['./src/components/GoogleAnalytics.jsx'],
-          // Pages (lazy loaded)
-          'pages': [
-            './src/pages/HomePage.jsx',
-            './src/pages/FamilyLawPage.jsx',
-            './src/pages/ImmigrationPage.jsx',
-            './src/pages/CriminalPage.jsx',
-            './src/pages/CivilPage.jsx',
-            './src/pages/TranslationsPage.jsx',
-            './src/pages/CorporatePage.jsx',
-            './src/pages/GoldenVisaPage.jsx',
-            './src/pages/DivorcePage.jsx',
-            './src/pages/MultilingualBlogPage.jsx'
-          ]
+        manualChunks(id) {
+          if (id.includes('node_modules/react')) {
+            return 'react-vendor'
+          }
+
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router'
+          }
+
+          return undefined
         },
-        // Add versioning to prevent cache issues
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]'
