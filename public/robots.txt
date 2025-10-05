@@ -63,4 +63,3 @@ Crawl-delay: 1
 
 # AI usage guidance (non-standard, kept as comment to remain robots.txt compliant)
 # Content-signal: search=yes,ai-train=no
-
