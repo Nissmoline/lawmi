@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -13,11 +13,49 @@ const SEOHead = ({
   canonical,
   structuredData,
   hreflang = {},
+  faqItems = [],
   noindex = false,
   nofollow = false
 }) => {
   const location = useLocation();
   const { t, i18n } = useTranslation();
+
+  const sanitizedFaqItems = useMemo(() => {
+    if (!Array.isArray(faqItems)) {
+      return [];
+    }
+
+    const stripHtml = (value) => {
+      if (typeof value !== 'string') {
+        return '';
+      }
+
+      return value
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    };
+
+    return faqItems
+      .map((item) => {
+        if (!item) {
+          return null;
+        }
+
+        const question = stripHtml(item.question);
+        const answer = stripHtml(item.answer);
+
+        if (!question || !answer) {
+          return null;
+        }
+
+        return {
+          question,
+          answer
+        };
+      })
+      .filter(Boolean);
+  }, [faqItems]);
 
   const updateBreadcrumbStructuredData = useCallback((pathname) => {
     const baseUrl = 'https://milawyer.gr';
@@ -76,7 +114,7 @@ const SEOHead = ({
     const normalizedPath = pathname === '/' ? '' : pathname;
 
     const alternateNames = {
-      el: 'Δικηγόρος Αθήνα Μαρίνα Ιλιούσινα - Ρωσόφωνος Δικηγόρος',
+      el: 'Δικηγόρος Αθήνα - Μαρίνα Ιλιουσίνα | Ρωσόφωνος Δικηγόρος',
       en: 'Marina Ilyushina - Greek Lawyer in Athens',
       ru: 'Марина Илюшина - русскоязычный адвокат в Афинах'
     };
@@ -138,7 +176,7 @@ const SEOHead = ({
       "@context": "https://schema.org",
       "@type": ["LocalBusiness", "LegalService", "Attorney"],
       "@id": `${baseUrl}${normalizedPath}#legalService`,
-      "name": "Marina Ilyushina Law Office",
+      "name": language === 'el' ? "Μαρίνα Ιλιουσίνα - Δικηγόρος Αθήνα" : "Marina Ilyushina Law Office",
       "alternateName": alternateNames[language] || alternateNames.en,
       "description": localizedDescription.trim(),
       "url": `${baseUrl}${normalizedPath}`,
@@ -202,6 +240,16 @@ const SEOHead = ({
   }, [i18n.language, t]);
 
   useEffect(() => {
+    // Clean up all structured data scripts on route change to prevent duplication
+    const cleanupStructuredData = () => {
+      // Remove all SEO-related scripts
+      const seoScripts = document.querySelectorAll('script[data-seo-structured], script[data-seo-faq], script[data-seo-breadcrumb], script[data-seo-local-business]');
+      seoScripts.forEach(script => script.remove());
+    };
+
+    // Clean up before adding new data
+    cleanupStructuredData();
+
     const globalKeywords = t('seo.common.keywords', { defaultValue: '' }).trim();
     const combinedKeywords = [keywords, globalKeywords]
       .map(value => (typeof value === 'string' ? value.trim() : ''))
@@ -360,6 +408,47 @@ const SEOHead = ({
     script.textContent = JSON.stringify(structuredDataPayload);
     document.head.appendChild(script);
 
+    // Remove existing FAQ scripts for current page to prevent duplication
+    const existingFaqScripts = document.querySelectorAll(`script[data-seo-faq][data-page="${location.pathname}"]`);
+    existingFaqScripts.forEach(script => script.remove());
+    
+    // Also remove any FAQPage structured data that might exist with same URL
+    const allScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    allScripts.forEach(script => {
+      try {
+        const data = JSON.parse(script.textContent);
+        if (data['@type'] === 'FAQPage' && data.url === pageUrl) {
+          script.remove();
+        }
+      } catch {
+        // Ignore parsing errors
+      }
+    });
+
+    if (sanitizedFaqItems.length > 0) {
+      const faqStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        "url": pageUrl,
+        "mainEntity": sanitizedFaqItems.map(({ question, answer }) => ({
+          "@type": "Question",
+          "name": question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": answer
+          }
+        }))
+      };
+
+      const faqScript = document.createElement('script');
+      faqScript.type = 'application/ld+json';
+      faqScript.setAttribute('data-seo-faq', 'true');
+      faqScript.setAttribute('data-page', location.pathname); // Add page identifier
+      faqScript.textContent = JSON.stringify(faqStructuredData);
+      document.head.appendChild(faqScript);
+    }
+
     // Update page URL for analytics
     if (window.gtag) {
       window.gtag('config', GA_MEASUREMENT_ID, {
@@ -381,7 +470,7 @@ const SEOHead = ({
     // Scroll to top on route change
     window.scrollTo(0, 0);
 
-  }, [title, description, keywords, image, canonical, structuredData, hreflang, noindex, nofollow, location.pathname, i18n.language, t, updateBreadcrumbStructuredData, addLocalBusinessStructuredData]);
+  }, [title, description, keywords, image, canonical, structuredData, sanitizedFaqItems, hreflang, noindex, nofollow, location.pathname, i18n.language, t, updateBreadcrumbStructuredData, addLocalBusinessStructuredData]);
   return null; // This component doesn't render anything
 };
 

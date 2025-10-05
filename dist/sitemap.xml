@@ -5,7 +5,7 @@
   <!-- All pages with hreflang for multiple languages -->
   <url>
     <loc>https://milawyer.gr/</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/"/>
@@ -16,7 +16,7 @@
   
   <url>
     <loc>https://milawyer.gr/family</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/family"/>
@@ -27,7 +27,7 @@
   
   <url>
     <loc>https://milawyer.gr/immigration</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/immigration"/>
@@ -38,7 +38,7 @@
   
   <url>
     <loc>https://milawyer.gr/criminal</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/criminal"/>
@@ -49,7 +49,7 @@
   
   <url>
     <loc>https://milawyer.gr/civil</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/civil"/>
@@ -60,7 +60,7 @@
   
   <url>
     <loc>https://milawyer.gr/corporate</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/corporate"/>
@@ -71,7 +71,7 @@
   
   <url>
     <loc>https://milawyer.gr/translations</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/translations"/>
@@ -82,7 +82,7 @@
   
   <url>
     <loc>https://milawyer.gr/terms</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/terms"/>
@@ -93,7 +93,7 @@
   
   <url>
     <loc>https://milawyer.gr/privacy</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/privacy"/>
@@ -104,7 +104,7 @@
   
   <url>
     <loc>https://milawyer.gr/golden-visa</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/golden-visa"/>
@@ -115,7 +115,7 @@
   
   <url>
     <loc>https://milawyer.gr/divorce</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/divorce"/>
@@ -126,7 +126,7 @@
 
   <url>
     <loc>https://milawyer.gr/blog</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/blog"/>
@@ -137,7 +137,7 @@
 
   <url>
     <loc>https://milawyer.gr/impressum</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://milawyer.gr/impressum"/>

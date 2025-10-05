@@ -4,95 +4,12 @@ Allow: /
 # Sitemap
 Sitemap: https://milawyer.gr/sitemap.xml
 
-# Disallow admin and private areas
+# Disallow private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
-
-# Allow important pages for all languages
-Allow: /
-Allow: /family
-Allow: /immigration
-Allow: /criminal
-Allow: /civil
-Allow: /translations
-Allow: /corporate
-Allow: /golden-visa
-Allow: /divorce
-Allow: /blog
-Allow: /terms
-Allow: /privacy
-
-# Allow all main pages (same URLs for all languages)
-Allow: /
-Allow: /family
-Allow: /immigration
-Allow: /criminal
-Allow: /civil
-Allow: /translations
-Allow: /corporate
-Allow: /golden-visa
-Allow: /divorce
-Allow: /blog
-Allow: /terms
-Allow: /privacy
-
-# Allow important SEO pages
-Allow: /images/
-Allow: /public/
-Allow: /favicon.ico
-Allow: /site.webmanifest
-Allow: /sitemap.xml
-Allow: /robots.txt
-
-# Allow favicon and important assets
-Allow: /favicon.ico
-Allow: /images/faviconBlack.svg
-Allow: /site.webmanifest
-Allow: /images/
-Allow: /public/
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Host
-Host: https://milawyer.gr
-
-# Specific rules for different bots
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-
-# Greek search engines
-User-agent: SearchBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: GreekBot
-Allow: /
-Crawl-delay: 1
 
 # Block bad bots
 User-agent: AhrefsBot
@@ -113,14 +30,5 @@ Disallow: /
 User-agent: Screaming Frog SEO Spider
 Disallow: /
 
-# Additional Greek SEO optimizations
-User-agent: *
-Allow: /el/
-Allow: /en/
-Allow: /ru/
-Allow: /images/Ilyushina.jpg
-Allow: /images/faviconBlack.svg
-Allow: /favicon.ico
-Allow: /site.webmanifest
-Allow: /sitemap.xml
-Allow: /robots.txt 
+# Crawl delay
+Crawl-delay: 1

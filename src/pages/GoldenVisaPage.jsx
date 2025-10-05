@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '../components/SEOHead';
 
 function GoldenVisaPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const faqItems = useMemo(() => {
+    const items = t('pages.goldenVisa.faq.items', { returnObjects: true, lng: i18n.language });
+    return Array.isArray(items) ? items : [];
+  }, [t, i18n.language]);
 
   return (
     <>
@@ -12,6 +17,7 @@ function GoldenVisaPage() {
         description={t('seo.goldenVisa.description')}
         keywords={t('seo.goldenVisa.keywords')}
         canonical="https://milawyer.gr/golden-visa"
+        faqItems={faqItems}
         hreflang={{
           "el": "https://milawyer.gr/golden-visa",
           "en": "https://milawyer.gr/golden-visa",
@@ -49,7 +55,7 @@ function GoldenVisaPage() {
         <div className="container">
           <h2>{t('pages.goldenVisa.faq.title')}</h2>
           <div className="faq-grid">
-            {t('pages.goldenVisa.faq.items', { returnObjects: true }).map((item, index) => (
+            {faqItems.map((item, index) => (
               <div key={index} className="faq-item">
                 <h3>{item.question}</h3>
                 <p>{item.answer}</p>

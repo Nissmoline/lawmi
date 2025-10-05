@@ -9,9 +9,10 @@ function TermsPage() {
     <>
       <SEOHead 
         title={t('pages.terms.title')}
-        description="Условия использования веб-сайта адвоката Марины Илюшиной"
-        keywords="условия использования, правовая информация"
+        description="Условия использования веб-сайта - правовая информация и правила"
+        keywords="условия использования, правовая информация, правила сайта"
         canonical="https://milawyer.gr/terms"
+        noindex={true}
         hreflang={{
           "el": "https://milawyer.gr/terms",
           "en": "https://milawyer.gr/terms",

@@ -1,10 +1,8 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
-import SEOHead from './components/SEOHead';
 import Breadcrumbs from './components/Breadcrumbs';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SecurityHeaders from './components/SecurityHeaders';
@@ -32,8 +30,6 @@ import './styles/globals.css';
 import './App.css';
 
 function App() {
-  const { t } = useTranslation();
-  
   useEffect(() => {
     initializeCookieSystem();
   }, []);
@@ -43,18 +39,6 @@ function App() {
       <div id="root">
         <LanguageInitializer />
         <SecurityHeaders />
-        <SEOHead 
-          title={t('seo.home.title')}
-          description={t('seo.home.description')}
-          keywords={t('seo.home.keywords')}
-          canonical="https://milawyer.gr/"
-          hreflang={{
-            "el": "https://milawyer.gr/",
-            "en": "https://milawyer.gr/",
-            "ru": "https://milawyer.gr/",
-            "x-default": "https://milawyer.gr/"
-          }}
-        />
         <PerformanceOptimizer />
         <Suspense fallback={<LoadingSpinner />}>
           <GoogleAnalytics />

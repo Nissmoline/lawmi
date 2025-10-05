@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '../components/SEOHead';
 
 function DivorcePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const faqItems = useMemo(() => {
+    const items = t('pages.divorce.faq.items', { returnObjects: true, lng: i18n.language });
+    return Array.isArray(items) ? items : [];
+  }, [t, i18n.language]);
 
   return (
     <>
@@ -12,6 +17,7 @@ function DivorcePage() {
         description={t('seo.divorce.description')}
         keywords={t('seo.divorce.keywords')}
         canonical="https://milawyer.gr/divorce"
+        faqItems={faqItems}
         hreflang={{
           "el": "https://milawyer.gr/divorce",
           "en": "https://milawyer.gr/divorce",
@@ -64,7 +70,7 @@ function DivorcePage() {
         <div className="container">
           <h2>{t('pages.divorce.faq.title')}</h2>
           <div className="faq-grid">
-            {t('pages.divorce.faq.items', { returnObjects: true }).map((item, index) => (
+            {faqItems.map((item, index) => (
               <div key={index} className="faq-item">
                 <h3>{item.question}</h3>
                 <p>{item.answer}</p>

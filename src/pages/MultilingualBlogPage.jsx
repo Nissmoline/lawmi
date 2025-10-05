@@ -616,19 +616,6 @@ const MultilingualBlogPage = () => {
     articleBody: content.structuredData.articleBody,
   };
 
-  const faqStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: content.faq.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
-
   return (
     <>
       <SEOHead
@@ -643,6 +630,7 @@ const MultilingualBlogPage = () => {
           'x-default': BLOG_CANONICAL,
         }}
         structuredData={structuredData}
+        faqItems={content.faq}
       />
 
       <section className="blog-hero">
@@ -745,10 +733,6 @@ const MultilingualBlogPage = () => {
         </div>
       </article>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-      />
     </>
   );
 };

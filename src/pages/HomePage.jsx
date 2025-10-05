@@ -12,6 +12,34 @@ function HomePage() {
         description={t('seo.home.description')}
         keywords={t('seo.home.keywords')}
         canonical="https://milawyer.gr/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": ["Person", "Attorney"],
+          "name": "Μαρίνα Ιλιουσίνα",
+          "alternateName": ["Marina Ilyushina", "Марина Илюшина"],
+          "jobTitle": "Δικηγόρος",
+          "description": "Ρωσόφωνος δικηγόρος στην Αθήνα, Ελλάδα",
+          "url": "https://milawyer.gr/",
+          "image": "https://milawyer.gr/images/Ilyushina.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Στουρνάρη 39",
+            "addressLocality": "Αθήνα",
+            "postalCode": "106 82",
+            "addressCountry": "GR"
+          },
+          "telephone": "+30-698-336-3775",
+          "email": "ilyushina.law@gmail.com",
+          "knowsLanguage": ["Greek", "Russian", "English"],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Δικηγόρος",
+            "occupationLocation": {
+              "@type": "City",
+              "name": "Αθήνα"
+            }
+          }
+        }}
         hreflang={{
           "el": "https://milawyer.gr/",
           "en": "https://milawyer.gr/",

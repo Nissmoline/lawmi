@@ -1,0 +1,14 @@
+# Marina Iliushina - Greek Lawyer Website
+# https://milawyer.gr/
+
+/* TEAM */
+Lawyer: Μαρίνα Ιλιουσίνα (Marina Ilyushina)
+Contact: ilyushina.law@gmail.com
+Phone: +30 698 336 3775
+Location: Athens, Greece
+
+/* SITE */
+Last update: 2025/01/27
+Standards: HTML5, CSS3, JavaScript ES6
+Components: React, i18next
+IDE: VS Code

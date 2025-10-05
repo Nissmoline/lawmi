@@ -19,6 +19,9 @@ lerna-debug.log*
 .env.*
 !.env.example
 
+# Documentation and reports
+*.md
+
 # Cache and temp files
 .cache/
 .parcel-cache/
