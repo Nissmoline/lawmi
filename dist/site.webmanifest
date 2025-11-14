@@ -54,7 +54,7 @@
       "name": "Επικοινωνία",
       "short_name": "Επικοινωνία",
       "description": "Επικοινωνήστε μαζί μας",
-      "url": "mailto:ilyushina.law@gmail.com",
+      "url": "/#contact",
       "icons": [
         {
           "src": "/favicon.ico",

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const GA_MEASUREMENT_ID = 'G-5CY4QQN1FW';
 const GA_STREAM_ID = '12194715519';
+const GOOGLE_ADS_ID = 'AW-17626670964';
 
 const SEOHead = ({ 
   title, 
@@ -451,14 +452,21 @@ const SEOHead = ({
 
     // Update page URL for analytics
     if (window.gtag) {
-      window.gtag('config', GA_MEASUREMENT_ID, {
+      const sharedPageConfig = {
         page_title: title || document.title,
         page_location: pageUrl,
-        send_page_view: true,
+        page_path: location.pathname,
+        send_page_view: true
+      };
+
+      window.gtag('config', GA_MEASUREMENT_ID, {
+        ...sharedPageConfig,
         anonymize_ip: true,
         cookie_flags: 'SameSite=None;Secure',
         stream_id: GA_STREAM_ID
       });
+
+      window.gtag('config', GOOGLE_ADS_ID, sharedPageConfig);
     }
 
     // Update breadcrumb structured data

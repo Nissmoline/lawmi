@@ -80,7 +80,7 @@ export const HREFLANG_URLS = {
 // Business information for structured data
 export const BUSINESS_INFO = {
   name: 'Marina Ilyushina Law Office',
-  alternateName: 'Μαρίνα Ιλιούσινα - Δικηγόρος',
+  alternateName: 'Δικηγόρος - Μαρίνα Ιλιούσινα',
   description: 'Δικηγόρος Μαρίνα Ιλιούσινα στην Αθήνα. Εξειδικευμένες νομικές υπηρεσίες σε οικογενειακό δίκαιο, μεταναστευτικό δίκαιο, ποινικό δίκαιο, αστικό δίκαιο και εταιρικό δίκαιο.',
   logo: 'https://milawyer.gr/favicon.ico',
   image: 'https://milawyer.gr/images/Ilyushina.jpg',
