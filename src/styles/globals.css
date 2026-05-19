@@ -599,6 +599,61 @@ select:focus {
   font-weight: 600;
 }
 
+.official-resources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(10, 43, 76, 0.14);
+}
+
+.official-resource-link {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 144px;
+  padding: 1.25rem;
+  border: 1px solid rgba(10, 43, 76, 0.16);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  color: var(--dark-text);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.official-resource-link:hover,
+.official-resource-link:focus-visible {
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.official-resource-link-primary {
+  background: linear-gradient(135deg, #fff 0%, #f8f3ec 100%);
+}
+
+.official-resource-kicker {
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.official-resource-title {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.official-resource-description {
+  color: var(--neutral-gray);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 /* Mobile Responsive for Terms/Privacy */
 @media (max-width: 768px) {
   .terms-section,
@@ -625,6 +680,11 @@ select:focus {
   .terms-content ul,
   .privacy-content ul {
     margin: 0.8rem 0 1.2rem 1.5rem;
+  }
+
+  .official-resources {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
   }
 }
 
