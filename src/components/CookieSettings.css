@@ -40,13 +40,13 @@
 }
 
 .cookie-settings-modal {
-  background: white;
-  border-radius: 12px;
+  background: var(--surface-container-lowest);
+  border-radius: var(--border-radius-lg);
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
   animation: slideIn 0.3s ease-out;
 }
 
@@ -55,13 +55,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid #e9ecef;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid rgba(192, 200, 199, 0.65);
+  background: var(--surface-container-low);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
 
 .cookie-settings-header h3 {
-  color: #0A2B4C;
+  color: var(--primary-color);
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
@@ -95,9 +95,9 @@
 .cookie-category {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  background: #f8f9fa;
+  border: 1px solid rgba(192, 200, 199, 0.65);
+  border-radius: var(--border-radius-md);
+  background: var(--surface-container-low);
 }
 
 .cookie-category:last-child {
@@ -112,7 +112,7 @@
 }
 
 .cookie-category-info h4 {
-  color: #0A2B4C;
+  color: var(--primary-color);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
   font-weight: 600;
@@ -260,7 +260,7 @@
   .cookie-settings-footer .cookie-btn {
     width: 100%;
   }
-  
+
   .cookie-settings-link {
     font-size: 0.8rem;
     padding: 0.6rem;
@@ -284,7 +284,7 @@
   .cookie-category-info p {
     font-size: 0.85rem;
   }
-  
+
   .cookie-settings-link {
     font-size: 0.7rem;
     padding: 0.4rem;
@@ -298,4 +298,4 @@
     padding: 0.5rem;
     min-height: 36px;
   }
-} 
+}

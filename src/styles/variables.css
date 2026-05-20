@@ -1,20 +1,38 @@
 /* CSS Variables for consistent theming */
 :root {
-  /* Primary Colors */
-  --primary-color: #0A2B4C;
-  --secondary-color: #CAB8A8;
-  --accent-color: #D4A373;
+  /* Brand Colors */
+  --primary-color: #3d6262;
+  --secondary-color: #4e6073;
+  --accent-color: #7a5340;
+  --primary-action: #5f8585;
+  --primary-action-hover: #3d6262;
+  --inverse-primary: #a6cece;
+  --sea-foam-wash: #e8eeee;
   
   /* Background Colors */
-  --light-bg: #FFFFFF;
-  --dark-bg: #212529;
-  --section-bg-light: #EFEFEF;
-  --footer-bg: #343a40;
+  --background: #f9f9f6;
+  --light-bg: #fcfcf9;
+  --surface: #f9f9f6;
+  --surface-dim: #dadad7;
+  --surface-bright: #f9f9f6;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f4f4f1;
+  --surface-container: #eeeeeb;
+  --surface-container-high: #e8e8e5;
+  --surface-container-highest: #e2e3e0;
+  --dark-bg: #2f312f;
+  --inverse-on-surface: #f1f1ee;
+  --section-bg-light: #f4f4f1;
+  --footer-bg: #2f312f;
   
   /* Text Colors */
-  --dark-text: #212529;
-  --light-text: #f8f9fa;
-  --neutral-gray: #718787;
+  --dark-text: #1a1c1b;
+  --light-text: #f1f1ee;
+  --neutral-gray: #414848;
+  --muted-text: #717978;
+  --outline: #717978;
+  --outline-variant: #c0c8c7;
+  --deep-charcoal: #222222;
   
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -23,16 +41,20 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
+  --container-max: 1200px;
+  --container-gutter: 24px;
+  --section-padding: 80px;
   
   /* Border Radius */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 12px 32px rgba(26, 28, 27, 0.08);
+  --shadow-lg: 0 18px 48px rgba(26, 28, 27, 0.12);
   
   /* Transitions */
   --transition-fast: 0.15s ease-in-out;

@@ -21,6 +21,8 @@ lerna-debug.log*
 
 # Documentation and reports
 *.md
+DESIGN.md
+robots.txt.backup
 
 # Cache and temp files
 .cache/
